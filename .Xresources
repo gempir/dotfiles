@@ -55,16 +55,11 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-
-URxvt.perl-ext-common: selection-to-clipboard
-
 !! Copy Paste & Other Extensions
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt.keysym.Shift-Control-c: perl:clipboard:copy
+URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.Control-v: perl:clipboard:paste
 
 URxvt.urlLauncher: google-chrome

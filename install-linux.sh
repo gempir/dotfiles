@@ -5,11 +5,19 @@ set -e
 . $(dirname "$0")/scripts/helpers.sh
 
 
-make_home_symlink ".config"
+make_home_symlink ".config/i3"
+make_home_symlink ".config/i3status"
+make_home_symlink ".config/compton.conf"
+
+make_home_symlink ".local/share/chatterino/Settings/commands.json"
+
+make_home_symlink ".local/share/fonts"
+make_home_symlink ".urxvt"
+
+
 make_home_symlink ".xinitrc"
 make_home_symlink ".Xresources"
-make_home_symlink ".local"
-make_home_symlink ".urxvt"
+
 
 xrdb ~/.Xresources
 fc-cache -f
