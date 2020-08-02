@@ -13,4 +13,4 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/local/go/bin
 
-alias ls="ls -lsa"
+alias ls="ls -l"
