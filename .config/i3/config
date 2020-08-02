@@ -178,7 +178,7 @@ bindsym Print exec gnome-screenshot -i -a
 bar {
         output DP-4
         tray_output none
-        status_command i3status
+        status_command i3blocks
 }
 
 bar {

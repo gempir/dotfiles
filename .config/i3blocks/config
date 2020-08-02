@@ -1,0 +1,7 @@
+[date]
+command=date +"%Y-%m-%d"
+interval=5
+
+[time]
+command=date +"%H:%M"
+interval=5

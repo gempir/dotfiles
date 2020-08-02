@@ -7,6 +7,7 @@ git
 zsh
 oh-my-zsh
 i3
+i3blocks
 xsel # clipboard
 urxvt # terminal
 playerctl # for media

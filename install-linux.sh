@@ -6,7 +6,7 @@ set -e
 
 
 make_home_symlink ".config/i3"
-make_home_symlink ".config/i3status"
+make_home_symlink ".config/i3blocks"
 make_home_symlink ".config/compton.conf"
 make_home_symlink ".config/wallpaper.jpg"
 
