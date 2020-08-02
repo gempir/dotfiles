@@ -3,7 +3,10 @@
 #### Requirements
 
 ```
-zsh
 git
+zsh
 oh-my-zsh
+i3
+xsel
+urxvt
 ```

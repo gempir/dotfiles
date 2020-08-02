@@ -29,6 +29,6 @@ make_home_symlink() {
         fi
     fi
 
-    ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
+    ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" #2>/dev/null
     echo " done!"
 }

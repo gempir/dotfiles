@@ -195,3 +195,5 @@ workspace 2 output DP-4
 workspace 3 output DP-0
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
+
+bindsym Print exec gnome-screenshot -i -a 
