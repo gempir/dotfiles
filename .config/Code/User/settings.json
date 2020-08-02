@@ -1,0 +1,6 @@
+{
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'Menlo', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+}

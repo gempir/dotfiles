@@ -9,6 +9,8 @@ make_home_symlink ".config/i3"
 make_home_symlink ".config/i3status"
 make_home_symlink ".config/compton.conf"
 
+make_home_symlink ".config/Code/User/settings.json"
+
 make_home_symlink ".local/share/chatterino/Settings/commands.json"
 
 make_home_symlink ".local/share/fonts"
