@@ -6,6 +6,7 @@
 # ß
 # If the above line is not correctly displayed, fix your editor first!
 
+
 general {
   output_format = "i3bar"
   interval = 5
@@ -36,5 +37,5 @@ disk "/" {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %H:%M"
 }
