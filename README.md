@@ -7,6 +7,9 @@ git
 zsh
 oh-my-zsh
 i3
-xsel
-urxvt
+xsel # clipboard
+urxvt # terminal
+playerctl # for media
+pactl # for audio
+feh # wallpaper
 ```
