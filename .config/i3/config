@@ -207,6 +207,9 @@ client.background       #F8F8F2
 
 bindsym $mod+d exec "dmenu_run -b -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10'"
 
+# Chatterino
+for_window [title="Usercard"] floating enable
+
 workspace 1 output HDMI-0
 workspace 2 output DP-4
 workspace 3 output DP-0
@@ -214,3 +217,4 @@ workspace 3 output DP-0
 exec_always 'xrandr --output DP-0 --mode 2560x1440 --pos 5120x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-5 --off --output USB-C-0 --off'
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec_always feh --bg-fill ~/.config/wallpaper.jpg
+exec_always imwheel -b "4 5" --kill

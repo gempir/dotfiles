@@ -40,7 +40,7 @@ make_home_symlink() {
     fi
 
     ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
-    echo -e "${GREEN}done!${NC}"
+    echo -e " ${GREEN}done!${NC}"
 }
 
 print_big_notice() {
@@ -59,7 +59,7 @@ if [ "$(uname)" == "Darwin" ]; then
     # Do something under Mac OS X platform        
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     print_big_notice "Detected Linux"
-    
+
     make_home_symlink ".config/i3"
     make_home_symlink ".config/i3blocks"
     make_home_symlink ".config/compton.conf"
@@ -71,6 +71,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
     make_home_symlink ".local/share/fonts"
     make_home_symlink ".urxvt"
+    make_home_symlink ".imwheelrc"
 
     make_home_symlink ".Xresources"
 
