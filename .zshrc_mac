@@ -1,0 +1,2 @@
+alias spoton="sudo mdutil -a -i on" 
+alias spotoff="sudo mdutil -a -i off"
