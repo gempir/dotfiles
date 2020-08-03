@@ -1,3 +1,12 @@
+[volume]
+command=$SCRIPT_DIR/volume
+LABEL=♪ 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
 [date]
 command=date +"%Y-%m-%d"
 interval=5
