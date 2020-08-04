@@ -57,6 +57,8 @@ make_home_symlink ".zshrc"
 if [ "$(uname)" == "Darwin" ]; then
     print_big_notice "Detected macOS"
     make_home_symlink ".zshrc_mac"
+    make_home_symlink ".hushlogin"
+
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     print_big_notice "Detected Linux"
 
