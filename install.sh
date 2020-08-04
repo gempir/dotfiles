@@ -51,7 +51,7 @@ print_big_notice() {
 
 
 make_home_symlink ".gitconfig"
-
+make_home_symlink ".vimrc"
 make_home_symlink ".zshrc"
 
 if [ "$(uname)" == "Darwin" ]; then
