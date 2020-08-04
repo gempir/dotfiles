@@ -20,7 +20,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
-[[ -f "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh" 
+alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
 if [ "$(uname)" = "Darwin" ]; then
   . ~/.zshrc_mac
