@@ -1,12 +1,9 @@
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git omz-git)
 
 source $ZSH/oh-my-zsh.sh
@@ -16,6 +13,7 @@ if [ -f $MOEBEL_CODE/env/misc/zshrc ]; then
      . $MOEBEL_CODE/env/misc/zshrc
 fi
 
+export EDITOR="vim"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
