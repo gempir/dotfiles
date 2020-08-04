@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh" 
 
 if [ "$(uname)" = "Darwin" ]; then
-  . .zshrc_mac
+  . ~/.zshrc_mac
 fi
 
 sl () { streamlink twitch.tv/"$@" audio_only --hls-live-edge 1 --twitch-disable-hosting  }
