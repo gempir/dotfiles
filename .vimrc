@@ -18,3 +18,8 @@ set softtabstop=4
 set ruler	
  
 set backspace=indent,eol,start
+
+" enable jumping to the end of line behind the last character
+set ve+=onemore
+noremap $ $l
+
