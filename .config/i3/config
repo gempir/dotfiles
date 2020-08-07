@@ -209,6 +209,8 @@ bindsym $mod+d exec "dmenu_run -b -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf 
 
 # Chatterino
 for_window [title="Usercard"] floating enable
+for_window [title="Searching in"] floating enable
+
 
 workspace 1 output HDMI-0
 workspace 2 output DP-4
