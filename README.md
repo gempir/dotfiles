@@ -11,8 +11,6 @@ i3
 i3blocks # from source, packaged is too old
 alacritty
 tmux
-xsel # clipboard
-urxvt # terminal
 playerctl # for media
 pactl # for audio
 feh # wallpaper

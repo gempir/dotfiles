@@ -46,7 +46,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+w kill

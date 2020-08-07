@@ -74,12 +74,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     make_home_symlink ".local/share/chatterino/Settings/commands.json"
 
     make_home_symlink ".local/share/fonts"
-    make_home_symlink ".urxvt"
     make_home_symlink ".imwheelrc"
 
-    make_home_symlink ".Xresources"
-
-    xrdb ~/.Xresources
     fc-cache -f
 fi
 
