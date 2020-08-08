@@ -15,6 +15,7 @@ playerctl # for media
 pactl # for audio
 feh # wallpaper
 imwheel # fix scroll speed in chrome
+streamlink
 ```
 
 
