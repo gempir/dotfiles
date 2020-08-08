@@ -1,0 +1,16 @@
+player=mpv 
+loglevel=debug 
+
+twitch-low-latency 
+# twitch-disable-ads
+# twitch-disable-hosting 
+# twitch-disable-reruns 
+
+# hls-live-edge=1 
+
+# hls-segment-threads=5 
+
+# retry-max=10 
+
+# hls-playlist-reload-attempts=20 
+# hls-timeout=10 
