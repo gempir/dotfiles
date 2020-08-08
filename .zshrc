@@ -32,7 +32,7 @@ fi
 sl () { streamlink twitch.tv/"$@" audio_only --hls-live-edge 1 --twitch-disable-hosting  }
 alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
-
+alias restartcompton="killall -USR1 compton"
 
 # ssh autocompletion via config file
 h=()
