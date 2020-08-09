@@ -19,4 +19,6 @@ set ruler
  
 set backspace=indent,eol,start
 
+" Use system clipboard
+set clipboard=unnamedplus
 
