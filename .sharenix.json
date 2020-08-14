@@ -1,0 +1,24 @@
+{
+  "DefaultFileUploader": "nuuls",
+  "DefaultUrlShortener": "nuuls",
+  "DefaultImageUploader": "nuuls",
+  "XineramaHead": 0,
+  "NotificationTime": 5,
+  "NotifyUploading": true,
+  "NotifyCommand": "",
+  "ClipboardTime": 5,
+  "SaveFolder": "sharenix",
+  "OrganizedFolders": true,
+  "Services": [
+    {
+      "Name": "nuuls",
+      "RequestURL": "https://i.nuuls.com/upload",
+      "RequestType": "POST",
+      "FileFormName": "abc",
+      "ResponseType": "Text",
+      "Arguments": {
+        "key": "dank-password"
+      }
+    }
+  ]
+}
