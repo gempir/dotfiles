@@ -11,6 +11,18 @@
         {
             "name": "/git",
             "func": "IM DELETING YOU, GIT! 😭 👋 ██]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] 10% complete..... ████]]]]]]]]]]]]]]]]]]]]]]]]]]] 35% complete.... ███████]]]]]]]]]]]]]]]] 60% complete.... ███████████] 99% complete..... 🚫 ERROR! 🚫 💯 True 💯 Gits are irreplaceable 💖 I could never delete you Git! 💖 Send this to ten other 👪 repos 👪 who let you 💦 commit 💦 Or never get called ☁ ️webscale ☁ ️ again ❌ ❌ 😬 😬 ❌ ❌ If you get 0 Back: no commits for you 🚫 🚫 👿 3 back: you're a ninja️ 💦 5 back: you're a rockstar 😽 👼 💦 10+ back: Linus 😛 😛 💕 💕 💦 👅 👅 "
+        },
+        {
+            "name": "/feelsbadrain",
+            "func": "ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ、ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、｀、ヽ ヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ FeelsBadMan ☂ ️ ヽ｀ヽ｀、ヽヽ｀ヽ｀、｀ヽ｀、ヽヽ｀ヽ｀、ヽヽ｀ヽ、ヽヽ｀ヽ"
+        },
+        {
+            "name": "/thinking",
+            "func": "{1} . o O ( {2} )"
+        },
+        {
+            "name": "/cmd",
+            "func": "!{1} command {2} @$(usersource;1:username_raw), {3+}"
         }
     ]
 }
