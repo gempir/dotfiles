@@ -224,6 +224,5 @@ exec_always --no-startup-id xrandr \
 --output DP-4 --primary --mode 2560x1440 --rate 165 --pos 2560x0 --rotate normal \
 --output DP-5 --off --output USB-C-0 --off
 
-exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec_always feh --bg-fill ~/.config/wallpaper.jpg
 exec_always imwheel -b "4 5" --kill
