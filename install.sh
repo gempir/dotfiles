@@ -52,6 +52,8 @@ print_big_notice() {
 
 make_home_symlink ".gitconfig"
 make_home_symlink ".vimrc"
+make_home_symlink ".vim/colors/onedark.vim"
+make_home_symlink ".vim/autoload/onedark.vim"
 make_home_symlink ".zshrc"
 make_home_symlink ".config/alacritty"
 make_home_symlink ".config/streamlink"

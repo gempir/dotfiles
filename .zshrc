@@ -1,5 +1,5 @@
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux
+   exec tmux
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -23,6 +23,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
 if [ "$(uname)" = "Darwin" ]; then

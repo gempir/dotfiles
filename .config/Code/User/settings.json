@@ -2,5 +2,9 @@
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
     "window.titleBarStyle": "custom",
-    "editor.fontFamily": "'Menlo', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+    "editor.fontFamily": "'Menlo', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "C_Cpp.updateChannel": "Insiders",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
