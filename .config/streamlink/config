@@ -1,4 +1,4 @@
-player=mpv 
+player=mpv --video-sync=display-resample
 loglevel=debug 
 
 twitch-low-latency 
