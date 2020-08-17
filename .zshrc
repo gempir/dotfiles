@@ -25,7 +25,7 @@ export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
+export WINIT_HIDPI_FACTOR=1
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
 if [ "$(uname)" = "Darwin" ]; then
