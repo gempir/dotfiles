@@ -19,3 +19,5 @@
 	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 	# $ git grep-by-author fix
 	grep-by-author = "!sh -c 'git log --grep="$1" --format=short -i --no-merges | grep "Author" | sort | uniq -c | sort -r'"
+[pull]
+	rebase = true
