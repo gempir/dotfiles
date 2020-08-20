@@ -21,3 +21,8 @@
 	grep-by-author = "!sh -c 'git log --grep="$1" --format=short -i --no-merges | grep "Author" | sort | uniq -c | sort -r'"
 [pull]
 	rebase = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
