@@ -23,6 +23,10 @@
         {
             "name": "/cmd",
             "func": "!{1} command {2} @$(usersource;1:username_raw), {3+}"
+        },
+        {
+            "name": "/wivon",
+            "func": "Wi Von ZYLYL 🇺🇬 , GUYS 👯 ♂ ️ Wi Vo-, any Wi 🇺🇬 Woners guys 📢 ? 🤤 I watch 👀 the Vorsen in the morning 🌡 ☀ ️, and I 🚫 😴 stay up 👆 to ✌ snipe 🧐 and a tr-tr-trrr ⚠ ️ Wi Von! 💪 GUYS-GUYS? 🤷 ♂ ️ Any -Any Worsen? ⁉ ️ 🧐 Any Worsen ⁉ viewers guys? ⁉ ️ GUYS WI von 🏆 🍾 Ahahahahaa 📢 "
         }
     ]
 }
