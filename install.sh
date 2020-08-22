@@ -63,9 +63,12 @@ if [ "$(uname)" == "Darwin" ]; then
     print_big_notice "Detected macOS"
     make_home_symlink ".zshrc_mac"
     make_home_symlink ".hushlogin"
+    make_home_symlink ".config/alacritty/macos.yml" ".config/alacritty/os.yml"
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     print_big_notice "Detected Linux"
+
+    make_home_symlink ".config/alacritty/linux.yml" ".config/alacritty/os.yml"
 
     make_home_symlink ".config/i3"
     make_home_symlink ".config/i3blocks"
