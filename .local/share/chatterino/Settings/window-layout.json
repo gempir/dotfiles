@@ -1,0 +1,234 @@
+{
+    "windows": [
+        {
+            "emotePopup": {
+                "x": 1707,
+                "y": 0
+            },
+            "height": 1416,
+            "tabs": [
+                {
+                    "highlightsEnabled": true,
+                    "selected": true,
+                    "splits2": {
+                        "items": [
+                            {
+                                "items": [
+                                    {
+                                        "data": {
+                                            "name": "nymn",
+                                            "type": "twitch"
+                                        },
+                                        "flexh": 1,
+                                        "flexv": 1.0004440090736797,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "type": "mentions"
+                                        },
+                                        "flexh": 1,
+                                        "flexv": 0.9995559909263204,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    }
+                                ],
+                                "type": "vertical"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "data": {
+                                            "name": "pokimane",
+                                            "type": "twitch"
+                                        },
+                                        "flexh": 1,
+                                        "flexv": 1.0003080358234253,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "name": "pajlada",
+                                            "type": "twitch"
+                                        },
+                                        "flexh": 1,
+                                        "flexv": 0.9996919641765747,
+                                        "moderationMode": true,
+                                        "type": "split"
+                                    }
+                                ],
+                                "type": "vertical"
+                            }
+                        ],
+                        "type": "horizontal"
+                    },
+                    "title": "main"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "gempir",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "forsen",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "trainwreckstv",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    },
+                    "title": "train"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "yabbe",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "mizkif",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "xqcow",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "michaelreeves",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    },
+                    "title": "reeves"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "shroud",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "vadikus007",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "summit1g",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "melina",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "xangold",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                }
+            ],
+            "type": "main",
+            "width": 914,
+            "x": 1646,
+            "y": 0
+        }
+    ]
+}
