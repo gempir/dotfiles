@@ -50,7 +50,10 @@ alias ydl-hq="youtube-dl -f bestvideo+bestaudio"
 
 alias yw="yarn watch"
 
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+if ! type "pbcopy" > /dev/null; then
+    alias pbpaste='xsel --clipboard --output'
+    alias pbcopy='xsel --clipboard --input'
+fi
+
 alias cb="git symbolic-ref --short HEAD | pbcopy" # copy current branch name into clipboard
 
