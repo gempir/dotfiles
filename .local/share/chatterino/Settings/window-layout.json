@@ -77,7 +77,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "me"
                 },
                 {
                     "highlightsEnabled": true,
@@ -143,7 +144,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "xqc"
                 },
                 {
                     "highlightsEnabled": true,
@@ -183,7 +185,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "vadi"
                 },
                 {
                     "highlightsEnabled": true,
@@ -196,26 +199,14 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "1g"
                 },
                 {
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
                             "name": "melina",
-                            "type": "twitch"
-                        },
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "xangold",
                             "type": "twitch"
                         },
                         "flexh": 1,
@@ -239,8 +230,35 @@
                 }
             ],
             "type": "main",
-            "width": 980,
-            "x": 1580,
+            "width": 834,
+            "x": 1726,
+            "y": 0
+        },
+        {
+            "emotePopup": {
+                "x": 1707,
+                "y": 0
+            },
+            "height": 1416,
+            "tabs": [
+                {
+                    "highlightsEnabled": true,
+                    "selected": true,
+                    "splits2": {
+                        "data": {
+                            "name": "shroud",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                }
+            ],
+            "type": "popup",
+            "width": 361,
+            "x": 1365,
             "y": 0
         }
     ]

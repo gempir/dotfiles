@@ -24,6 +24,8 @@ make_home_symlink() {
 
     printf "%s -> %s" "$1" "$HOME_DOTFILE_PATH"
 
+    mkdir -p `dirname ${HOME_DOTFILE_PATH}`
+
     if [ -L "$HOME_DOTFILE_PATH" ]; then
         echo -e " ${ORANGE}skipping, already a symlink${NC}"
         return
