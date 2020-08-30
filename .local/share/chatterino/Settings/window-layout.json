@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.1100440176070427,
+                                        "flexv": 1.0299858248827827,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.8899559823929571,
+                                        "flexv": 0.9700141751172173,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.1073852295409181,
+                                        "flexv": 1.0291978725713666,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.8926147704590819,
+                                        "flexv": 0.9708021274286335,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -230,8 +230,8 @@
                 }
             ],
             "type": "main",
-            "width": 834,
-            "x": 1726,
+            "width": 858,
+            "x": 1702,
             "y": 0
         },
         {
@@ -246,7 +246,7 @@
                     "selected": true,
                     "splits2": {
                         "data": {
-                            "name": "shroud",
+                            "name": "summit1g",
                             "type": "twitch"
                         },
                         "flexh": 1,
@@ -257,8 +257,8 @@
                 }
             ],
             "type": "popup",
-            "width": 361,
-            "x": 1365,
+            "width": 346,
+            "x": 1356,
             "y": 0
         }
     ]

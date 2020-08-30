@@ -6,5 +6,6 @@
     "C_Cpp.updateChannel": "Insiders",
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
-    }
+    },
+    "go.formatTool": "goimports"
 }
