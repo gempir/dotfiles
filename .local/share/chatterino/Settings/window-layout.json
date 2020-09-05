@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0299858248827827,
+                                        "flexv": 1.2108249672632039,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9700141751172173,
+                                        "flexv": 0.7891750327367961,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0291978725713666,
+                                        "flexv": 1.0899803536345776,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9708021274286335,
+                                        "flexv": 0.9100196463654224,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -227,11 +227,64 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "fourtf",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "sodapoppin",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "vigors",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "poopernoodle",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    },
+                    "title": "noodle"
                 }
             ],
             "type": "main",
-            "width": 858,
-            "x": 1702,
+            "width": 820,
+            "x": 1740,
             "y": 0
         },
         {
@@ -257,8 +310,8 @@
                 }
             ],
             "type": "popup",
-            "width": 346,
-            "x": 1356,
+            "width": 318,
+            "x": 1422,
             "y": 0
         }
     ]
