@@ -7,5 +7,8 @@
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "go.formatTool": "goimports"
+    "go.formatTool": "goimports",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }

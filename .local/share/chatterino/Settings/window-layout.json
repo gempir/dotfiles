@@ -20,8 +20,8 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.2108249672632039,
-                                        "moderationMode": false,
+                                        "flexv": 1.0323141767578778,
+                                        "moderationMode": true,
                                         "type": "split"
                                     },
                                     {
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.7891750327367961,
+                                        "flexv": 0.967685823242122,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0899803536345776,
+                                        "flexv": 1.012208775390521,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9100196463654224,
+                                        "flexv": 0.9877912246094791,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -69,14 +69,28 @@
                 {
                     "highlightsEnabled": true,
                     "splits2": {
-                        "data": {
-                            "name": "gempir",
-                            "type": "twitch"
-                        },
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
+                        "items": [
+                            {
+                                "data": {
+                                    "type": "whispers"
+                                },
+                                "flexh": 1,
+                                "flexv": 1,
+                                "moderationMode": false,
+                                "type": "split"
+                            },
+                            {
+                                "data": {
+                                    "name": "gempir",
+                                    "type": "twitch"
+                                },
+                                "flexh": 1,
+                                "flexv": 1,
+                                "moderationMode": false,
+                                "type": "split"
+                            }
+                        ],
+                        "type": "horizontal"
                     },
                     "title": "me"
                 },
@@ -279,27 +293,52 @@
                         "moderationMode": false,
                         "type": "split"
                     },
-                    "title": "noodle"
-                }
-            ],
-            "type": "main",
-            "width": 820,
-            "x": 1740,
-            "y": 0
-        },
-        {
-            "emotePopup": {
-                "x": 1707,
-                "y": 0
-            },
-            "height": 1416,
-            "tabs": [
+                    "title": "pnoodle"
+                },
                 {
                     "highlightsEnabled": true,
-                    "selected": true,
                     "splits2": {
                         "data": {
-                            "name": "summit1g",
+                            "name": "symfuhny",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "aidenwallis",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "romydank",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "supinic",
                             "type": "twitch"
                         },
                         "flexh": 1,
@@ -309,9 +348,9 @@
                     }
                 }
             ],
-            "type": "popup",
-            "width": 318,
-            "x": 1422,
+            "type": "main",
+            "width": 845,
+            "x": 1715,
             "y": 0
         }
     ]

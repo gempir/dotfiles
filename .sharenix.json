@@ -6,7 +6,7 @@
   "NotificationTime": 5,
   "NotifyUploading": true,
   "NotifyCommand": "",
-  "ClipboardTime": 5,
+  "ClipboardTime": 10,
   "SaveFolder": "sharenix",
   "OrganizedFolders": true,
   "Services": [
