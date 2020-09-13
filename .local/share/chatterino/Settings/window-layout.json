@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0323141767578778,
+                                        "flexv": 1.125982256020279,
                                         "moderationMode": true,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.967685823242122,
+                                        "flexv": 0.8740177439797212,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.012208775390521,
+                                        "flexv": 1.1266818989591267,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9877912246094791,
+                                        "flexv": 0.8733181010408734,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -346,11 +346,25 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "fabzeef",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    },
+                    "title": "fabzeef"
                 }
             ],
             "type": "main",
-            "width": 845,
-            "x": 1715,
+            "width": 900,
+            "x": 1660,
             "y": 0
         }
     ]
