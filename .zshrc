@@ -32,6 +32,7 @@ sl () { streamlink twitch.tv/"$@" audio_only --hls-live-edge 1 --twitch-disable-
 alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
 alias restartcompton="killall -USR1 compton"
+alias ciscovpn="/opt/cisco/anyconnect/bin/vpnui"
 
 # ssh autocompletion via config file
 h=()
