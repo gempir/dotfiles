@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.4128035320088301,
+                                        "flexv": 1.0881600372179576,
                                         "moderationMode": true,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.5871964679911699,
+                                        "flexv": 0.9118399627820423,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.4025018395879323,
+                                        "flexv": 1.0881600372179576,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.5974981604120677,
+                                        "flexv": 0.9118399627820423,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -233,19 +233,6 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "yabbe",
-                            "type": "twitch"
-                        },
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
                             "name": "fourtf",
                             "type": "twitch"
                         },
@@ -373,11 +360,37 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "lizzvega",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "keebi",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 862,
-            "x": 1698,
+            "width": 922,
+            "x": 1638,
             "y": 0
         }
     ]
