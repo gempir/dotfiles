@@ -32,6 +32,8 @@ sl () { streamlink twitch.tv/"$@" audio_only --hls-live-edge 1 --twitch-disable-
 alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
 alias restartcompton="killall -USR1 compton"
+alias tm="tmux attach || tmux"
+alias ktm="killall -9 tmux"
 
 # ssh autocompletion via config file
 h=()
