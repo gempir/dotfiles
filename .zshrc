@@ -34,6 +34,8 @@ alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
 alias restartcompton="killall -USR1 compton"
 alias ciscovpn="/opt/cisco/anyconnect/bin/vpnui"
+alias tm="tmux attach || tmux"
+alias ktm="killall -9 tmux"
 
 # ssh autocompletion via config file
 h=()
