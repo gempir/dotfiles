@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.125982256020279,
+                                        "flexv": 1.0881600372179576,
                                         "moderationMode": true,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.8740177439797212,
+                                        "flexv": 0.9118399627820423,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.1266818989591267,
+                                        "flexv": 1.0881600372179576,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.8733181010408734,
+                                        "flexv": 0.9118399627820423,
                                         "moderationMode": true,
                                         "type": "split"
                                     }
@@ -233,19 +233,6 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "yabbe",
-                            "type": "twitch"
-                        },
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
                             "name": "fourtf",
                             "type": "twitch"
                         },
@@ -360,11 +347,50 @@
                         "type": "split"
                     },
                     "title": "fabzeef"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "robinlemonz",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "lizzvega",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "keebi",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 900,
-            "x": 1660,
+            "width": 922,
+            "x": 1638,
             "y": 0
         }
     ]

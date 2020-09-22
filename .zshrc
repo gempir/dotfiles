@@ -18,6 +18,7 @@ export EDITOR="vim"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH="$PATH:$(yarn global bin)"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -32,6 +33,7 @@ sl () { streamlink twitch.tv/"$@" audio_only --hls-live-edge 1 --twitch-disable-
 alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
 alias restartcompton="killall -USR1 compton"
+alias ciscovpn="/opt/cisco/anyconnect/bin/vpnui"
 alias tm="tmux attach || tmux"
 alias ktm="killall -9 tmux"
 
