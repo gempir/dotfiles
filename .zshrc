@@ -9,6 +9,11 @@ plugins=(git omz-git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Always exit on Ctrl+D, even with partial input
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey '^D' exit_zsh
+
 export MOEBEL_CODE="$HOME/dev/moebel" # Change this to your code path aswell
 if [ -f $MOEBEL_CODE/env/misc/zshrc ]; then
      . $MOEBEL_CODE/env/misc/zshrc
