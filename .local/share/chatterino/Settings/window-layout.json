@@ -2,7 +2,7 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1920,
+                "x": 1707,
                 "y": 0
             },
             "height": 1416,
@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1,
+                                        "flexv": 1.0967144840351688,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1,
+                                        "flexv": 0.9032855159648311,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.000187421110378,
+                                        "flexv": 1.0546682249058565,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9998125788896218,
+                                        "flexv": 0.9453317750941436,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -480,13 +480,13 @@
                 }
             ],
             "type": "main",
-            "width": 887,
-            "x": 1673,
+            "width": 939,
+            "x": 1621,
             "y": 0
         },
         {
             "emotePopup": {
-                "x": 1920,
+                "x": 1707,
                 "y": 0
             },
             "height": 1416,
@@ -496,7 +496,7 @@
                     "selected": true,
                     "splits2": {
                         "data": {
-                            "name": "nymn",
+                            "name": "vadikus007",
                             "type": "twitch"
                         },
                         "flexh": 1,
@@ -507,8 +507,8 @@
                 }
             ],
             "type": "popup",
-            "width": 426,
-            "x": 4694,
+            "width": 374,
+            "x": 1247,
             "y": 0
         }
     ]

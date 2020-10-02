@@ -87,6 +87,18 @@
         {
             "name": "/playon",
             "func": "!module enable playsounds"
+        },
+        {
+            "name": "/shrug",
+            "func": "¯\\_ pokiW _/¯"
+        },
+        {
+            "name": "/scrollup",
+            "func": "MODS uh ⠀⠀⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀⠀ ⠀ ҉ MODS ҉ MODS oh⠀⠀⠀⠀ ⠀⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ҉ MODS ҉ MODS ҉ MODS scrolling ⠀⠀⠀ ⠀⠀⠀⠀ ⠀ ⠀⠀ ⠀⠀ ҉ MODS ҉ MODS ҉ MODS MODS up"
+        },
+        {
+            "name": "/reload",
+            "func": "/w botnextdoor !{1}emotes reload"
         }
     ]
 }
