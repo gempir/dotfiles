@@ -82,11 +82,11 @@
         },
         {
             "name": "/playoff",
-            "func": "!module disable playsounds"
+            "func": "!module disable playsound"
         },
         {
             "name": "/playon",
-            "func": "!module enable playsounds"
+            "func": "!module enable playsound"
         },
         {
             "name": "/shrug",

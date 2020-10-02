@@ -5,7 +5,7 @@
                 "x": 1707,
                 "y": 0
             },
-            "height": 1416,
+            "height": 1410,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0967144840351688,
+                                        "flexv": 1.474497681607419,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9032855159648311,
+                                        "flexv": 0.5255023183925811,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0546682249058565,
+                                        "flexv": 1.187017001545595,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9453317750941436,
+                                        "flexv": 0.812982998454405,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -480,35 +480,8 @@
                 }
             ],
             "type": "main",
-            "width": 939,
-            "x": 1621,
-            "y": 0
-        },
-        {
-            "emotePopup": {
-                "x": 1707,
-                "y": 0
-            },
-            "height": 1416,
-            "tabs": [
-                {
-                    "highlightsEnabled": true,
-                    "selected": true,
-                    "splits2": {
-                        "data": {
-                            "name": "vadikus007",
-                            "type": "twitch"
-                        },
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                }
-            ],
-            "type": "popup",
-            "width": 374,
-            "x": 1247,
+            "width": 887,
+            "x": -887,
             "y": 0
         }
     ]
