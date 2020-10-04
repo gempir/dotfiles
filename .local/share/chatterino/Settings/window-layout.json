@@ -5,7 +5,7 @@
                 "x": 1707,
                 "y": 0
             },
-            "height": 1410,
+            "height": 1416,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.474497681607419,
+                                        "flexv": 1.3110435663627154,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.5255023183925811,
+                                        "flexv": 0.6889564336372846,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.187017001545595,
+                                        "flexv": 1.103154305200341,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.812982998454405,
+                                        "flexv": 0.896845694799659,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -480,8 +480,8 @@
                 }
             ],
             "type": "main",
-            "width": 887,
-            "x": -887,
+            "width": 900,
+            "x": 1660,
             "y": 0
         }
     ]

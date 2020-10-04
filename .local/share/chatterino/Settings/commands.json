@@ -99,6 +99,10 @@
         {
             "name": "/reload",
             "func": "/w botnextdoor !{1}emotes reload"
+        },
+        {
+            "name": "/nukeracism",
+            "func": "/w botnextdoor #nymn !nuke /(cmonBruh|TriHard)/ 40s 300s"
         }
     ]
 }

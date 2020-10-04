@@ -16,5 +16,6 @@
     },
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
-    }
+    },
+    "go.lintTool": "golangci-lint"
 }
