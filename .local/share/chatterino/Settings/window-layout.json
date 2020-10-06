@@ -2,10 +2,10 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1707,
-                "y": 0
+                "x": 19,
+                "y": 107
             },
-            "height": 1416,
+            "height": 1410,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -20,7 +20,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.32381667918858,
+                                        "flexv": 1.2952952952952952,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -29,7 +29,7 @@
                                             "type": "mentions"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.6761833208114201,
+                                        "flexv": 0.7047047047047047,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -44,7 +44,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 1.0035814710670417,
+                                        "flexv": 1.0002245960519356,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -54,7 +54,7 @@
                                             "type": "twitch"
                                         },
                                         "flexh": 1,
-                                        "flexv": 0.9964185289329586,
+                                        "flexv": 0.9997754039480644,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -490,11 +490,24 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "g_teez",
+                            "type": "twitch"
+                        },
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 909,
-            "x": 1651,
+            "width": 887,
+            "x": -887,
             "y": 0
         }
     ]
