@@ -17,5 +17,19 @@
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "go.lintTool": "golangci-lint"
+    "go.lintTool": "golangci-lint",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "editor.renderWhitespace": "none",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }
