@@ -19,8 +19,23 @@
                                             "name": "nymn",
                                             "type": "twitch"
                                         },
+                                        "filters": [
+                                        ],
                                         "flexh": 1,
-                                        "flexv": 1.2562529495044832,
+                                        "flexv": 1.8475477971026812,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "name": "nymn",
+                                            "type": "twitch"
+                                        },
+                                        "filters": [
+                                            "4bfc33bd-0d18-4bac-b22f-5ae6944a7e64"
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 0.6090816913525323,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -28,8 +43,10 @@
                                         "data": {
                                             "type": "mentions"
                                         },
+                                        "filters": [
+                                        ],
                                         "flexh": 1,
-                                        "flexv": 0.7437470504955168,
+                                        "flexv": 0.5433705115447867,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -43,8 +60,10 @@
                                             "name": "pokimane",
                                             "type": "twitch"
                                         },
+                                        "filters": [
+                                        ],
                                         "flexh": 1,
-                                        "flexv": 1.00014513076758,
+                                        "flexv": 1.2291510142749813,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -53,8 +72,10 @@
                                             "name": "pajlada",
                                             "type": "twitch"
                                         },
+                                        "filters": [
+                                        ],
                                         "flexh": 1,
-                                        "flexv": 0.9998548692324201,
+                                        "flexv": 0.7708489857250187,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -74,6 +95,8 @@
                                 "data": {
                                     "type": "whispers"
                                 },
+                                "filters": [
+                                ],
                                 "flexh": 1,
                                 "flexv": 1,
                                 "moderationMode": false,
@@ -84,6 +107,8 @@
                                     "name": "gempir",
                                     "type": "twitch"
                                 },
+                                "filters": [
+                                ],
                                 "flexh": 1,
                                 "flexv": 1,
                                 "moderationMode": false,
@@ -101,6 +126,8 @@
                             "name": "forsen",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -114,6 +141,8 @@
                             "name": "vadikus007",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -128,6 +157,8 @@
                             "name": "trainwreckstv",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -142,6 +173,8 @@
                             "name": "yabbe",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -155,6 +188,8 @@
                             "name": "mizkif",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -168,6 +203,8 @@
                             "name": "xqcow",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -182,6 +219,8 @@
                             "name": "michaelreeves",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -196,6 +235,8 @@
                             "name": "shroud",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -209,6 +250,8 @@
                             "name": "summit1g",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -223,6 +266,8 @@
                             "name": "melina",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -236,6 +281,8 @@
                             "name": "fourtf",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -249,6 +296,8 @@
                             "name": "sodapoppin",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -262,6 +311,8 @@
                             "name": "vigors",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -275,6 +326,8 @@
                             "name": "poopernoodle",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -289,6 +342,8 @@
                             "name": "symfuhny",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -302,6 +357,8 @@
                             "name": "aidenwallis",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -315,6 +372,8 @@
                             "name": "romydank",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -328,6 +387,8 @@
                             "name": "supinic",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -341,6 +402,8 @@
                             "name": "fabzeef",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -355,6 +418,8 @@
                             "name": "robinlemonz",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -368,6 +433,8 @@
                             "name": "nmplol",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -381,6 +448,8 @@
                             "name": "greekgodx",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -394,6 +463,8 @@
                             "name": "maya",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -407,6 +478,8 @@
                             "name": "twitchdev",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -420,6 +493,8 @@
                             "name": "riotgames",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -433,6 +508,8 @@
                             "name": "pokelawls",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -446,6 +523,8 @@
                             "name": "tormentdubz",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -459,6 +538,8 @@
                             "name": "tolekk",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -472,6 +553,8 @@
                             "name": "alazymeme",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -485,6 +568,8 @@
                             "name": "apa420",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -498,6 +583,8 @@
                             "name": "g_teez",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -511,6 +598,8 @@
                             "name": "myth",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -524,6 +613,84 @@
                             "name": "lirik",
                             "type": "twitch"
                         },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "erobb221",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "nymn",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "pokimane",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                            "82307e5e-91a8-4ddd-8306-7bced1f3873c"
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    },
+                    "title": "poki_nogrey"
+                }
+            ],
+            "type": "main",
+            "width": 855,
+            "x": 1705,
+            "y": 0
+        },
+        {
+            "emotePopup": {
+                "x": 1707,
+                "y": 0
+            },
+            "height": 1416,
+            "tabs": [
+                {
+                    "highlightsEnabled": true,
+                    "selected": true,
+                    "splits2": {
+                        "data": {
+                            "name": "gempir",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
                         "flexh": 1,
                         "flexv": 1,
                         "moderationMode": false,
@@ -531,9 +698,9 @@
                     }
                 }
             ],
-            "type": "main",
-            "width": 946,
-            "x": 1614,
+            "type": "popup",
+            "width": 387,
+            "x": 2560,
             "y": 0
         }
     ]
