@@ -32,7 +32,6 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "files.autoSave": "onFocusChange",
     "extensions.ignoreRecommendations": false,
     "emmet.excludeLanguages": [
         "typescript",

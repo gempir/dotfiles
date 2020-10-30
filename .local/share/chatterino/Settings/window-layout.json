@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.8475477971026812,
+                                        "flexv": 1.5110690597855134,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -35,7 +35,7 @@
                                             "4bfc33bd-0d18-4bac-b22f-5ae6944a7e64"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.6090816913525323,
+                                        "flexv": 0.8144001051779236,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5433705115447867,
+                                        "flexv": 0.674530835036563,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.2291510142749813,
+                                        "flexv": 1.004042378926788,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -75,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7708489857250187,
+                                        "flexv": 0.9959576210732121,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -670,37 +670,8 @@
                 }
             ],
             "type": "main",
-            "width": 855,
-            "x": 1705,
-            "y": 0
-        },
-        {
-            "emotePopup": {
-                "x": 1707,
-                "y": 0
-            },
-            "height": 1416,
-            "tabs": [
-                {
-                    "highlightsEnabled": true,
-                    "selected": true,
-                    "splits2": {
-                        "data": {
-                            "name": "gempir",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                }
-            ],
-            "type": "popup",
-            "width": 387,
-            "x": 2560,
+            "width": 896,
+            "x": 1664,
             "y": 0
         }
     ]
