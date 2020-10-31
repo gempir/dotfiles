@@ -19,6 +19,15 @@ imwheel # fix scroll speed in chrome
 streamlink
 ```
 
+#### Install
+
+```
+sudo pacman -S yarn zsh alacritty
+
+# Install https://github.com/ohmyzsh/ohmyzsh
+
+chsh -s $(which zsh)`
+```
 
 #### Learnings
 
