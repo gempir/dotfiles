@@ -22,7 +22,7 @@ streamlink
 #### Install
 
 ```
-sudo pacman -S yarn zsh alacritty
+sudo pacman -S yarn zsh alacritty feh imwheel
 
 # Install https://github.com/ohmyzsh/ohmyzsh
 
