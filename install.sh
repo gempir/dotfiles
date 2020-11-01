@@ -59,6 +59,7 @@ make_home_symlink ".vim/autoload/onedark.vim"
 make_home_symlink ".zshrc"
 make_home_symlink ".config/alacritty/alacritty.yml"
 make_home_symlink ".config/streamlink"
+make_home_symlink ".config/chromium-flags.conf"
 make_home_symlink ".tmux.conf"
 
 if [[ "$(uname)" == "Darwin"* ]]; then
