@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.2364329742859588,
+                                        "flexv": 1.5005876538994158,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -32,9 +32,10 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
+                                            "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0069511443039378,
+                                        "flexv": 0.6244960595569424,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -45,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7566158814101034,
+                                        "flexv": 0.8749162865436417,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -62,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0020252829439407,
+                                        "flexv": 1.000507090988032,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -74,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9979747170560593,
+                                        "flexv": 0.999492909011968,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -668,8 +669,8 @@
                 }
             ],
             "type": "main",
-            "width": 896,
-            "x": 1664,
+            "width": 944,
+            "x": 1616,
             "y": 0
         }
     ]
