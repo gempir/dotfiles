@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1707,
-                "y": 0
+                "x": 2257,
+                "y": 293
             },
             "height": 1421,
             "tabs": [
@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5005876538994158,
+                                        "flexv": 1.7259789434443311,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -35,7 +35,7 @@
                                             "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.6244960595569424,
+                                        "flexv": 0.6778226800002445,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.8749162865436417,
+                                        "flexv": 0.5961983765554245,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.000507090988032,
+                                        "flexv": 1.0835360908353608,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -75,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.999492909011968,
+                                        "flexv": 0.9164639091646392,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -123,7 +123,7 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "forsen",
+                            "name": "yabbe",
                             "type": "twitch"
                         },
                         "filters": [
@@ -154,6 +154,21 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
+                            "name": "forsen",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
                             "name": "trainwreckstv",
                             "type": "twitch"
                         },
@@ -165,21 +180,6 @@
                         "type": "split"
                     },
                     "title": "train"
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "yabbe",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
                 },
                 {
                     "highlightsEnabled": true,
@@ -659,6 +659,7 @@
                             "type": "twitch"
                         },
                         "filters": [
+                            "cf43a9e0-8f4c-463c-b2cd-e9c2b4402853"
                         ],
                         "flexh": 1,
                         "flexv": 1,
@@ -666,11 +667,26 @@
                         "type": "split"
                     },
                     "title": "poki_nogrey"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "hasanabi",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 944,
-            "x": 1616,
+            "width": 896,
+            "x": 1664,
             "y": 0
         }
     ]
