@@ -38,8 +38,11 @@
         "typescriptreact",
         "markdown"
     ],
-    "go.useLanguageServer": true,
     "files.watcherExclude": {
         "**/logs": true,
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "go.addTags": {
+        "transform": "camelcase"
     }
 }
