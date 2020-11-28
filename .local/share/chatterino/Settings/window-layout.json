@@ -2,7 +2,7 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1583,
+                "x": 1579,
                 "y": 245
             },
             "height": 1421,
@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.7957785906309627,
+                                        "flexv": 1.707373319414799,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -35,7 +35,7 @@
                                             "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7621861706392046,
+                                        "flexv": 0.7672190540335762,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.44203523872983264,
+                                        "flexv": 0.525407626551625,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.00423791601221,
+                                        "flexv": 1.0708088441085921,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -75,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9957620839877901,
+                                        "flexv": 0.9291911558914078,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -654,23 +654,6 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "pokimane",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                            "cf43a9e0-8f4c-463c-b2cd-e9c2b4402853"
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    },
-                    "title": "poki_nogrey"
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
                             "name": "hasanabi",
                             "type": "twitch"
                         },
@@ -701,7 +684,52 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "tubbo",
+                            "name": "codenjoy",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "destiny",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "marcfryd",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "39daph",
                             "type": "twitch"
                         },
                         "filters": [
@@ -714,8 +742,8 @@
                 }
             ],
             "type": "main",
-            "width": 926,
-            "x": 1634,
+            "width": 879,
+            "x": 1681,
             "y": 0
         }
     ]
