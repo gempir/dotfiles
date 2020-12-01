@@ -36,8 +36,6 @@ alias restartcompton="killall -USR1 compton"
 alias ciscovpn="/opt/cisco/anyconnect/bin/vpnui"
 alias tm="tmux attach || tmux"
 alias ktm="killall -9 tmux"
-alias swagger="docker run --rm -it -e GOPATH=$HOME/go:/go -v $HOME:$HOME -w $(pwd) quay.io/goswagger/swagger"
-
 
 # ssh autocompletion via config file
 h=()
