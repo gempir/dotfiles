@@ -5,7 +5,7 @@
                 "x": 1579,
                 "y": 245
             },
-            "height": 1421,
+            "height": 1410,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -16,13 +16,42 @@
                                 "items": [
                                     {
                                         "data": {
+                                            "name": "yabbe",
+                                            "type": "twitch"
+                                        },
+                                        "filters": [
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 1,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "name": "marcfryd",
+                                            "type": "twitch"
+                                        },
+                                        "filters": [
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 1,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    }
+                                ],
+                                "type": "vertical"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "data": {
                                             "name": "nymn",
                                             "type": "twitch"
                                         },
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.707373319414799,
+                                        "flexv": 1.9848627329173865,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -32,10 +61,9 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
-                                            "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7672190540335762,
+                                        "flexv": 0.5052509685479675,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +74,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.525407626551625,
+                                        "flexv": 0.5098862985346461,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +91,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0708088441085921,
+                                        "flexv": 1.0367039025097926,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -75,7 +103,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9291911558914078,
+                                        "flexv": 0.9632960974902075,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -742,8 +770,8 @@
                 }
             ],
             "type": "main",
-            "width": 879,
-            "x": 1681,
+            "width": 1368,
+            "x": -1368,
             "y": 0
         }
     ]
