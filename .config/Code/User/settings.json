@@ -44,5 +44,7 @@
     "go.autocompleteUnimportedPackages": true,
     "go.addTags": {
         "transform": "camelcase"
-    }
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "editor.fontSize": 13
 }

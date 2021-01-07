@@ -2,10 +2,10 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1579,
-                "y": 245
+                "x": 1922,
+                "y": 318
             },
-            "height": 1410,
+            "height": 1421,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -22,7 +22,19 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1,
+                                        "flexv": 1.2719804714569722,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "name": "zoe_b44",
+                                            "type": "twitch"
+                                        },
+                                        "filters": [
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 0.9819785869758264,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1,
+                                        "flexv": 0.7460409415672011,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -51,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.9848627329173865,
+                                        "flexv": 1.5043223251534381,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -61,9 +73,10 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
+                                            "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5052509685479675,
+                                        "flexv": 0.9130493918513638,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -74,7 +87,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5098862985346461,
+                                        "flexv": 0.5826282829951981,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -91,7 +104,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0367039025097926,
+                                        "flexv": 1.0283400809716599,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -103,7 +116,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9632960974902075,
+                                        "flexv": 0.9716599190283401,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -114,6 +127,21 @@
                         "type": "horizontal"
                     },
                     "title": "main"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "romydank",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 },
                 {
                     "highlightsEnabled": true,
@@ -146,36 +174,6 @@
                         "type": "horizontal"
                     },
                     "title": "me"
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "romydank",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "yabbe",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
                 },
                 {
                     "highlightsEnabled": true,
@@ -526,7 +524,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "riotgames"
                 },
                 {
                     "highlightsEnabled": true,
@@ -616,7 +615,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "teez"
                 },
                 {
                     "highlightsEnabled": true,
@@ -653,21 +653,6 @@
                     "splits2": {
                         "data": {
                             "name": "erobb221",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "nymn",
                             "type": "twitch"
                         },
                         "filters": [
@@ -767,11 +752,41 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "mendo",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "zoe_b44",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1368,
-            "x": -1368,
+            "width": 1341,
+            "x": 1219,
             "y": 0
         }
     ]
