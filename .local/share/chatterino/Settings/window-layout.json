@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1922,
-                "y": 318
+                "x": 3144,
+                "y": 220
             },
             "height": 1421,
             "tabs": [
@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.2719804714569722,
+                                        "flexv": 1.7631255458270858,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +34,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9819785869758264,
+                                        "flexv": 0.4469579409166753,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7460409415672011,
+                                        "flexv": 0.7899165132562389,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5043223251534381,
+                                        "flexv": 1.9944219614454617,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -76,7 +76,7 @@
                                             "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9130493918513638,
+                                        "flexv": 0.6550857286187569,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -87,7 +87,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5826282829951981,
+                                        "flexv": 0.35049230993578134,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -104,7 +104,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0283400809716599,
+                                        "flexv": 1.1656891495601174,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -116,7 +116,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9716599190283401,
+                                        "flexv": 0.8343108504398826,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -785,8 +785,8 @@
                 }
             ],
             "type": "main",
-            "width": 1341,
-            "x": 1219,
+            "width": 1358,
+            "x": 1202,
             "y": 0
         }
     ]
