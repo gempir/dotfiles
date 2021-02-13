@@ -15,7 +15,7 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "go.lintTool": "golangci-lint",
     "[jsonc]": {
@@ -23,9 +23,6 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
     "editor.renderWhitespace": "none",
     "[typescriptreact]": {
@@ -46,5 +43,20 @@
         "transform": "camelcase"
     },
     "workbench.colorTheme": "Default Dark+",
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "arduino.additionalUrls": "https://arduino.esp8266.com/stable/package_esp8266com_index.json",
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.commentContinuationPatterns": [
+        "/**"
+    ],
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/usr/local/include/**",
+        "/usr/include/**",
+        "${workspaceFolder}/src"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
 }
