@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5056683889581874,
+                                        "flexv": 1.653106278576057,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +34,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5393110457525674,
+                                        "flexv": 0.48581979729429325,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9550205652892447,
+                                        "flexv": 0.8610739241296497,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -63,7 +63,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.133583111290684,
+                                        "flexv": 2.192903465474365,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -76,7 +76,7 @@
                                             "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.3607295157233734,
+                                        "flexv": 0.3871123469643818,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -87,7 +87,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5056873729859424,
+                                        "flexv": 0.41998418756125333,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -104,7 +104,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0370672097759674,
+                                        "flexv": 1.0047887175709098,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -116,7 +116,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9629327902240326,
+                                        "flexv": 0.9952112824290901,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -168,7 +168,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.00000000037803,
+                                        "flexv": 1.0000000000472538,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -180,7 +180,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9999999996219701,
+                                        "flexv": 0.9999999999527464,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -847,8 +847,8 @@
                 }
             ],
             "type": "main",
-            "width": 1536,
-            "x": 1024,
+            "width": 1489,
+            "x": 1071,
             "y": 0
         }
     ]
