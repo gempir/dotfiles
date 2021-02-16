@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VOLTAGE_FILE=${1:-"/sys/class/power_supply/hidpp_battery_0/voltage_now"}
+VOLTAGE_FILE=${1:-"/sys/class/power_supply/hidpp_battery_2/voltage_now"}
 
 LEVELS=(
     4186 # 100%
