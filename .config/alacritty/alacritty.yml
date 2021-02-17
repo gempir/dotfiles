@@ -13,7 +13,7 @@
   #TERM: alacritty
 
 import:
-  - .config/alacritty/os.yml
+  - ~/.config/alacritty/os.yml
 
 
 window:
