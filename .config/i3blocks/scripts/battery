@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-VOLTAGE_FILE=${1:-"/sys/class/power_supply/hidpp_battery_0/voltage_now"}
+# Find first available device with voltage_now
+for DIR in /sys/class/power_supply/*; do
+    if [ -d "$DIR" ]; then
+        if test -f "$DIR/voltage_now"; then
+            VOLTAGE_FILE="$DIR/voltage_now"
+            break
+        fi
+    fi
+done
 
 LEVELS=(
     4186 # 100%
@@ -108,6 +116,12 @@ LEVELS=(
 )
 
 VOLTAGE=$(cat $VOLTAGE_FILE)
+
+if ! [[ "$VOLTAGE" =~ ^[0-9]+$ ]]; then
+    echo $LABEL"Unknown"
+    exit 1
+fi
+
 VOLTAGE=${VOLTAGE::-3}
 
 for i in "${!LEVELS[@]}"; do
