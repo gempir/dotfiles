@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2255,
-                "y": 474
+                "x": 3594,
+                "y": 181
             },
             "height": 1421,
             "tabs": [
@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.4352010516646643,
+                                        "flexv": 2.26000796468444,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +34,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.43077563729808155,
+                                        "flexv": 0.49690241342730745,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4482248667937411,
+                                        "flexv": 0.6204500324823408,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -58,7 +58,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.6857984442435134,
+                                        "flexv": 0.6226395894059117,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -75,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.241314893488807,
+                                        "flexv": 2.2663440248446327,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -88,7 +88,7 @@
                                             "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.41782658039746856,
+                                        "flexv": 0.38483181518885845,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -99,7 +99,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.3408585261137244,
+                                        "flexv": 0.34882415996650906,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -116,7 +116,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0601471224578105,
+                                        "flexv": 1.255985267034991,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -128,7 +128,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9398528775421895,
+                                        "flexv": 0.7440147329650092,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -180,7 +180,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0000000000000115,
+                                        "flexv": 1.0000000000000002,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -192,7 +192,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9999999999999886,
+                                        "flexv": 0.9999999999999999,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -872,11 +872,26 @@
                         "type": "split"
                     },
                     "title": "mike"
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "zoil",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1472,
-            "x": 1088,
+            "width": 1408,
+            "x": 1152,
             "y": 0
         }
     ]
