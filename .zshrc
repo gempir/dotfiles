@@ -9,7 +9,7 @@ plugins=(git omz-git)
 
 source $ZSH/oh-my-zsh.sh
 
-export MOEBEL_CODE="$HOME/dev/moebel" # Change this to your code path aswell
+export MOEBEL_CODE="$HOME/dev/furniture" # Change this to your code path aswell
 if [ -f $MOEBEL_CODE/env/misc/zshrc ]; then
      . $MOEBEL_CODE/env/misc/zshrc
 fi
