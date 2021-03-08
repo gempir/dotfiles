@@ -2,10 +2,10 @@
     "windows": [
         {
             "emotePopup": {
-                "x": -1813,
-                "y": 491
+                "x": 2255,
+                "y": 181
             },
-            "height": 1410,
+            "height": 1421,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -22,7 +22,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.202311798552987,
+                                        "flexv": 2.18193483057603,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +34,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.6795351973094768,
+                                        "flexv": 0.5548478947380987,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +46,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.3500035719322481,
+                                        "flexv": 0.6916920576006161,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -58,7 +58,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.768149432205288,
+                                        "flexv": 0.5715252170852548,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -75,7 +75,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.1024515835848714,
+                                        "flexv": 2.3256134703776103,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -85,10 +85,10 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
-                                            "70fc8bf4-a0f5-4e76-9914-b32fe9881da0"
+                                            "00aafede-302f-4853-ba99-096913c10c12"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5473421867544453,
+                                        "flexv": 0.3560958243867418,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -99,7 +99,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.35020622966068315,
+                                        "flexv": 0.3182907052356479,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -116,7 +116,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.0205524861878452,
+                                        "flexv": 1.0653222270933802,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -128,7 +128,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9794475138121548,
+                                        "flexv": 0.9346777729066199,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -153,7 +153,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "romy"
                 },
                 {
                     "highlightsEnabled": true,
@@ -387,7 +388,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "soda"
                 },
                 {
                     "highlightsEnabled": true,
@@ -433,7 +435,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "symfuhny"
                 },
                 {
                     "highlightsEnabled": true,
@@ -448,7 +451,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "aiden"
                 },
                 {
                     "highlightsEnabled": true,
@@ -493,7 +497,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "nmp"
                 },
                 {
                     "highlightsEnabled": true,
@@ -508,7 +513,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "greek"
                 },
                 {
                     "highlightsEnabled": true,
@@ -599,7 +605,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "tdubz"
                 },
                 {
                     "highlightsEnabled": true,
@@ -890,8 +897,52 @@
                 }
             ],
             "type": "main",
-            "width": 1368,
-            "x": -1368,
+            "width": 1408,
+            "x": 1152,
+            "y": 0
+        },
+        {
+            "emotePopup": {
+                "x": 2255,
+                "y": 181
+            },
+            "height": 1421,
+            "tabs": [
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "yabbe",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "selected": true,
+                    "splits2": {
+                        "data": {
+                            "name": "pajlada",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                }
+            ],
+            "type": "popup",
+            "width": 401,
+            "x": 5120,
             "y": 0
         }
     ]
