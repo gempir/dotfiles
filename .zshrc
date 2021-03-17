@@ -9,6 +9,8 @@ plugins=(git omz-git)
 
 source $ZSH/oh-my-zsh.sh
 
+zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
+
 export MOEBEL_CODE="$HOME/dev/furniture" # Change this to your code path aswell
 if [ -f $MOEBEL_CODE/env/misc/zshrc ]; then
      . $MOEBEL_CODE/env/misc/zshrc
