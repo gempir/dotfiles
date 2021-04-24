@@ -24,6 +24,10 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export WINIT_HIDPI_FACTOR=1
+export DENO_INSTALL="/home/gempir/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
 if [ "$(uname)" = "Darwin" ]; then
