@@ -24,7 +24,8 @@ make_home_symlink() {
 
     printf "%s -> %s" "$1" "$HOME_DOTFILE_PATH"
 
-    mkdir -p `dirname ${HOME_DOTFILE_PATH}`
+    dir=`dirname "${HOME_DOTFILE_PATH}"`
+    mkdir -p $dir
 
     if [ -L "$HOME_DOTFILE_PATH" ]; then
         echo -e " ${ORANGE}skipping, already a symlink${NC}"
@@ -41,7 +42,12 @@ make_home_symlink() {
         fi
     fi
 
-    ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
+    if [[ "$(uname)" == "Darwin"* ]]; then
+        # macOS permissions won't allow us to use a symlink
+        ln "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
+    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+        ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
+    fi
     echo -e " ${GREEN}done!${NC}"
 }
 
@@ -67,6 +73,8 @@ if [[ "$(uname)" == "Darwin"* ]]; then
     make_home_symlink ".zshrc_mac"
     make_home_symlink ".hushlogin"
     make_home_symlink ".config/alacritty/macos.yml" ".config/alacritty/os.yml"
+    make_home_symlink ".local/share/chatterino/Settings/commands.json" "Library/Application\ Support/chatterino/Settings/commands.json"
+    make_home_symlink ".local/share/chatterino/Settings/window-layout.json" "Library/Application Support/chatterino/Settings/window-layout.json"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     print_big_notice "Detected Linux"
 
