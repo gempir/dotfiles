@@ -66,5 +66,10 @@
         }
     ],
     "git.ignoreMissingGitWarning": true,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.limit.enabled": true,
+    "go.toolsEnvVars": {},
+    "go.inferGopath": false,
+    "go.useLanguageServer": false
 }

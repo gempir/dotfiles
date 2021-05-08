@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2255,
-                "y": 181
+                "x": 2257,
+                "y": 444
             },
             "height": 1421,
             "tabs": [
@@ -11,8 +11,12 @@
                     "highlightsEnabled": true,
                     "selected": true,
                     "splits2": {
+                        "flexh": 1,
+                        "flexv": 1,
                         "items": [
                             {
+                                "flexh": 0.9760192814304134,
+                                "flexv": 1,
                                 "items": [
                                     {
                                         "data": {
@@ -22,7 +26,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.4076192096887716,
+                                        "flexv": 2.319806564666183,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -34,7 +38,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5844912064858409,
+                                        "flexv": 0.44284550096661635,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -46,7 +50,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.41018762132428543,
+                                        "flexv": 0.7200718382897011,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -58,7 +62,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.5977019625011017,
+                                        "flexv": 0.5172760960774996,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -66,6 +70,8 @@
                                 "type": "vertical"
                             },
                             {
+                                "flexh": 1.0484748612745924,
+                                "flexv": 1,
                                 "items": [
                                     {
                                         "data": {
@@ -107,6 +113,8 @@
                                 "type": "vertical"
                             },
                             {
+                                "flexh": 0.9755058572949944,
+                                "flexv": 1,
                                 "items": [
                                     {
                                         "data": {
@@ -116,7 +124,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.1198686371100164,
+                                        "flexv": 1.250733137829912,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -128,7 +136,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.8801313628899836,
+                                        "flexv": 0.749266862170088,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -143,6 +151,8 @@
                 {
                     "highlightsEnabled": true,
                     "splits2": {
+                        "flexh": 1,
+                        "flexv": 1,
                         "items": [
                             {
                                 "data": {
@@ -156,6 +166,8 @@
                                 "type": "split"
                             },
                             {
+                                "flexh": 1,
+                                "flexv": 1,
                                 "items": [
                                     {
                                         "data": {
@@ -183,6 +195,17 @@
                                     }
                                 ],
                                 "type": "vertical"
+                            },
+                            {
+                                "data": {
+                                    "type": "mentions"
+                                },
+                                "filters": [
+                                ],
+                                "flexh": 1,
+                                "flexv": 1,
+                                "moderationMode": false,
+                                "type": "split"
                             }
                         ],
                         "type": "horizontal"
@@ -621,7 +644,8 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "apa"
                 },
                 {
                     "highlightsEnabled": true,
@@ -698,28 +722,14 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
-                    }
+                    },
+                    "title": "hasan"
                 },
                 {
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
                             "name": "coral",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "codenjoy",
                             "type": "twitch"
                         },
                         "filters": [
@@ -916,6 +926,36 @@
                     "splits2": {
                         "data": {
                             "name": "nymn2",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "fabzeef",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "kattah",
                             "type": "twitch"
                         },
                         "filters": [
