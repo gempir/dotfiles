@@ -139,6 +139,10 @@
         {
             "name": "/chugjug",
             "func": "We got a number one victory royale {1} Yeah, Fortnite, we 'bout to get down (Get down) {1} Ten kills on the board right now {1} Just wiped out Tomato Town {1} My friend just got downed {1} I revived him, now we're heading south-bound {1} Now we're in the Pleasant Park streets {1} Look at the map, go to the marked sheet {1}"
+        },
+        {
+            "name": "/nospace",
+            "func": "{1} ￼￼￼￼￼￼￼￼ {2} ￼￼￼￼￼￼￼￼ "
         }
     ]
 }
