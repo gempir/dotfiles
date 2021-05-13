@@ -71,5 +71,5 @@
     "workbench.editor.limit.enabled": true,
     "go.toolsEnvVars": {},
     "go.inferGopath": false,
-    "go.useLanguageServer": false
+    "go.toolsManagement.autoUpdate": true
 }

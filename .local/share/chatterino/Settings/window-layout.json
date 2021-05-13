@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2257,
-                "y": 444
+                "x": 2982,
+                "y": 610
             },
             "height": 1421,
             "tabs": [
@@ -160,13 +160,13 @@
                                 },
                                 "filters": [
                                 ],
-                                "flexh": 1,
+                                "flexh": 1.0191489361702128,
                                 "flexv": 1,
                                 "moderationMode": false,
                                 "type": "split"
                             },
                             {
-                                "flexh": 1,
+                                "flexh": 0.9808510638297872,
                                 "flexv": 1,
                                 "items": [
                                     {
@@ -968,8 +968,8 @@
                 }
             ],
             "type": "main",
-            "width": 1408,
-            "x": 1152,
+            "width": 1478,
+            "x": 1082,
             "y": 0
         }
     ]
