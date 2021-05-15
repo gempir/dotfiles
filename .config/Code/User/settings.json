@@ -71,5 +71,10 @@
     "workbench.editor.limit.enabled": true,
     "go.toolsEnvVars": {},
     "go.inferGopath": false,
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "eslint.alwaysShowStatus": true
 }

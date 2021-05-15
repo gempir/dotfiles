@@ -143,8 +143,8 @@
         {
             "name": "/nospace",
             "func": "{1} ￼￼￼￼￼￼￼￼ {2} ￼￼￼￼￼￼￼￼ "
-	},
-	{
+        },
+        {
             "name": "/tradeoffer",
             "func": "Hmm ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ItsBoshyTime New Trade Offer! ItsBoshyTime ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ItsBoshyTime You Give: {1} ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ItsBoshyTime I Give: {2} 󠀀"
         }
