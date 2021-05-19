@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2982,
-                "y": 610
+                "x": 2026,
+                "y": 431
             },
             "height": 1421,
             "tabs": [
@@ -124,7 +124,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.250733137829912,
+                                        "flexv": 1.219941348973607,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -136,7 +136,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.749266862170088,
+                                        "flexv": 0.7800586510263929,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -465,7 +465,7 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "aidenwallis",
+                            "name": "aiden",
                             "type": "twitch"
                         },
                         "filters": [
@@ -956,6 +956,66 @@
                     "splits2": {
                         "data": {
                             "name": "kattah",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "kian",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "adinross",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "qtcinderella",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "masayoshi",
                             "type": "twitch"
                         },
                         "filters": [
