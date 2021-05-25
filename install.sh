@@ -80,6 +80,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
     make_home_symlink ".config/alacritty/linux.yml" ".config/alacritty/os.yml"
 
+    make_home_symlink ".config/gtk-3.0/settings.ini" ".config/gtk-3.0/settings.ini"
+
     make_home_symlink ".config/i3"
     make_home_symlink ".config/i3blocks"
     make_home_symlink ".config/compton.conf"

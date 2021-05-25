@@ -27,6 +27,8 @@ export WINIT_HIDPI_FACTOR=1
 export DENO_INSTALL="/home/gempir/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export GTK_THEME=Adwaita:dark
+export QT_STYLE_OVERRIDE=adwaita
 
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
