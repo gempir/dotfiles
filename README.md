@@ -3,26 +3,15 @@
 #### Requirements
 
 ```
-git
-zsh
 oh-my-zsh
-omz-git
 i3
-i3blocks # from source, packaged is too old
-alacritty
-tmux
-xsel # clipboard interaction
-playerctl # for media
-pactl # for audio
-feh # wallpaper
-imwheel # fix scroll speed in chrome
-streamlink
+i3blocks
 ```
 
 #### Install
 
 ```
-sudo pacman -S yarn zsh alacritty feh imwheel
+sudo pacman -S yarn zsh alacritty feh xsel imwheel tmux playerctl
 
 # Install https://github.com/ohmyzsh/ohmyzsh
 
