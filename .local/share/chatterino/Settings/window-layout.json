@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2026,
-                "y": 431
+                "x": 1648,
+                "y": 360
             },
             "height": 1421,
             "tabs": [
@@ -26,19 +26,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.146770858718079,
-                                        "moderationMode": false,
-                                        "type": "split"
-                                    },
-                                    {
-                                        "data": {
-                                            "name": "zoweeh",
-                                            "type": "twitch"
-                                        },
-                                        "filters": [
-                                        ],
-                                        "flexh": 1,
-                                        "flexv": 0.4515858267369,
+                                        "flexv": 1.6460492356890928,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -50,7 +38,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7242967480780149,
+                                        "flexv": 0.7117784283359164,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -62,7 +50,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.677346566467006,
+                                        "flexv": 0.6421723359749908,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -91,6 +79,7 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
+                                            "6ef0c033-5752-4527-8cfa-6a72d3bf92d2"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.46153307892320594,
@@ -123,7 +112,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.219941348973607,
+                                        "flexv": 1.155425219941349,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -135,7 +124,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7800586510263929,
+                                        "flexv": 0.8445747800586509,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -1039,11 +1028,41 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "zoweeh",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "aceu",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1494,
-            "x": 1066,
+            "width": 1408,
+            "x": 1152,
             "y": 0
         }
     ]

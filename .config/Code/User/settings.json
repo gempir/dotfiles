@@ -76,5 +76,9 @@
         "javascript": "javascriptreact",
         "typescript": "typescriptreact"
     },
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ]
 }
