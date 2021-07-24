@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1648,
-                "y": 360
+                "x": 2129,
+                "y": 374
             },
             "height": 1421,
             "tabs": [
@@ -58,7 +58,7 @@
                                 "type": "vertical"
                             },
                             {
-                                "flexh": 1.0045414291954207,
+                                "flexh": 0.9879165798128202,
                                 "flexv": 1,
                                 "items": [
                                     {
@@ -101,7 +101,7 @@
                                 "type": "vertical"
                             },
                             {
-                                "flexh": 1.0194392893741662,
+                                "flexh": 1.0360641387567666,
                                 "flexv": 1,
                                 "items": [
                                     {
@@ -943,21 +943,6 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "kattah",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
                             "name": "kian",
                             "type": "twitch"
                         },
@@ -1058,11 +1043,86 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "rumathra",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "netflix",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "russel",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "icdb",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "mitchjones",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1408,
-            "x": 1152,
+            "width": 1695,
+            "x": 865,
             "y": 0
         }
     ]

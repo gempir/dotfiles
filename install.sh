@@ -87,8 +87,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     make_home_symlink ".config/compton.conf"
     make_home_symlink ".config/wallpaper.jpg"
 
-    make_home_symlink ".config/Code/User/settings.json"
-
     make_home_symlink ".local/share/chatterino/Settings/commands.json"
     make_home_symlink ".local/share/chatterino/Settings/window-layout.json"
     
