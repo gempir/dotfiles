@@ -213,6 +213,8 @@ bindsym $mod+d exec "dmenu_run -b -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf 
 for_window [title="Usercard"] floating enable
 for_window [title="Searching in"] floating enable
 
+for_window [instance="origin.exe"] floating enable
+
 exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --dpi 96 --pos 0x0 --rotate normal --output DP-2 --primary --mode 2560x1440 --dpi 96 --rate 144 --pos 2560x0 --rotate normal --output DP-3 --off --output DP-4 --mode 2560x1440 --dpi 96 --pos 5120x0 --rotate normal --output DP-5 --off --output USB-C-0 --off
 
 workspace 1 output HDMI-0
