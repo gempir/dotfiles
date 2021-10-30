@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 2129,
-                "y": 374
+                "x": 1460,
+                "y": 342
             },
             "height": 1421,
             "tabs": [
@@ -26,7 +26,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.6460492356890928,
+                                        "flexv": 2.404260433756781,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -38,19 +38,31 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.7117784283359164,
+                                        "flexv": 0.471868930504364,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
                                     {
                                         "data": {
-                                            "name": "marcfryd",
+                                            "name": "gempir",
                                             "type": "twitch"
                                         },
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.6421723359749908,
+                                        "flexv": 0.5319796222883595,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "type": "mentions"
+                                        },
+                                        "filters": [
+                                            "f6fadc4a-27c0-4111-a55d-6220a7fa63ca"
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 0.5918910134504952,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -69,7 +81,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.1560188115412635,
+                                        "flexv": 2.1510098056537648,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -82,7 +94,7 @@
                                             "6ef0c033-5752-4527-8cfa-6a72d3bf92d2"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.46153307892320594,
+                                        "flexv": 0.399665705017088,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -91,9 +103,10 @@
                                             "type": "mentions"
                                         },
                                         "filters": [
+                                            "30177635-a93f-4cba-9a1b-5ee233bd3a3e"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.38244810953553054,
+                                        "flexv": 0.4493244893291472,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -112,7 +125,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.155425219941349,
+                                        "flexv": 1.348802395209581,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -124,7 +137,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.8445747800586509,
+                                        "flexv": 0.6511976047904191,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -639,6 +652,21 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
+                            "name": "myth",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
                             "name": "g_teez",
                             "type": "twitch"
                         },
@@ -650,21 +678,6 @@
                         "type": "split"
                     },
                     "title": "teez"
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "myth",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
                 },
                 {
                     "highlightsEnabled": true,
@@ -763,21 +776,6 @@
                     "splits2": {
                         "data": {
                             "name": "39daph",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "mendo",
                             "type": "twitch"
                         },
                         "filters": [
@@ -929,21 +927,6 @@
                     "splits2": {
                         "data": {
                             "name": "fabzeef",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "kian",
                             "type": "twitch"
                         },
                         "filters": [
@@ -1118,11 +1101,116 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "flex3rs",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "fawcan",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "felanbird",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "mande",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "mendo",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "dojacattington",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "sadge_i_watch_erobb",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1695,
-            "x": 865,
+            "width": 1536,
+            "x": 1024,
             "y": 0
         }
     ]

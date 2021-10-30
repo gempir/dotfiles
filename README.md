@@ -12,6 +12,7 @@ i3blocks
 
 ```
 sudo pacman -S yarn zsh alacritty feh xsel imwheel tmux playerctl
+yay -S dunst
 
 # Install https://github.com/ohmyzsh/ohmyzsh
 

@@ -84,6 +84,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
     make_home_symlink ".config/i3"
     make_home_symlink ".config/i3blocks"
+    make_home_symlink ".config/dunst"
     make_home_symlink ".config/compton.conf"
     make_home_symlink ".config/wallpaper.jpg"
 
