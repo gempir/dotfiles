@@ -225,3 +225,4 @@ exec_always feh --bg-fill ~/.config/wallpaper.jpg
 exec_always imwheel -b 45 --kill
 exec_always pkill dunst
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always xinput set-prop 'pointer:Logitech G703 LS' "libinput Accel Profile Enabled" 0, 1
