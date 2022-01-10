@@ -21,6 +21,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$(yarn global bin)"
 export NVM_DIR="$HOME/.nvm"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export WINIT_HIDPI_FACTOR=1
