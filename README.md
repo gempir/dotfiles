@@ -16,6 +16,9 @@ yay -S dunst
 
 # Install https://github.com/ohmyzsh/ohmyzsh
 
+# Also install omz-git
+sh -c "$(curl -fsSL https://raw.github.com/tnwinc/omz-git/master/install-plugin.sh)"
+
 chsh -s $(which zsh)`
 ```
 

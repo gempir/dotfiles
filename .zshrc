@@ -5,7 +5,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git)
+plugins=(git omz-git)
 
 source $ZSH/oh-my-zsh.sh
 
