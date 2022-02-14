@@ -3,7 +3,8 @@
 #### Requirements
 
 ```
-oh-my-zsh
+zsh
+# linux 
 i3
 i3blocks
 ```
@@ -14,12 +15,9 @@ i3blocks
 sudo pacman -S yarn zsh alacritty feh xsel imwheel tmux playerctl
 yay -S dunst
 
-# Install https://github.com/ohmyzsh/ohmyzsh
-
-# Also install omz-git
-sh -c "$(curl -fsSL https://raw.github.com/tnwinc/omz-git/master/install-plugin.sh)"
-
 chsh -s $(which zsh)`
+
+./install.sh
 ```
 
 #### Learnings
