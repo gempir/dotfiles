@@ -17,9 +17,15 @@ export PATH="$HOME/.local/bin:$PATH"
 
 source "$XDG_CONFIG_HOME/zsh/git.sh"
 
-zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
-
+# setup zsh
 PROMPT='%F{cyan}%B%1~%f %F{yellow}$(git_branch_name)%f %F{green}➜%f%b '
+
+# Initialize the autocompletion
+autoload -Uz compinit && compinit -i
+
+zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
+host_list=($(cat ~/.ssh/config | grep 'Host '  | awk '{s = s $2 " "} END {print s}'))
+zstyle ':completion:*:(ssh|scp|sftp):*' hosts $host_list
 
 if [ -f $HOME/.profile ]; then
      . $HOME/.profile
@@ -37,21 +43,6 @@ alias tm="tmux attach || tmux"
 alias tmn="tmux new"
 alias ktm="killall -9 tmux"
 alias dev="cd ~/dev"
-
-
-# ssh autocompletion via config file
-h=()
-if [[ -r ~/.ssh/config ]]; then
-  h=($h ${${${(@M)${(f)"$(cat ~/.ssh/config)"}:#Host *}#Host }:#*[*?]*})
-fi
-if [[ -r ~/.ssh/known_hosts ]]; then
-  h=($h ${${${(f)"$(cat ~/.ssh/known_hosts{,2} || true)"}%%\ *}%%,*}) 2>/dev/null
-fi
-if [[ $#h -gt 0 ]]; then
-  zstyle ':completion:*:ssh:*' hosts $h
-  zstyle ':completion:*:slogin:*' hosts $h
-fi
-
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
