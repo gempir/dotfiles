@@ -1,10 +1,10 @@
-PROMPT="%(?:➜ "
+PROMPT='%F{cyan}%B%1~%f %F{green}➜%f%b '
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 export EDITOR="nano"
-export TERM=xterm
+export TERM="xterm-256color"
 
 export WINIT_HIDPI_FACTOR=1
 export GTK_THEME=Adwaita:dark

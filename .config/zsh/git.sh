@@ -32,6 +32,7 @@ fi
 alias g='git'
 
 alias ga='git add'
+alias gaa='git add --all'
 alias gb='git symbolic-ref --short HEAD'
 alias gst='git status'
 alias gc='git commit -v'
