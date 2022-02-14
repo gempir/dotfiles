@@ -1,5 +1,3 @@
-PROMPT='%F{cyan}%B%1~%f %F{green}➜%f%b '
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
@@ -20,6 +18,8 @@ export PATH="$HOME/.local/bin:$PATH"
 source "$XDG_CONFIG_HOME/zsh/git.sh"
 
 zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
+
+PROMPT='%F{cyan}%B%1~%f %F{yellow}$(git_branch_name)%f %F{green}➜%f%b '
 
 if [ -f $HOME/.profile ]; then
      . $HOME/.profile

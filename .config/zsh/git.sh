@@ -1,3 +1,20 @@
+# Find and set branch name var if in git repository.
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  elif [[ $branch == *"SHOFUR"* ]]; then
+    echo "${branch:7:4}"
+  else 
+    echo "$branch"
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
 # Check if main exists and use instead of master
 function git_main_branch() {
   command git rev-parse --git-dir &>/dev/null || return
