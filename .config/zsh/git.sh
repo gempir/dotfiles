@@ -1,3 +1,6 @@
+# Enable substitution in the prompt.
+setopt prompt_subst
+
 # Find and set branch name var if in git repository.
 function git_branch_name()
 {
@@ -11,9 +14,6 @@ function git_branch_name()
     echo "$branch"
   fi
 }
-
-# Enable substitution in the prompt.
-setopt prompt_subst
 
 # Check if main exists and use instead of master
 function git_main_branch() {
@@ -48,15 +48,19 @@ fi
 
 alias g='git'
 
+alias cb="git symbolic-ref --short HEAD | pbcopy" # copy current branch name into clipboard
+
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git symbolic-ref --short HEAD'
-alias gst='git status'
 alias gc='git commit -v'
-alias gcm='git checkout $(git_main_branch)'
 alias gcd='git checkout $(git_develop_branch)'
+alias gcm='git checkout $(git_main_branch)'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
+alias gd='git diff'
+alias gf='git fetch'
 alias gl='git pull'
 alias gp='git push'
-alias cb="git symbolic-ref --short HEAD | pbcopy" # copy current branch name into clipboard
+alias gr='git restore'
+alias gst='git status'
