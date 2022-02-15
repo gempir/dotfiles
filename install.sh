@@ -64,17 +64,15 @@ make_home_symlink ".vim/colors/onedark.vim"
 make_home_symlink ".vim/autoload/onedark.vim"
 make_home_symlink ".zshrc"
 make_home_symlink ".config/alacritty/alacritty.yml"
-make_home_symlink ".config/streamlink"
-make_home_symlink ".config/chromium-flags.conf"
 make_home_symlink ".tmux.conf"
+make_home_symlink ".config/zsh/git.sh"
 
 if [[ "$(uname)" == "Darwin"* ]]; then
     print_big_notice "Detected macOS"
     make_home_symlink ".hushlogin"
-    make_home_symlink ".config/zsh/git.sh"
     make_home_symlink ".config/alacritty/macos.yml" ".config/alacritty/os.yml"
-    make_home_symlink ".local/share/chatterino/Settings/commands.json" "Library/Application\ Support/chatterino/Settings/commands.json"
-    make_home_symlink ".local/share/chatterino/Settings/window-layout.json" "Library/Application Support/chatterino/Settings/window-layout.json"
+    make_home_symlink ".local/share/chatterino/Settings/commands.json" "~/Library/Application\ Support/chatterino/Settings/commands.json"
+    make_home_symlink ".local/share/chatterino/Settings/window-layout.json" "~/Library/Application Support/chatterino/Settings/window-layout.json"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     print_big_notice "Detected Linux"
 
@@ -85,8 +83,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     make_home_symlink ".config/i3"
     make_home_symlink ".config/i3blocks"
     make_home_symlink ".config/dunst"
-    make_home_symlink ".config/zsh/git.sh"
-    make_home_symlink ".config/compton.conf"
     make_home_symlink ".config/wallpaper.jpg"
 
     make_home_symlink ".local/share/chatterino/Settings/commands.json"
