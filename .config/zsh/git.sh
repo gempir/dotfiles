@@ -3,8 +3,14 @@ setopt prompt_subst
 
 function git_prompt()
 {
+  branch=$(git symbolic-ref HEAD 2> /dev/null)
+  if [ -z "$branch" ]
+  then
+    return
+  fi
+
   name=""
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  branch=$(echo $branch | awk 'BEGIN{FS="/"} {print $NF}')
   if [[ $branch == "" ]];
   then
     :
