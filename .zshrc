@@ -18,7 +18,7 @@ export PATH="$HOME/.local/bin:$PATH"
 source "$XDG_CONFIG_HOME/zsh/git.sh"
 
 # setup zsh
-PROMPT='%F{cyan}%B%1~%f %F{yellow}$(git_branch_name)%f %F{green}➜%f%b '
+PROMPT='%F{cyan}%B%1~%f $(git_prompt) %F{green}➜%f%b '
 
 # Initialize the autocompletion
 autoload -Uz compinit && compinit -i

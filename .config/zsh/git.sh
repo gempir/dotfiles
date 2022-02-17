@@ -1,17 +1,23 @@
 # Enable substitution in the prompt.
 setopt prompt_subst
 
-# Find and set branch name var if in git repository.
-function git_branch_name()
+function git_prompt()
 {
+  name=""
   branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
   if [[ $branch == "" ]];
   then
     :
   elif [[ $branch == *"SHOFUR"* ]]; then
-    echo "${branch:7:4}"
+    name="${branch:7:4}"
   else 
-    echo "$branch"
+    name="${branch}"
+  fi
+
+  if [[ -z "`git status --porcelain 2> /dev/null`" ]]; then
+    echo "%F{green}${name}%f"
+  else
+    echo "%F{yellow}${name}%f"
   fi
 }
 
