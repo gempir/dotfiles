@@ -28,3 +28,5 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
+[safe]
+	directory = /mnt/WD1/home/homeassistant
