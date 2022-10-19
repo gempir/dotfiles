@@ -46,3 +46,6 @@ alias dev="cd ~/dev"
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
