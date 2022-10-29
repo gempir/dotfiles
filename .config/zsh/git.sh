@@ -1,11 +1,9 @@
 # Enable substitution in the prompt.
 setopt prompt_subst
 
-function git_prompt()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null)
-  if [ -z "$branch" ]
-  then
+function git_prompt() {
+  branch=$(git symbolic-ref HEAD 2>/dev/null)
+  if [ -z "$branch" ]; then
     return
   fi
 
@@ -13,11 +11,11 @@ function git_prompt()
   branch=$(echo $branch | awk 'BEGIN{FS="/"} {print $NF}')
   if [[ $branch == *"SHOFUR"* ]]; then
     name="${branch:7:4}"
-  else 
+  else
     name="${branch}"
   fi
 
-  if [[ -z "`git status --porcelain 2> /dev/null`" ]]; then
+  if [[ -z "$(git status --porcelain 2>/dev/null)" ]]; then
     echo "%F{green}${name}%f"
   else
     echo "%F{yellow}${name}%f"
@@ -50,9 +48,9 @@ function git_develop_branch() {
   echo develop
 }
 
-if ! type "pbcopy" > /dev/null; then
-    alias pbpaste='xsel --clipboard --output'
-    alias pbcopy='xsel --clipboard --input'
+if ! type "pbcopy" >/dev/null; then
+  alias pbpaste='xsel --clipboard --output'
+  alias pbcopy='xsel --clipboard --input'
 fi
 
 alias g='git'
@@ -62,7 +60,6 @@ alias cb="git symbolic-ref --short HEAD | pbcopy" # copy current branch name int
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git symbolic-ref --short HEAD'
-alias gc='git commit -v'
 alias gcd='git checkout $(git_develop_branch)'
 alias gcm='git checkout $(git_main_branch)'
 alias gcmsg='git commit -m'
@@ -74,3 +71,13 @@ alias gm='git merge'
 alias gp='git push'
 alias gr='git restore'
 alias gst='git status'
+alias grh='git reset HEAD^'
+gc() {
+  message=$*
+  if [ -z "$message" ]; then
+    echo "Add a message"
+    return 1
+  fi
+  git commit -m "$message"
+}
+alias gca='git add -A && gc'
