@@ -73,6 +73,7 @@ alias gr='git restore'
 alias gst='git status'
 alias grh='git reset HEAD^'
 unalias gc
+unset -f gc
 function gc {
   message=$*
   if [ -z "$message" ]; then
