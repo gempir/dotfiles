@@ -72,7 +72,8 @@ alias gp='git push'
 alias gr='git restore'
 alias gst='git status'
 alias grh='git reset HEAD^'
-gc() {
+unalias gc
+function gc {
   message=$*
   if [ -z "$message" ]; then
     echo "Add a message"
