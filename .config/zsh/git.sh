@@ -72,14 +72,5 @@ alias gp='git push'
 alias gr='git restore'
 alias gst='git status'
 alias grh='git reset HEAD^'
-unalias gc
-unset -f gc
-function gc {
-  message=$*
-  if [ -z "$message" ]; then
-    echo "Add a message"
-    return 1
-  fi
-  git commit -m "$message"
-}
+alias gc='_gc() { git commit -m "$*" }; _gc'
 alias gca='git add -A && gc'
