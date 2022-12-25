@@ -42,6 +42,7 @@ alias tm="tmux attach || tmux"
 alias tmn="tmux new"
 alias ktm="killall -9 tmux"
 alias dev="cd ~/dev"
+alias dcom="docker-compose"
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
