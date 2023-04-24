@@ -9,7 +9,7 @@ function git_prompt() {
 
   name=""
   branch=$(echo $branch | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == *"SHOFUR"* ]]; then
+  if [[ $branch == *"SHOP"* ]]; then
     name="${branch:7:4}"
   else
     name="${branch}"
