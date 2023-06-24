@@ -5,13 +5,7 @@ interval=60
 signal=10
 #STEP=5%
 #MIXER=[determined automatically]
-#SCONTROL=[determined automatically]
-
-[battery]
-command=$SCRIPT_DIR/battery
-LABEL=🔋
-POSTFIX=%
-interval=60
+#SCONTROL=[determined automatically]g
 
 [date]
 command=date +"%Y-%m-%d"

@@ -2,8 +2,8 @@
     "windows": [
         {
             "emotePopup": {
-                "x": 1460,
-                "y": 342
+                "x": 463,
+                "y": 390
             },
             "height": 1421,
             "tabs": [
@@ -57,7 +57,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 2.1641729650395765,
+                                        "flexv": 2.1645696246418127,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
@@ -70,7 +70,7 @@
                                             "6ef0c033-5752-4527-8cfa-6a72d3bf92d2"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4675338559673083,
+                                        "flexv": 0.45728820545921833,
                                         "moderationMode": true,
                                         "type": "split"
                                     },
@@ -82,7 +82,7 @@
                                             "30177635-a93f-4cba-9a1b-5ee233bd3a3e"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.3682931789931156,
+                                        "flexv": 0.378142169898969,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -90,35 +90,16 @@
                                 "type": "vertical"
                             },
                             {
+                                "data": {
+                                    "name": "pajlada",
+                                    "type": "twitch"
+                                },
+                                "filters": [
+                                ],
                                 "flexh": 1.0360641387567666,
                                 "flexv": 1,
-                                "items": [
-                                    {
-                                        "data": {
-                                            "name": "pokimane",
-                                            "type": "twitch"
-                                        },
-                                        "filters": [
-                                        ],
-                                        "flexh": 1,
-                                        "flexv": 1.030791788856305,
-                                        "moderationMode": false,
-                                        "type": "split"
-                                    },
-                                    {
-                                        "data": {
-                                            "name": "pajlada",
-                                            "type": "twitch"
-                                        },
-                                        "filters": [
-                                        ],
-                                        "flexh": 1,
-                                        "flexv": 0.969208211143695,
-                                        "moderationMode": false,
-                                        "type": "split"
-                                    }
-                                ],
-                                "type": "vertical"
+                                "moderationMode": false,
+                                "type": "split"
                             }
                         ],
                         "type": "horizontal"
@@ -132,15 +113,34 @@
                         "flexv": 1,
                         "items": [
                             {
-                                "data": {
-                                    "type": "whispers"
-                                },
-                                "filters": [
-                                ],
                                 "flexh": 1.0191489361702128,
                                 "flexv": 1,
-                                "moderationMode": false,
-                                "type": "split"
+                                "items": [
+                                    {
+                                        "data": {
+                                            "type": "whispers"
+                                        },
+                                        "filters": [
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 1,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    },
+                                    {
+                                        "data": {
+                                            "name": "gempir",
+                                            "type": "twitch"
+                                        },
+                                        "filters": [
+                                        ],
+                                        "flexh": 1,
+                                        "flexv": 1,
+                                        "moderationMode": false,
+                                        "type": "split"
+                                    }
+                                ],
+                                "type": "vertical"
                             },
                             {
                                 "flexh": 0.9808510638297872,
@@ -148,7 +148,7 @@
                                 "items": [
                                     {
                                         "data": {
-                                            "name": "gempir",
+                                            "name": "nymn",
                                             "type": "twitch"
                                         },
                                         "filters": [
@@ -166,7 +166,7 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.9999999999999999,
+                                        "flexv": 1,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -692,6 +692,88 @@
                         "flexv": 1,
                         "moderationMode": false,
                         "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "twitchgaming",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "forsen_ai_",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "ottomated",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "velcuz",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "pokimane",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "flexh": 1,
+                        "flexv": 1
                     }
                 }
             ],
