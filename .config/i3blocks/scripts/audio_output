@@ -13,7 +13,7 @@ elif [ "$ACTIVE_SINK" = "$SPEAKER_SINK" ]; then
 fi
 
 case $BLOCK_BUTTON in
-    1) pactl set-default-sink "$SINK_TO_SWITCH_TO" ;;
+    2) pactl set-default-sink "$SINK_TO_SWITCH_TO" ;;
 esac
 
 ACTIVE_SINK=$(pactl get-default-sink)
