@@ -775,11 +775,26 @@
                         "flexh": 1,
                         "flexv": 1
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "chloelock",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1536,
-            "x": 1024,
+            "width": 1408,
+            "x": 1152,
             "y": 0
         }
     ]

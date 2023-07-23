@@ -177,7 +177,7 @@ bindsym Print exec sharenix-section
 # finds out, if available)
 bar {
         output DP-2
-        tray_output none
+        tray_output primary
         status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
 }
 
