@@ -1,3 +1,7 @@
+[audio_output]
+command=$SCRIPT_DIR/audio_output
+interval=60
+
 [volume]
 command=$SCRIPT_DIR/volume
 LABEL=♪ 
