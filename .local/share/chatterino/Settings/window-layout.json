@@ -240,21 +240,6 @@
                     "highlightsEnabled": true,
                     "splits2": {
                         "data": {
-                            "name": "mizkif",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
                             "name": "xqc",
                             "type": "twitch"
                         },
@@ -426,21 +411,6 @@
                     "splits2": {
                         "data": {
                             "name": "mande",
-                            "type": "twitch"
-                        },
-                        "filters": [
-                        ],
-                        "flexh": 1,
-                        "flexv": 1,
-                        "moderationMode": false,
-                        "type": "split"
-                    }
-                },
-                {
-                    "highlightsEnabled": true,
-                    "splits2": {
-                        "data": {
-                            "name": "velcuz",
                             "type": "twitch"
                         },
                         "filters": [
