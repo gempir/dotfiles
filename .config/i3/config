@@ -215,7 +215,7 @@ for_window [title="Searching in"] floating enable
 
 for_window [instance="origin.exe"] floating enable
 
-exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --dpi 96 --pos 0x0 --rotate normal --output DP-2 --primary --mode 2560x1440 --dpi 96 --rate 144 --pos 2560x0 --rotate normal --output DP-3 --off --output DP-4 --mode 2560x1440 --dpi 96 --pos 5120x0 --rotate normal --output DP-5 --off --output USB-C-0 --off
+exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --rotate left --mode 2560x1440 --dpi 96 --pos 0x0 --output DP-2 --primary --mode 3440x1440 --pos 1440x560 --rotate normal --dpi 96 --rate 165 --output DP-3 --off --output DP-4 --mode 2560x1440 --dpi 96 --pos 4880x0 --rotate right --output DP-5 --off --output USB-C-0 --off
 
 workspace 1 output HDMI-0
 workspace 2 output DP-2
@@ -225,4 +225,3 @@ exec_always feh --bg-fill ~/.config/wallpaper.jpg
 exec_always imwheel -b 45 --kill
 exec_always pkill dunst
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec_always xinput set-prop 'pointer:Logitech G703 LS' "libinput Accel Profile Enabled" 0, 1
