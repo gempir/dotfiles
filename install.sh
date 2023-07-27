@@ -90,6 +90,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     
     make_home_symlink ".local/share/fonts"
     make_home_symlink ".imwheelrc"
+    make_home_symlink ".Xresources"
 
     fc-cache -f
 fi
