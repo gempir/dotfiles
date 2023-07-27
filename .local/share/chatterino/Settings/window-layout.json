@@ -5,7 +5,7 @@
                 "x": 463,
                 "y": 390
             },
-            "height": 1906,
+            "height": 1421,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -67,7 +67,6 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
-                                            "6ef0c033-5752-4527-8cfa-6a72d3bf92d2"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.4641399416909622,
@@ -98,7 +97,6 @@
                                             "type": "mentions"
                                         },
                                         "filters": [
-                                            "30177635-a93f-4cba-9a1b-5ee233bd3a3e"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.4641399416909622,
@@ -445,9 +443,9 @@
                 }
             ],
             "type": "main",
-            "width": 1440,
-            "x": 0,
-            "y": 635
+            "width": 1519,
+            "x": 1041,
+            "y": 0
         }
     ]
 }
