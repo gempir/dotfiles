@@ -67,6 +67,7 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
+                                            "e9bd4d3d-e5d0-4e28-a3bf-b654aab41ad0"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.4641399416909622,
@@ -443,8 +444,8 @@
                 }
             ],
             "type": "main",
-            "width": 1519,
-            "x": 1041,
+            "width": 1536,
+            "x": 1024,
             "y": 0
         }
     ]

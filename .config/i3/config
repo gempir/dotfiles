@@ -214,6 +214,7 @@ for_window [title="Usercard"] floating enable
 for_window [title="Searching in"] floating enable
 
 for_window [instance="origin.exe"] floating enable
+for_window [instance="JagexLauncher.exe"] floating enable
 
 exec_always --no-startup-id xrandr --dpi 96 --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate normal --output DP-2 --primary --rate 165 --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-3 --off --output DP-4 --mode 2560x1440 --pos 5120x0 --rotate normal --output DP-5 --off --output USB-C-0 --off
 
