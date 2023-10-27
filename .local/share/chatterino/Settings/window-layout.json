@@ -26,19 +26,18 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5346938775510204,
+                                        "flexv": 1.5344827586206897,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
                                     {
                                         "data": {
-                                            "name": "gempir",
-                                            "type": "twitch"
+                                            "type": "mentions"
                                         },
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4653061224489796,
+                                        "flexv": 0.4655172413793103,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -89,18 +88,19 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5358600583090378,
+                                        "flexv": 1.535919540229885,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
                                     {
                                         "data": {
-                                            "type": "mentions"
+                                            "name": "gempir",
+                                            "type": "twitch"
                                         },
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4641399416909622,
+                                        "flexv": 0.4640804597701149,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -441,11 +441,55 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "nymn2",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1536,
-            "x": 1024,
+            "width": 1558,
+            "x": 1002,
+            "y": 0
+        },
+        {
+            "emotePopup": {
+                "x": 463,
+                "y": 390
+            },
+            "height": 1421,
+            "tabs": [
+                {
+                    "highlightsEnabled": true,
+                    "selected": true,
+                    "splits2": {
+                        "data": {
+                            "name": "yabbe",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
+                }
+            ],
+            "type": "popup",
+            "width": 384,
+            "x": 5120,
             "y": 0
         }
     ]
