@@ -75,5 +75,3 @@ alias ghead='git reset HEAD^'
 alias ghard='git reset --hard'
 alias gc='_gc() { git commit -m "$*" }; _gc'
 alias gca='git add -A && gc'
-# delete all local branches that are not on remote
-alias grmrf='git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done'
