@@ -10,6 +10,7 @@
 	ci = !git add -A && git commit
 	tracking = for-each-ref --format='%(refname:short) <- %(upstream:short)' refs/heads
 	s = status --short
+	iml = checkout /Users/daniel.pasch/dev/furniture/.idea/moebel.iml
 
 	# current branch
 	# $ git find-merge <SHA-1>

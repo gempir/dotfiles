@@ -66,6 +66,7 @@ make_home_symlink ".zshrc"
 make_home_symlink ".config/alacritty/alacritty.yml"
 make_home_symlink ".tmux.conf"
 make_home_symlink ".config/zsh/git.sh"
+make_home_symlink ".config/streamlink/config"
 
 if [[ "$(uname)" == "Darwin"* ]]; then
     print_big_notice "Detected macOS"
@@ -90,7 +91,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     
     make_home_symlink ".local/share/fonts"
     make_home_symlink ".imwheelrc"
-    make_home_symlink ".Xresources"
 
     fc-cache -f
 fi

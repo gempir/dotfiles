@@ -5,7 +5,7 @@
                 "x": 463,
                 "y": 390
             },
-            "height": 1906,
+            "height": 1421,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -26,19 +26,18 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5346938775510204,
+                                        "flexv": 1.5344827586206897,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
                                     {
                                         "data": {
-                                            "name": "gempir",
-                                            "type": "twitch"
+                                            "type": "mentions"
                                         },
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4653061224489796,
+                                        "flexv": 0.4655172413793103,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -67,7 +66,7 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
-                                            "6ef0c033-5752-4527-8cfa-6a72d3bf92d2"
+                                            "e9bd4d3d-e5d0-4e28-a3bf-b654aab41ad0"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.4641399416909622,
@@ -89,19 +88,19 @@
                                         "filters": [
                                         ],
                                         "flexh": 1,
-                                        "flexv": 1.5358600583090378,
+                                        "flexv": 1.535919540229885,
                                         "moderationMode": false,
                                         "type": "split"
                                     },
                                     {
                                         "data": {
-                                            "type": "mentions"
+                                            "name": "gempir",
+                                            "type": "twitch"
                                         },
                                         "filters": [
-                                            "30177635-a93f-4cba-9a1b-5ee233bd3a3e"
                                         ],
                                         "flexh": 1,
-                                        "flexv": 0.4641399416909622,
+                                        "flexv": 0.4640804597701149,
                                         "moderationMode": false,
                                         "type": "split"
                                     }
@@ -442,12 +441,27 @@
                         "moderationMode": false,
                         "type": "split"
                     }
+                },
+                {
+                    "highlightsEnabled": true,
+                    "splits2": {
+                        "data": {
+                            "name": "nymn2",
+                            "type": "twitch"
+                        },
+                        "filters": [
+                        ],
+                        "flexh": 1,
+                        "flexv": 1,
+                        "moderationMode": false,
+                        "type": "split"
+                    }
                 }
             ],
             "type": "main",
-            "width": 1440,
-            "x": 0,
-            "y": 635
+            "width": 1551,
+            "x": 1009,
+            "y": 0
         }
     ]
 }
