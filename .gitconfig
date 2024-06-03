@@ -1,6 +1,3 @@
-[user]
-	email = gempir.dev@gmail.com
-	name = gempir
 [oh-my-zsh]
 	prefix-length = 0
 	prefix-regex = [^-]*-

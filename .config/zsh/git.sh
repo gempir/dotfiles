@@ -15,6 +15,11 @@ function git_prompt() {
     name="${branch}"
   fi
 
+  # Truncate branch name to a maximum of 20 characters
+  if [ ${#name} -gt 15 ]; then
+    name="${name:0:15}»"
+  fi
+
   if [[ -z "$(git status --porcelain 2>/dev/null)" ]]; then
     echo "%F{green}${name}%f"
   else
