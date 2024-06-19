@@ -42,12 +42,7 @@ make_home_symlink() {
         fi
     fi
 
-    if [[ "$(uname)" == "Darwin"* ]]; then
-        # macOS permissions won't allow us to use a symlink
-        ln "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
-    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-        ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
-    fi
+    ln -s "$THIS_DOTFILE_PATH" "$HOME_DOTFILE_PATH" 2>/dev/null
     echo -e " ${GREEN}done!${NC}"
 }
 
@@ -58,7 +53,7 @@ print_big_notice() {
 }
 
 
-make_home_symlink ".gitconfig"
+# make_home_symlink ".gitconfig"
 make_home_symlink ".vimrc"
 make_home_symlink ".vim/colors/onedark.vim"
 make_home_symlink ".vim/autoload/onedark.vim"
@@ -72,6 +67,7 @@ if [[ "$(uname)" == "Darwin"* ]]; then
     print_big_notice "Detected macOS"
     make_home_symlink ".hushlogin"
     make_home_symlink ".config/alacritty/macos.yml" ".config/alacritty/os.yml"
+    make_home_symlink ".config/aerospace/aerospace.toml" ".config/aerospace/aerospace.toml"
     make_home_symlink ".local/share/chatterino/Settings/commands.json" "~/Library/Application\ Support/chatterino/Settings/commands.json"
     make_home_symlink ".local/share/chatterino/Settings/window-layout.json" "~/Library/Application Support/chatterino/Settings/window-layout.json"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
