@@ -8,6 +8,9 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 [mode.main.binding]
+cmd-h = [] # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
+cmd-m = [] # Disable "minimize"
 alt-shift-enter = 'exec-and-forget open -n /Applications/Alacritty.app'
 
 alt-shift-j = 'focus left'
