@@ -66,6 +66,7 @@ make_home_symlink ".config/streamlink/config"
 if [[ "$(uname)" == "Darwin"* ]]; then
     print_big_notice "Detected macOS"
     make_home_symlink ".hushlogin"
+    make_home_symlink "screensaver.workflow"
     make_home_symlink ".config/alacritty/macos.yml" ".config/alacritty/os.yml"
     make_home_symlink ".config/aerospace/aerospace.toml" ".config/aerospace/aerospace.toml"
     make_home_symlink ".local/share/chatterino/Settings/commands.json" "~/Library/Application\ Support/chatterino/Settings/commands.json"
