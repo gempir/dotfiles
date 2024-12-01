@@ -2,10 +2,12 @@
     "windows": [
         {
             "emotePopup": {
+                "height": 0,
+                "width": 0,
                 "x": 463,
                 "y": 390
             },
-            "height": 1421,
+            "height": 1359,
             "tabs": [
                 {
                     "highlightsEnabled": true,
@@ -66,7 +68,6 @@
                                             "type": "twitch"
                                         },
                                         "filters": [
-                                            "e9bd4d3d-e5d0-4e28-a3bf-b654aab41ad0"
                                         ],
                                         "flexh": 1,
                                         "flexv": 0.4641399416909622,
@@ -459,9 +460,9 @@
                 }
             ],
             "type": "main",
-            "width": 1551,
-            "x": 1009,
-            "y": 0
+            "width": 1262,
+            "x": -1911,
+            "y": 16
         }
     ]
 }
