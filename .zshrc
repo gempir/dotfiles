@@ -46,6 +46,7 @@ alias dcom="docker compose"
 alias doc="docker compose"
 alias bssh="mkdir -p ~/.ssh/config.d && echo -e '\nHost *\n    IdentityFile \"~/.ssh/id_ed25519_sk_backup\"\n    IdentityFile \"~/.ssh/id_rsa\"\n' >> ~/.ssh/config.d/backup"
 alias nssh="rm ~/.ssh/config.d/backup"
+alias drink="brew update && brew upgrade && brew cleanup"
 
 bindkey -e
 bindkey "^[[1;5C" forward-word
@@ -54,3 +55,8 @@ bindkey "^[[1;5D" backward-word
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+export GOROOT=/home/gempir/.go
+export GOPATH=/home/gempir/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+. "$HOME/.config/local/share/../bin/env"
