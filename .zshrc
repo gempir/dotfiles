@@ -59,4 +59,4 @@ export GOROOT=/home/gempir/.go
 export GOPATH=/home/gempir/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-. "$HOME/.config/local/share/../bin/env"
+[[ -f "$HOME/.config/local/share/../bin/env" ]] && . "$HOME/.config/local/share/../bin/env"
