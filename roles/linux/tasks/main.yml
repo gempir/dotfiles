@@ -1,0 +1,38 @@
+---
+# Linux-specific tasks
+
+- name: Create Linux-specific directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - "{{ ansible_env.HOME }}/.config/gtk-3.0"
+    - "{{ ansible_env.HOME }}/.config/i3"
+    - "{{ ansible_env.HOME }}/.config/i3blocks"
+    - "{{ ansible_env.HOME }}/.config/dunst"
+    - "{{ ansible_env.HOME }}/.local/share/chatterino/Settings"
+    - "{{ ansible_env.HOME }}/.local/share/fonts"
+
+- name: Symlink Linux-specific configuration files
+  ansible.builtin.file:
+    src: "{{ ansible_env.PWD }}/{{ item.src }}"
+    dest: "{{ ansible_env.HOME }}/{{ item.dest | default(item.src) }}"
+    state: link
+    force: "{{ item.force | default(false) }}"
+  loop:
+    - { src: ".config/alacritty/linux.yml", dest: ".config/alacritty/os.yml" }
+    - { src: ".config/gtk-3.0/settings.ini" }
+    - { src: ".config/i3" }
+    - { src: ".config/i3blocks" }
+    - { src: ".config/dunst" }
+    - { src: ".config/wallpaper.jpg" }
+    - { src: ".local/share/chatterino/Settings/commands.json" }
+    - { src: ".local/share/chatterino/Settings/window-layout.json" }
+    - { src: ".local/share/fonts" }
+    - { src: ".imwheelrc" }
+
+- name: Update font cache
+  ansible.builtin.command:
+    cmd: fc-cache -f
+  changed_when: true
