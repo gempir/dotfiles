@@ -1,15 +1,11 @@
 ---
-# Main playbook for macOS
 - name: Setup macOS dotfiles
   hosts: localhost
   connection: local
   become: false
-
-  pre_tasks:
-    - name: Display macOS version
-      ansible.builtin.debug:
-        msg: "Setting up dotfiles for macOS {{ ansible_distribution_version }}"
+  vars:
+    current_os: macos
 
   roles:
-    - common
+    - unix
     - macos

@@ -1,0 +1,28 @@
+[user]
+	email = gempir.dev@gmail.com
+	name = gempir
+[alias]
+	slog = log -n 10 --format=format:'%Creset%an %Cgreen%ar:%Creset%s %Cred%h'
+	ci = !git add -A && git commit
+	tracking = for-each-ref --format='%(refname:short) <- %(upstream:short)' refs/heads
+	s = status --short
+
+	# current branch
+	# $ git find-merge <SHA-1>
+	# specify branch
+	# $ git find-merge <SHA-1> master
+	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+	# $ git grep-by-author fix
+	grep-by-author = "!sh -c 'git log --grep="$1" --format=short -i --no-merges | grep "Author" | sort | uniq -c | sort -r'"
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main

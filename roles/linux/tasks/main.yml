@@ -1,27 +1,24 @@
 ---
-# Linux-specific tasks
-
 - name: Create Linux-specific directories
   ansible.builtin.file:
-    path: "{{ item }}"
+    path: "~/{{ item }}"
     state: directory
     mode: '0755'
   loop:
-    - "{{ ansible_env.HOME }}/.config/gtk-3.0"
-    - "{{ ansible_env.HOME }}/.config/i3"
-    - "{{ ansible_env.HOME }}/.config/i3blocks"
-    - "{{ ansible_env.HOME }}/.config/dunst"
-    - "{{ ansible_env.HOME }}/.local/share/chatterino/Settings"
-    - "{{ ansible_env.HOME }}/.local/share/fonts"
+    - ".config/gtk-3.0"
+    - ".config/i3"
+    - ".config/i3blocks"
+    - ".config/dunst"
+    - ".local/share/chatterino/Settings"
+    - ".config/fonts"
 
-- name: Symlink Linux-specific configuration files
-  ansible.builtin.file:
-    src: "{{ ansible_env.PWD }}/{{ item.src }}"
-    dest: "{{ ansible_env.HOME }}/{{ item.dest | default(item.src) }}"
-    state: link
-    force: "{{ item.force | default(false) }}"
+- name: Copy Linux-specific configuration files
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../files/{{ item.src }}"
+    dest: "~/{{ item.dest | default(item.src) }}"
+    force: true
   loop:
-    - { src: ".config/alacritty/linux.yml", dest: ".config/alacritty/os.yml" }
+    - { src: ".config/alacritty/linux.toml", dest: ".config/alacritty/os.toml" }
     - { src: ".config/gtk-3.0/settings.ini" }
     - { src: ".config/i3" }
     - { src: ".config/i3blocks" }
@@ -31,8 +28,6 @@
     - { src: ".local/share/chatterino/Settings/window-layout.json" }
     - { src: ".local/share/fonts" }
     - { src: ".imwheelrc" }
+  notify: 
+    - Update font cache
 
-- name: Update font cache
-  ansible.builtin.command:
-    cmd: fc-cache -f
-  changed_when: true

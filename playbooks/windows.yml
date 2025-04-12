@@ -1,14 +1,10 @@
 ---
-# Main playbook for Windows
 - name: Setup Windows dotfiles
   hosts: localhost
   connection: local
-
-  pre_tasks:
-    - name: Display Windows version
-      ansible.builtin.debug:
-        msg: "Setting up dotfiles for Windows {{ ansible_os_family }}"
+  become: false
+  vars:
+    current_os: windows
 
   roles:
-    - common
     - windows

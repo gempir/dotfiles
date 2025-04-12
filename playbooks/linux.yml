@@ -1,19 +1,11 @@
 ---
-# Main playbook for Linux
 - name: Setup Linux dotfiles
   hosts: localhost
   connection: local
   become: false
-
-  pre_tasks:
-    - name: Detect distribution
-      ansible.builtin.setup:
-        filter: ansible_distribution
-      
-    - name: Display detected distribution
-      ansible.builtin.debug:
-        msg: "Detected distribution: {{ ansible_distribution }} {{ ansible_distribution_version }}"
+  vars:
+    current_os: linux
 
   roles:
-    - common
+    - unix
     - linux
