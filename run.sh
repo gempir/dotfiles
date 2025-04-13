@@ -67,8 +67,6 @@ install_python() {
         curl -LsSf https://astral.sh/uv/install.sh | sh
     fi
 
-    source $HOME/.config/local/share/../bin/env
-
     uv venv --python 3.12
     uv pip install ansible
 }
