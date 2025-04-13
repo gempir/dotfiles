@@ -1,6 +1,6 @@
 ---
 - name: Setup Windows dotfiles
-  hosts: localhost
+  hosts: windows
   connection: local
   become: false
   vars:
