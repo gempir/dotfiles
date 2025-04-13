@@ -1,0 +1,55 @@
+---
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  become: "{{ current_os == 'linux' }}"
+  loop:
+    - alacritty
+    - tree
+
+- name: Delete files
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - "~/.config/alacritty/alacritty.yml"
+    - "~/.config/alacritty/os.yml"
+
+- name: Create required directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - "~/.ssh/config.d"
+    - "~/.vim/colors"
+    - "~/.vim/autoload"
+    - "~/.config/alacritty"
+    - "~/.config/zsh"
+    - "~/.config/streamlink"
+
+- name: Copy common configuration files
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/{{ item.src }}"
+    dest: "~/{{ item.dest | default(item.src) }}"
+    force: true
+  loop:
+    - { src: ".zshrc" }
+    - { src: ".gitconfig" }
+    - { src: ".ssh/config.d/gempir" }
+    - { src: ".vimrc" }
+    - { src: ".vim/colors/onedark.vim" }
+    - { src: ".vim/autoload/onedark.vim" }
+    - { src: ".config/alacritty/alacritty.toml" }
+    - { src: ".tmux.conf" }
+    - { src: ".config/zsh/git.sh" }
+    - { src: ".config/streamlink/config" }
+
+- name: Ensure ssh_config contains include
+  ansible.builtin.lineinfile:
+    path: "~/.ssh/config"
+    line: "Include ~/.ssh/config.d/*"
+    create: yes
+    state: present
+    regexp: "^Include ~/.ssh/config.d/\\*"

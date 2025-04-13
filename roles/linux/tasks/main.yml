@@ -1,0 +1,44 @@
+---
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  become: true
+  loop:
+    - fontconfig
+
+- name: Create Linux-specific directories
+  ansible.builtin.file:
+    path: "~/{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - ".config/gtk-3.0"
+    - ".local/share"
+
+- name: Copy shared config files
+  ansible.builtin.copy:
+    src: "{{ role_path }}/../../files/{{ item.src }}"
+    dest: "~/{{ item.dest | default(item.src) }}"
+    force: true
+  loop:
+    - { src: "chatterino/commands.json", dest: ".local/share/chatterino/Settings/commands.json" }
+    - { src: "chatterino/window-layout.json", dest: ".local/share/chatterino/Settings/window-layout.json" }
+
+- name: Copy Linux-specific configuration files
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/{{ item.src }}"
+    dest: "~/{{ item.dest | default(item.src) }}"
+    force: true
+  loop:
+    - { src: ".config/alacritty/linux.toml", dest: ".config/alacritty/os.toml" }
+    - { src: ".config/gtk-3.0/settings.ini" }
+    - { src: ".config/i3/" }
+    - { src: ".config/i3blocks/" }
+    - { src: ".config/dunst/" }
+    - { src: ".config/wallpaper.jpg" }
+    - { src: ".local/share/fonts/" }
+    - { src: ".imwheelrc" }
+  notify: 
+    - Update font cache
+

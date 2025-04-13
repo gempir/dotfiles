@@ -1,13 +1,11 @@
-[oh-my-zsh]
-	prefix-length = 0
-	prefix-regex = [^-]*-
-	suffix-length = 8
+[user]
+	email = gempir.dev@gmail.com
+	name = gempir
 [alias]
 	slog = log -n 10 --format=format:'%Creset%an %Cgreen%ar:%Creset%s %Cred%h'
 	ci = !git add -A && git commit
 	tracking = for-each-ref --format='%(refname:short) <- %(upstream:short)' refs/heads
 	s = status --short
-	iml = checkout /Users/daniel.pasch/dev/furniture/.idea/moebel.iml
 
 	# current branch
 	# $ git find-merge <SHA-1>
@@ -28,5 +26,3 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
-[safe]
-	directory = /mnt/WD1/home/homeassistant

@@ -1,0 +1,11 @@
+---
+- name: Setup macOS dotfiles
+  hosts: localhost
+  connection: local
+  become: false
+  vars:
+    current_os: macos
+
+  roles:
+    - unix
+    - macos
