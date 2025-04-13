@@ -12,6 +12,7 @@
     state: absent
   loop:
     - "{{ ansible_env.USERPROFILE }}\\AppData\\Roaming\\Chatterino2\\Settings\\commands.json"
+    - "{{ ansible_env.USERPROFILE }}\\AppData\\Roaming\\Chatterino2\\Settings\\settings.json"
     - "{{ ansible_env.USERPROFILE }}\\AppData\\Roaming\\Chatterino2\\Settings\\window-layout.json"
 
 - name: Copy Chatterino2 config files
@@ -20,4 +21,5 @@
     dest: "{{ ansible_env.USERPROFILE }}\\AppData\\Roaming\\Chatterino2\\Settings\\{{ item | basename }}"
   loop:
     - "{{ playbook_dir }}/files/chatterino/commands.json"
+    - "{{ playbook_dir }}/files/chatterino/settings.json"
     - "{{ playbook_dir }}/files/chatterino/window-layout.json"
