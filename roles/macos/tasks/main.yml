@@ -8,16 +8,16 @@
     - "~/.config/aerospace"
     - "~/Library/Application Support/chatterino/Settings"
 
-- name: Symlink macOS-specific configuration files
-  ansible.builtin.file:
-    src: "{{ role_path }}/files/{{ item.src }}"
-    dest: "~/{{ item.dest | default(item.src) }}"
-    state: link
-    force: "{{ item.force | default(false) }}"
+- name: Copy macOS-specific configuration files
+  ansible.builtin.copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    force: true
   loop:
-    - { src: ".hushlogin" }
-    - { src: "screensaver.workflow" }
-    - { src: ".config/alacritty/macos.toml", dest: ".config/alacritty/os.toml" }
-    - { src: ".config/aerospace/aerospace.toml" }
-    - { src: ".local/share/chatterino/Settings/commands.json", dest: "Library/Application Support/chatterino/Settings/commands.json" }
-    - { src: ".local/share/chatterino/Settings/window-layout.json", dest: "Library/Application Support/chatterino/Settings/window-layout.json" }
+    - { src: "{{ role_path }}/files/.hushlogin", dest: "~/.hushlogin" }
+    - { src: "{{ role_path }}/files/screensaver.workflow", dest: "~/screensaver.workflow" }
+    - { src: "{{ role_path }}/files/.config/alacritty/macos.toml", dest: "~/.config/alacritty/os.toml" }
+    - { src: "{{ role_path }}/files/.config/aerospace/aerospace.toml", dest: "~/.config/aerospace/aerospace.toml" }
+    - { src: "files/chatterino/commands.json", dest: "~/Library/Application Support/chatterino/Settings/commands.json" }
+    - { src: "files/chatterino/settings.json", dest: "~/Library/Application Support/chatterino/Settings/settings.json" }
+    - { src: "files/chatterino/window-layout.json", dest: "~/Library/Application Support/chatterino/Settings/window-layout.json" }

@@ -1,7 +1,6 @@
 ---
 - name: linux
   hosts: linux
-  connection: local
   become: false
   vars:
     current_os: linux
@@ -11,8 +10,7 @@
     - linux
 
 - name: macos
-  hosts: macos
-  connection: local
+  hosts: [macos, media]
   become: false
   vars:
     current_os: macos
@@ -23,10 +21,23 @@
 
 - name: windows
   hosts: windows
-  connection: ssh
   become: false
   vars:
     current_os: windows
 
   roles:
     - windows
+
+- name: media
+  hosts: [media]
+  become: false
+  vars:
+    current_os: macos
+
+  vars_files:
+    - vars/media.yml
+
+  roles:
+    - homebrew
+    - jdownloader
+    - nfs

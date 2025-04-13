@@ -2,3 +2,4 @@
 .venv/
 files/ssh/id_ed25519_ansible_gempir
 .vaultpass
+collections/

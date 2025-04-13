@@ -74,7 +74,7 @@ install_python() {
 
     uv venv --python 3.12
     uv pip install ansible
-}
+} 
 
 run_playbook() {
     source .venv/bin/activate
@@ -84,6 +84,13 @@ run_playbook() {
 
 if [ ! -f ".venv/bin/ansible" ]; then
     install_python
+fi
+
+if [[ "$OS" == "install" ]]; then
+    source .venv/bin/activate
+
+    ansible-galaxy collection install -r requirements.yml -p ./collections
+    exit 0
 fi
 
 run_playbook

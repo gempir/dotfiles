@@ -5,4 +5,7 @@ macos_host ansible_connection=local
 linux_host ansible_connection=local
 
 [windows]
-windows_host ansible_host=192.168.178.122 ansible_ssh_private_key_file=files/ssh/id_ed25519_ansible_gempir ansible_shell_type=powershell
+windows_host ansible_host=192.168.178.122 ansible_connection=ssh ansible_ssh_private_key_file=files/ssh/id_ed25519_ansible_gempir ansible_user=gempir ansible_shell_type=powershell
+
+[media]
+scarif ansible_host=192.168.178.100 ansible_connection=ssh ansible_ssh_private_key_file=files/ssh/id_ed25519_ansible_gempir ansible_user=gempir ansible_python_interpreter=/usr/bin/python3
