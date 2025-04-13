@@ -10,7 +10,7 @@
 
 - name: Symlink macOS-specific configuration files
   ansible.builtin.file:
-    src: "{{ ansible_env.PWD }}/files/{{ item.src }}"
+    src: "{{ role_path }}/files/{{ item.src }}"
     dest: "~/{{ item.dest | default(item.src) }}"
     state: link
     force: "{{ item.force | default(false) }}"

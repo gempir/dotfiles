@@ -22,20 +22,32 @@
     state: directory
     mode: '0755'
   loop:
+    - "~/.ssh/config.d"
     - "~/.vim/colors"
     - "~/.vim/autoload"
     - "~/.config/alacritty"
     - "~/.config/zsh"
     - "~/.config/streamlink"
+    - "~/.config/chatterino/Settings"
+
+- name: Copy shared config files
+  ansible.builtin.copy:
+    src: "files/{{ item.src }}"
+    dest: "~/{{ item.dest | default(item.src) }}"
+    force: true
+  loop:
+    - { src: "chatterino/Settings/commands.json", dest: ".config/chatterino/Settings/commands.json" }
+    - { src: "chatterino/Settings/window-layout.json", dest: ".config/chatterino/Settings/window-layout.json" }
 
 - name: Copy common configuration files
   ansible.builtin.copy:
-    src: "{{ playbook_dir }}/../files/{{ item.src }}"
+    src: "{{ role_path }}/files/{{ item.src }}"
     dest: "~/{{ item.dest | default(item.src) }}"
     force: true
   loop:
     - { src: ".zshrc" }
     - { src: ".gitconfig" }
+    - { src: ".ssh/config.d/gempir" }
     - { src: ".vimrc" }
     - { src: ".vim/colors/onedark.vim" }
     - { src: ".vim/autoload/onedark.vim" }
@@ -43,3 +55,11 @@
     - { src: ".tmux.conf" }
     - { src: ".config/zsh/git.sh" }
     - { src: ".config/streamlink/config" }
+
+- name: Ensure ssh_config contains include
+  ansible.builtin.lineinfile:
+    path: "~/.ssh/config"
+    line: "Include ~/.ssh/config.d/*"
+    create: yes
+    state: present
+    regexp: "^Include ~/.ssh/config.d/\\*"
