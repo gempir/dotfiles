@@ -28,16 +28,6 @@
     - "~/.config/alacritty"
     - "~/.config/zsh"
     - "~/.config/streamlink"
-    - "~/.config/chatterino/Settings"
-
-- name: Copy shared config files
-  ansible.builtin.copy:
-    src: "files/{{ item.src }}"
-    dest: "~/{{ item.dest | default(item.src) }}"
-    force: true
-  loop:
-    - { src: "chatterino/Settings/commands.json", dest: ".config/chatterino/Settings/commands.json" }
-    - { src: "chatterino/Settings/window-layout.json", dest: ".config/chatterino/Settings/window-layout.json" }
 
 - name: Copy common configuration files
   ansible.builtin.copy:
