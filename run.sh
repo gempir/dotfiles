@@ -23,8 +23,13 @@ detect_os() {
     fi
 }
 
-OS=$(detect_os)
-print_notice "Detected OS: ${OS}"
+if [ -n "$1" ]; then
+    OS="$1"
+    print_notice "Using provided OS: ${OS}"
+else
+    OS=$(detect_os)
+    print_notice "Detected OS: ${OS}"
+fi
 
 # Install Python and uv
 install_python() {    
@@ -73,8 +78,8 @@ install_python() {
 
 run_playbook() {
     source .venv/bin/activate
-    
-    ansible-playbook -i "localhost," -c local "playbooks/${OS}.yml"
+
+    ansible-playbook --limit "$OS" playbook.yml
 }
 
 if [ ! -f ".venv/bin/ansible" ]; then

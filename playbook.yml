@@ -1,0 +1,32 @@
+---
+- name: linux
+  hosts: linux
+  connection: local
+  become: false
+  vars:
+    current_os: linux
+
+  roles:
+    - unix
+    - linux
+
+- name: macos
+  hosts: macos
+  connection: local
+  become: false
+  vars:
+    current_os: macos
+
+  roles:
+    - unix
+    - macos
+
+- name: windows
+  hosts: windows
+  connection: ssh
+  become: false
+  vars:
+    current_os: windows
+
+  roles:
+    - windows
