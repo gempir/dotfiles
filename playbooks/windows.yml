@@ -1,8 +1,8 @@
 ---
-- name: Setup Windows dotfiles
+- name: Setup Windows dotfiles [TODO: not working yet, need to figure out how to do remote ssh, since ansible can't run on windows]
   hosts: windows
-  connection: local
-  become: false
+  connection: ssh
+  become: true
   vars:
     current_os: windows
 
