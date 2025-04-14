@@ -40,4 +40,4 @@ x = 0
 y = 0
 
 [general]
-import = ["/Users/gempir/.config/alacritty/os.toml"]
+import = ["~/.config/alacritty/os.toml"]
