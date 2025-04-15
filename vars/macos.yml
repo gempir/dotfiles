@@ -1,10 +1,4 @@
 ---
-# Variables for macOS role
-
-macos_computer_name: "MyMac"  # Set your desired computer name here
-macos_hostname: "mymac"       # Set your desired hostname (usually lowercase)
-macos_localhostname: "mymac"  # Set your desired local hostname
-
 macos_highlight_color: "0.764700 0.976500 0.568600" # Green
 
 macos_language: "en"
@@ -16,8 +10,27 @@ macos_timezone: "Europe/Berlin" # Find yours with `sudo systemsetup -listtimezon
 macos_screenshots_location: "{{ ansible_user_dir }}/Desktop"
 macos_screenshots_format: "png"
 
-macos_finder_new_window_target: "PfDe" # Desktop
+# Set default path for new windows.
+# Computer     : `PfCm`
+# Volume       : `PfVo`
+# $HOME        : `PfHm`
+# Desktop      : `PfDe`
+# Documents    : `PfDo`
+# All My Files : `PfAF`
+# Other…       : `PfLo`
+macos_finder_new_window_target: "PfHm"
 macos_finder_new_window_target_path: "file://{{ ansible_user_dir }}"
+# Set preferred view style.
+# Icon View   : `icnv`
+# List View   : `Nlsv`
+# Column View : `clmv`
+# Cover Flow  : `Flwv`
+macos_finder_preferred_view_style: "Nlsv"
+# Set search scope.
+# This Mac       : `SCev`
+# Current Folder : `SCcf`
+# Previous Scope : `SCsp`
+macos_finder_search_scope: "SCcf"
 
 # Hot Corners
 # 0: no-op, 2: Mission Control, 3: App windows, 4: Desktop, 5: Screensaver, 6: Disable Screensaver, 10: Sleep display, 13: Lock Screen
