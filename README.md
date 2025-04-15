@@ -1,3 +1,14 @@
+# macOS
+
+Disable input source on cursor
+
+```
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+
+# Revert
+sudo defaults delete /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor
+```
+
 # Window SSH Setup
 
 ```
