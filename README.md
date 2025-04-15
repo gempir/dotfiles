@@ -1,5 +1,7 @@
 # macOS
 
+More: https://github.com/kevinSuttle/macOS-Defaults
+
 Disable input source on cursor
 
 ```
