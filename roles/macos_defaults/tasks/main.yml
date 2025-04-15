@@ -1,0 +1,939 @@
+---
+# Tasks for applying macOS defaults
+
+-   name: Close System Preferences to prevent overrides
+    ansible.builtin.command: osascript -e 'tell application "System Preferences" to quit'
+    changed_when: false
+    failed_when: false # Ignore if it's already closed
+
+# ---------------------------------------------------------------------------- #
+# General UI/UX                                                                #
+# ---------------------------------------------------------------------------- #
+
+#- name: Set computer name (Sharing Preferences)
+#  become: true
+#  ansible.builtin.command: "{{ item }}"
+#  loop:
+#    - scutil --set ComputerName "{{ macos_computer_name }}"
+#    - scutil --set LocalHostName "{{ macos_localhostname }}"
+#    - defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ macos_localhostname }}"
+#  changed_when: false # These commands don't reliably report change
+
+-   name: Disable the sound effects on boot
+    become: true
+    ansible.builtin.command: nvram SystemAudioVolume=" "
+    changed_when: false
+
+-   name: Disable transparency in the menu bar and elsewhere
+    ansible.builtin.osx_defaults:
+        domain: com.apple.universalaccess
+        key: reduceTransparency
+        type: bool
+        value: true
+
+# Reset: defaults delete -g AppleHighlightColor
+-   name: Set highlight color
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleHighlightColor
+        type: string
+        value: "{{ macos_highlight_color }}"
+
+-   name: Set sidebar icon size to medium
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSTableViewDefaultSizeMode
+        type: int
+        value: 2
+
+-   name: Always show scrollbars
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleShowScrollBars
+        type: string
+        value: "Always"
+
+-   name: Disable the over-the-top focus ring animation
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSUseAnimatedFocusRing
+        type: bool
+        value: false
+
+# - name: Disable smooth scrolling (Uncomment if needed)
+#   ansible.builtin.osx_defaults:
+#     domain: NSGlobalDomain
+#     key: NSScrollAnimationEnabled
+#     type: bool
+#     value: false
+
+-   name: Increase window resize speed for Cocoa applications
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSWindowResizeTime
+        type: float
+        value: 0.001
+
+-   name: Expand save panel by default
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: "{{ item }}"
+        type: bool
+        value: true
+    loop:
+        - NSNavPanelExpandedStateForSaveMode
+        - NSNavPanelExpandedStateForSaveMode2
+
+-   name: Expand print panel by default
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: "{{ item }}"
+        type: bool
+        value: true
+    loop:
+        - PMPrintingExpandedStateForPrint
+        - PMPrintingExpandedStateForPrint2
+
+-   name: Save to disk (not to iCloud) by default
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSDocumentSaveNewDocumentsToCloud
+        type: bool
+        value: false
+
+-   name: Automatically quit printer app once the print jobs complete
+    ansible.builtin.osx_defaults:
+        domain: com.apple.print.PrintingPrefs
+        key: "Quit When Finished"
+        type: bool
+        value: true
+
+-   name: Disable the "Are you sure you want to open this application?" dialog
+    ansible.builtin.osx_defaults:
+        domain: com.apple.LaunchServices
+        key: LSQuarantine
+        type: bool
+        value: false
+
+-   name: Remove duplicates in the "Open With" menu
+    ansible.builtin.command: /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+    changed_when: false
+
+-   name: Display ASCII control characters using caret notation
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSTextShowsControlCharacters
+        type: bool
+        value: true
+
+-   name: Disable Resume system-wide
+    ansible.builtin.osx_defaults:
+        domain: com.apple.systempreferences
+        key: NSQuitAlwaysKeepsWindows
+        type: bool
+        value: false
+
+-   name: Disable automatic termination of inactive apps
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSDisableAutomaticTermination
+        type: bool
+        value: true
+
+# - name: Disable the crash reporter
+#   ansible.builtin.osx_defaults:
+#     domain: com.apple.CrashReporter
+#     key: DialogType
+#     type: string
+#     value: "none"
+
+-   name: Set Help Viewer windows to non-floating mode
+    ansible.builtin.osx_defaults:
+        domain: com.apple.helpviewer
+        key: DevMode
+        type: bool
+        value: true
+
+# Ancient UTF-8 bug fix commented out as in original script
+# - name: Fix ancient UTF-8 QuickLook bug (potential Adobe issues)
+#   ansible.builtin.copy:
+#     content: "0x08000100:0"
+#     dest: "~/.CFUserTextEncoding"
+#     force: true
+
+-   name: Reveal IP address, hostname, OS version, etc. on login window clock click
+    become: true
+    ansible.builtin.osx_defaults:
+        domain: /Library/Preferences/com.apple.loginwindow
+        key: AdminHostInfo
+        type: string
+        value: HostName
+
+-   name: Disable Notification Center and remove the menu bar icon
+    ansible.builtin.command: launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+    changed_when: false
+    failed_when: false # Ignore errors if already unloaded
+    notify: Restart SystemUIServer
+
+-   name: Disable automatic capitalization
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticCapitalizationEnabled
+        type: bool
+        value: false
+
+-   name: Disable smart dashes
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticDashSubstitutionEnabled
+        type: bool
+        value: false
+
+-   name: Disable automatic period substitution
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticPeriodSubstitutionEnabled
+        type: bool
+        value: false
+
+-   name: Disable smart quotes
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticQuoteSubstitutionEnabled
+        type: bool
+        value: false
+
+-   name: Disable auto-correct
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticSpellingCorrectionEnabled
+        type: bool
+        value: false
+
+# Wallpaper setting is complex and user-specific, skipping for now.
+# Requires placing image and potentially handling symlinks.
+
+# ---------------------------------------------------------------------------- #
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                  #
+# ---------------------------------------------------------------------------- #
+
+-   name: Trackpad - enable tap to click for this user and for the login screen
+    ansible.builtin.osx_defaults:
+        domain: "{{ item.domain }}"
+        key: "{{ item.key }}"
+        type: "{{ item.type }}"
+        value: "{{ item.value }}"
+        host: "{{ item.host | default(omit) }}"
+    loop:
+        - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: Clicking, type: int, value: 1 }
+        - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1, host: currentHost }
+        - { domain: NSGlobalDomain, key: com.apple.mouse.tapBehavior, type: int, value: 1 }
+
+-   name: Disable "natural" scrolling
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: com.apple.swipescrolldirection
+        type: bool
+        value: false
+
+-   name: Increase sound quality for Bluetooth headphones/headsets
+    ansible.builtin.osx_defaults:
+        domain: com.apple.BluetoothAudioAgent
+        key: "Apple Bitpool Min (editable)"
+        type: int
+        value: 40
+
+-   name: Enable full keyboard access for all controls (Tab in modal dialogs)
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleKeyboardUIMode
+        type: int
+        value: 3
+
+-   name: Disable press-and-hold for keys in favor of key repeat
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: ApplePressAndHoldEnabled
+        type: bool
+        value: false
+
+-   name: Set a fast keyboard repeat rate
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: "{{ item.key }}"
+        type: int
+        value: "{{ item.value }}"
+    loop:
+        - { key: KeyRepeat, value: 1 }
+        - { key: InitialKeyRepeat, value: 10 }
+
+-   name: Set language and text formats
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: "{{ item.key }}"
+        type: "{{ item.type }}"
+        value: "{{ item.value }}"
+    loop:
+        - { key: AppleLanguages, type: array, value: [ "{{ macos_language }}" ] } # Add more languages if needed: e.g., ["en", "nl"]
+        - { key: AppleLocale, type: string, value: "{{ macos_locale }}" }
+        - { key: AppleMeasurementUnits, type: string, value: "{{ macos_measurement_units }}" }
+        - { key: AppleMetricUnits, type: bool, value: "{{ macos_metric_units }}" }
+
+-   name: Show language menu in the top right corner of the boot screen
+    become: true
+    ansible.builtin.osx_defaults:
+        domain: /Library/Preferences/com.apple.loginwindow
+        key: showInputMenu
+        type: bool
+        value: true
+
+-   name: Set the timezone
+    become: true
+    ansible.builtin.command: "systemsetup -settimezone \"{{ macos_timezone }}\""
+    changed_when: false # systemsetup doesn't indicate change well
+
+-   name: Stop iTunes from responding to the keyboard media keys (may affect Music app)
+    ansible.builtin.command: launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+    changed_when: false
+    failed_when: false
+
+# ---------------------------------------------------------------------------- #
+# Energy saving                                                                #
+# ---------------------------------------------------------------------------- #
+
+-   name: Configure power management settings (pmset)
+    become: true
+    ansible.builtin.command: "pmset -{{ item.scope }} {{ item.setting }} {{ item.value }}"
+    loop:
+        - { scope: a, setting: lidwake, value: 1 }         # Enable lid wakeup
+        - { scope: a, setting: autorestart, value: 1 }      # Restart automatically on power loss
+        - { scope: a, setting: displaysleep, value: 15 }    # Sleep the display after 15 minutes
+        - { scope: c, setting: sleep, value: 0 }            # Disable machine sleep while charging
+        - { scope: b, setting: sleep, value: 5 }            # Set machine sleep to 5 minutes on battery
+        - { scope: a, setting: standbydelay, value: 86400 } # Set standby delay to 24 hours
+        - { scope: a, setting: hibernatemode, value: 0 }    # Disable hibernation (speeds up sleep)
+    changed_when: false # pmset doesn't indicate change
+
+-   name: Restart automatically if the computer freezes
+    become: true
+    ansible.builtin.command: systemsetup -setrestartfreeze on
+    changed_when: false
+
+-   name: Never go into computer sleep mode (redundant with pmset -c sleep 0?)
+    become: true
+    ansible.builtin.command: systemsetup -setcomputersleep Off
+    changed_when: false
+
+-   name: Ensure sleepimage file exists (needed for hibernatemode 0)
+    become: true
+    ansible.builtin.copy:
+        dest: /private/var/vm/sleepimage
+        content: ''
+        mode: '0600'
+
+-   name: Make sleepimage immutable
+    become: true
+    ansible.builtin.command: chflags uchg /private/var/vm/sleepimage
+    failed_when: false
+    changed_when: false # chflags doesn't report change
+
+# ---------------------------------------------------------------------------- #
+# Screen                                                                       #
+# ---------------------------------------------------------------------------- #
+
+#-   name: Save screenshots location
+#    ansible.builtin.osx_defaults:
+#        domain: com.apple.screencapture
+#        key: location
+#        type: string
+#        value: "{{ macos_screenshots_location }}"
+#    notify: Restart SystemUIServer
+
+-   name: Save screenshots format
+    ansible.builtin.osx_defaults:
+        domain: com.apple.screencapture
+        key: type
+        type: string
+        value: "{{ macos_screenshots_format }}"
+
+-   name: Enable subpixel font rendering on non-Apple LCDs
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleFontSmoothing
+        type: int
+        value: 1 # 1=light, 2=medium, 3=strong
+
+-   name: Enable HiDPI display modes (requires restart)
+    become: true
+    ansible.builtin.osx_defaults:
+        domain: /Library/Preferences/com.apple.windowserver
+        key: DisplayResolutionEnabled
+        type: bool
+        value: true
+
+# ---------------------------------------------------------------------------- #
+# Finder                                                                       #
+# ---------------------------------------------------------------------------- #
+
+-   name: Finder - allow quitting via ⌘ + Q
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: QuitMenuItem
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Finder - disable window animations and Get Info animations
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: DisableAllAnimations
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Set default location for new Finder windows
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: "{{ item.key }}"
+        type: string
+        value: "{{ item.value }}"
+    loop:
+        - { key: NewWindowTarget, value: "{{ macos_finder_new_window_target }}" }
+        #        - { key: NewWindowTargetPath, value: "{{ macos_finder_new_window_target_path }}" }
+        - { key: FXPreferredViewStyle, value: "{{ macos_finder_preferred_view_style }}" }
+        - { key: FXDefaultSearchScope, value: "{{ macos_finder_search_scope }}" }
+    notify: Restart Finder
+
+-   name: Finder - show hidden files by default
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: AppleShowAllFiles
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Finder - show all filename extensions
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleShowAllExtensions
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Finder - show status bar
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: ShowStatusBar
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Finder - show path bar
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: ShowPathbar
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Display full POSIX path as Finder window title
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: _FXShowPosixPathInTitle
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Keep folders on top when sorting by name
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: _FXSortFoldersFirst
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: When performing a search, search the current folder by default
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: FXDefaultSearchScope
+        type: string
+        value: "SCcf"
+    notify: Restart Finder
+
+-   name: Disable the warning when changing a file extension
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: FXEnableExtensionChangeWarning
+        type: bool
+        value: false
+    notify: Restart Finder
+
+-   name: Enable spring loading for directories
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: com.apple.springing.enabled
+        type: bool
+        value: true
+
+-   name: Remove the spring loading delay for directories
+    ansible.builtin.osx_defaults:
+        domain: NSGlobalDomain
+        key: com.apple.springing.delay
+        type: float
+        value: 0
+
+-   name: Avoid creating .DS_Store files on network or USB volumes
+    ansible.builtin.osx_defaults:
+        domain: com.apple.desktopservices
+        key: "{{ item }}"
+        type: bool
+        value: true
+    loop:
+        - DSDontWriteNetworkStores
+        - DSDontWriteUSBStores
+    notify: Restart Finder
+
+-   name: Disable disk image verification
+    ansible.builtin.osx_defaults:
+        domain: com.apple.frameworks.diskimages
+        key: "{{ item }}"
+        type: bool
+        value: true
+    loop:
+        - skip-verify
+        - skip-verify-locked
+        - skip-verify-remote
+
+-   name: Automatically open a new Finder window when a volume is mounted
+    ansible.builtin.osx_defaults:
+        domain: "{{ item.domain }}"
+        key: "{{ item.key }}"
+        type: bool
+        value: true
+    loop:
+        - { domain: com.apple.frameworks.diskimages, key: auto-open-ro-root }
+        - { domain: com.apple.frameworks.diskimages, key: auto-open-rw-root }
+        - { domain: com.apple.finder, key: OpenWindowForNewRemovableDisk }
+    notify: Restart Finder
+
+-   name: Use list view in all Finder windows by default
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: FXPreferredViewStyle
+        type: string
+        value: "Nlsv"
+    notify: Restart Finder
+
+-   name: Disable the warning before emptying the Trash
+    ansible.builtin.osx_defaults:
+        domain: com.apple.finder
+        key: WarnOnEmptyTrash
+        type: bool
+        value: false
+    notify: Restart Finder
+
+-   name: Enable AirDrop over Ethernet and on unsupported Macs
+    ansible.builtin.osx_defaults:
+        domain: com.apple.NetworkBrowser
+        key: BrowseAllInterfaces
+        type: bool
+        value: true
+    notify: Restart Finder
+
+-   name: Show the ~/Library folder
+    ansible.builtin.command: chflags nohidden ~/Library
+    changed_when: false # chflags doesn't indicate change
+
+-   name: Show the /Volumes folder
+    become: true
+    ansible.builtin.command: chflags nohidden /Volumes
+    changed_when: false # chflags doesn't indicate change
+
+# ---------------------------------------------------------------------------- #
+# Dock, Dashboard, and hot corners                                             #
+# ---------------------------------------------------------------------------- #
+
+-   name: Enable highlight hover effect for the grid view of a stack (Dock)
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: mouse-over-hilite-stack
+        type: bool
+        value: true
+
+-   name: Set the icon size of Dock items to 36 pixels
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: tilesize
+        type: int
+        value: 36
+
+-   name: Change minimize/maximize window effect to scale
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: mineffect
+        type: string
+        value: "scale"
+
+-   name: Minimize windows into their application's icon
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: minimize-to-application
+        type: bool
+        value: true
+
+-   name: Enable spring loading for all Dock items
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: enable-spring-load-actions-on-all-items
+        type: bool
+        value: true
+
+-   name: Show indicator lights for open applications in the Dock
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: show-process-indicators
+        type: bool
+        value: true
+
+-   name: Don't animate opening applications from the Dock
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: launchanim
+        type: bool
+        value: false
+
+-   name: Speed up Mission Control animations
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: expose-animation-duration
+        type: float
+        value: 0.1
+
+-   name: Don't group windows by application in Mission Control
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: expose-group-by-app
+        type: bool
+        value: false
+
+-   name: Disable Dashboard
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dashboard
+        key: mcx-disabled
+        type: bool
+        value: true
+
+-   name: Don't show Dashboard as a Space
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: dashboard-in-overlay
+        type: bool
+        value: true
+    notify: Restart Dock # Requires Dock restart
+
+-   name: Don't automatically rearrange Spaces based on most recent use
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: mru-spaces
+        type: bool
+        value: false
+    notify: Restart Dock # Requires Dock restart
+
+-   name: Remove the auto-hiding Dock delay
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: autohide-delay
+        type: float
+        value: 0
+
+-   name: Remove the animation when hiding/showing the Dock
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: autohide-time-modifier
+        type: float
+        value: 0
+
+-   name: Automatically hide and show the Dock
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: autohide
+        type: bool
+        value: true
+
+-   name: Make Dock icons of hidden applications translucent
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: showhidden
+        type: bool
+        value: true
+
+-   name: Don't show recent applications in Dock
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: show-recents
+        type: bool
+        value: false
+    notify: Restart Dock
+
+-   name: Configure Hot corners
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dock
+        key: "{{ item.key }}"
+        type: int
+        value: "{{ item.value }}"
+    loop:
+        - { key: wvous-tl-corner, value: "{{ macos_hotcorner_tl_corner }}" }
+        - { key: wvous-tl-modifier, value: "{{ macos_hotcorner_tl_modifier }}" }
+        - { key: wvous-tr-corner, value: "{{ macos_hotcorner_tr_corner }}" }
+        - { key: wvous-tr-modifier, value: "{{ macos_hotcorner_tr_modifier }}" }
+        - { key: wvous-bl-corner, value: "{{ macos_hotcorner_bl_corner }}" }
+        - { key: wvous-bl-modifier, value: "{{ macos_hotcorner_bl_modifier }}" }
+        - { key: wvous-br-corner, value: "{{ macos_hotcorner_br_corner }}" }
+        - { key: wvous-br-modifier, value: "{{ macos_hotcorner_br_modifier }}" }
+    notify: Restart Dock
+
+# ---------------------------------------------------------------------------- #
+# Spotlight                                                                    #
+# ---------------------------------------------------------------------------- #
+
+-   name: Spotlight - Change indexing order and disable results
+    ansible.builtin.osx_defaults:
+        domain: com.apple.spotlight
+        key: orderedItems
+        type: array
+        value:
+            - '{"enabled" = 1;"name" = "APPLICATIONS";}'
+            - '{"enabled" = 1;"name" = "SYSTEM_PREFS";}'
+            - '{"enabled" = 0;"name" = "DIRECTORIES";}'
+            - '{"enabled" = 0;"name" = "PDF";}'
+            - '{"enabled" = 0;"name" = "FONTS";}'
+            - '{"enabled" = 0;"name" = "DOCUMENTS";}'
+            - '{"enabled" = 0;"name" = "MESSAGES";}'
+            - '{"enabled" = 0;"name" = "CONTACT";}'
+            - '{"enabled" = 0;"name" = "EVENT_TODO";}'
+            - '{"enabled" = 0;"name" = "IMAGES";}'
+            - '{"enabled" = 0;"name" = "BOOKMARKS";}'
+            - '{"enabled" = 0;"name" = "MUSIC";}'
+            - '{"enabled" = 0;"name" = "MOVIES";}'
+            - '{"enabled" = 0;"name" = "PRESENTATIONS";}'
+            - '{"enabled" = 0;"name" = "SPREADSHEETS";}'
+            - '{"enabled" = 0;"name" = "SOURCE";}'
+            - '{"enabled" = 0;"name" = "MENU_DEFINITION";}'
+            - '{"enabled" = 0;"name" = "MENU_OTHER";}'
+            - '{"enabled" = 0;"name" = "MENU_CONVERSION";}'
+            - '{"enabled" = 0;"name" = "MENU_EXPRESSION";}'
+            - '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}'
+            - '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+
+-   name: Spotlight - Reload settings and rebuild index
+    become: true
+    ansible.builtin.command: "{{ item }}"
+    loop:
+        - killall mds
+        - mdutil -i on /
+        - mdutil -E /
+    changed_when: false
+    failed_when: false # Ignore killall error if mds not running
+
+# ---------------------------------------------------------------------------- #
+# Time Machine                                                                 #
+# ---------------------------------------------------------------------------- #
+
+-   name: Time Machine - Prevent prompting to use new hard drives as backup volume
+    ansible.builtin.osx_defaults:
+        domain: com.apple.TimeMachine
+        key: DoNotOfferNewDisksForBackup
+        type: bool
+        value: true
+
+-   name: Time Machine - Disable local backups
+    become: true
+    ansible.builtin.command: tmutil disablelocal
+    register: tmutil_disablelocal_status
+    changed_when: "'disabled' in tmutil_disablelocal_status.stdout"
+    # Check if tmutil exists first
+    when: ansible_distribution == 'MacOSX'
+    failed_when: false # Ignore if tmutil command not found or fails
+
+# ---------------------------------------------------------------------------- #
+# Activity Monitor                                                             #
+# ---------------------------------------------------------------------------- #
+
+-   name: Activity Monitor - Show the main window when launching
+    ansible.builtin.osx_defaults:
+        domain: com.apple.ActivityMonitor
+        key: OpenMainWindow
+        type: bool
+        value: true
+
+-   name: Activity Monitor - Visualize CPU usage in the Dock icon
+    ansible.builtin.osx_defaults:
+        domain: com.apple.ActivityMonitor
+        key: IconType
+        type: int
+        value: 5
+    notify: Restart Dock # Requires Dock restart to see change
+
+-   name: Activity Monitor - Show all processes
+    ansible.builtin.osx_defaults:
+        domain: com.apple.ActivityMonitor
+        key: ShowCategory
+        type: int
+        value: 0 # 0: All Processes, 100: My Processes, etc.
+
+-   name: Activity Monitor - Sort results by CPU usage
+    ansible.builtin.osx_defaults:
+        domain: com.apple.ActivityMonitor
+        key: "{{ item.key }}"
+        type: "{{ item.type }}"
+        value: "{{ item.value }}"
+    loop:
+        - { key: SortColumn, type: string, value: "CPUUsage" }
+        - { key: SortDirection, type: int, value: 0 } # 0=Descending, 1=Ascending
+
+# ---------------------------------------------------------------------------- #
+# Address Book, Calendar, TextEdit, Disk Utility, QuickTime Player             #
+# ---------------------------------------------------------------------------- #
+
+-   name: Enable the debug menu in Address Book (Contacts)
+    ansible.builtin.osx_defaults:
+        domain: com.apple.addressbook
+        key: ABShowDebugMenu
+        type: bool
+        value: true
+
+-   name: Enable Dashboard dev mode (widgets on desktop)
+    ansible.builtin.osx_defaults:
+        domain: com.apple.dashboard
+        key: devmode
+        type: bool
+        value: true
+    notify: Restart Dock # Needs Dock restart?
+
+-   name: Enable the debug menu in iCal (Calendar)
+    ansible.builtin.osx_defaults:
+        domain: com.apple.iCal
+        key: IncludeDebugMenu
+        type: bool
+        value: true
+
+-   name: TextEdit - Use plain text mode for new documents
+    ansible.builtin.osx_defaults:
+        domain: com.apple.TextEdit
+        key: RichText
+        type: int
+        value: 0
+
+-   name: TextEdit - Open and save files as UTF-8
+    ansible.builtin.osx_defaults:
+        domain: com.apple.TextEdit
+        key: "{{ item }}"
+        type: int
+        value: 4 # 4 is UTF-8
+    loop:
+        - PlainTextEncoding
+        - PlainTextEncodingForWrite
+
+-   name: Enable the debug menu in Disk Utility
+    ansible.builtin.osx_defaults:
+        domain: com.apple.DiskUtility
+        key: "{{ item }}"
+        type: bool
+        value: true
+    loop:
+        - DUDebugMenuEnabled
+        - advanced-image-options
+
+-   name: Auto-play videos when opened with QuickTime Player
+    ansible.builtin.osx_defaults:
+        domain: com.apple.QuickTimePlayerX
+        key: MGPlayMovieOnOpen
+        type: bool
+        value: true
+
+# ---------------------------------------------------------------------------- #
+# Mac App Store                                                                #
+# ---------------------------------------------------------------------------- #
+
+-   name: App Store - Enable WebKit Developer Tools
+    ansible.builtin.osx_defaults:
+        domain: com.apple.appstore
+        key: WebKitDeveloperExtras
+        type: bool
+        value: true
+
+-   name: App Store - Enable Debug Menu
+    ansible.builtin.osx_defaults:
+        domain: com.apple.appstore
+        key: ShowDebugMenu
+        type: bool
+        value: true
+
+-   name: App Store - Enable automatic update check
+    ansible.builtin.osx_defaults:
+        domain: com.apple.SoftwareUpdate
+        key: AutomaticCheckEnabled
+        type: bool
+        value: true
+
+-   name: App Store - Check for software updates daily
+    ansible.builtin.osx_defaults:
+        domain: com.apple.SoftwareUpdate
+        key: ScheduleFrequency
+        type: int
+        value: 1
+
+-   name: App Store - Download newly available updates in background
+    ansible.builtin.osx_defaults:
+        domain: com.apple.SoftwareUpdate
+        key: AutomaticDownload
+        type: int # Boolean in some macOS versions, Int in others. Int seems safer.
+        value: 1
+
+-   name: App Store - Install System data files & security updates
+    ansible.builtin.osx_defaults:
+        domain: com.apple.SoftwareUpdate
+        key: CriticalUpdateInstall
+        type: int # Boolean in some macOS versions, Int in others.
+        value: 1
+
+#- name: App Store - Automatically download apps purchased on other Macs
+#  ansible.builtin.osx_defaults:
+#    domain: com.apple.SoftwareUpdate
+#    key: ConfigDataInstall
+#    type: int # Boolean in some macOS versions, Int in others.
+#    value: 1
+
+-   name: App Store - Turn on app auto-update
+    ansible.builtin.osx_defaults:
+        domain: com.apple.commerce
+        key: AutoUpdate
+        type: bool
+        value: true
+
+-   name: App Store - Allow the App Store to reboot machine on macOS updates
+    ansible.builtin.osx_defaults:
+        domain: com.apple.commerce
+        key: AutoUpdateRestartRequired
+        type: bool
+        value: true
+
+# ---------------------------------------------------------------------------- #
+# Photos                                                                       #
+# ---------------------------------------------------------------------------- #
+
+-   name: Photos - Prevent opening automatically when devices are plugged in
+    ansible.builtin.osx_defaults:
+        domain: com.apple.ImageCapture
+        key: disableHotPlug
+        type: bool
+        value: true
+        host: currentHost
+
+# ---------------------------------------------------------------------------- #
+# Final Steps                                                                  #
+# ---------------------------------------------------------------------------- #
+
+-   name: Display completion message
+    ansible.builtin.debug:
+        msg: "macOS defaults applied. Some changes may require a logout/restart or application restart to take full effect."

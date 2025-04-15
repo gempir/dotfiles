@@ -1,23 +1,23 @@
 ---
-- name: Create macOS-specific directories
-  ansible.builtin.file:
-    path: "{{ item }}"
-    state: directory
-    mode: '0755'
-  loop:
-    - "~/.config/aerospace"
-    - "~/Library/Application Support/chatterino/Settings"
+-   name: Create macOS-specific directories
+    ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+    loop:
+        - "~/.config/aerospace"
+        - "~/Library/Application Support/chatterino/Settings"
 
-- name: Copy macOS-specific configuration files
-  ansible.builtin.copy:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    force: true
-  loop:
-    - { src: "{{ role_path }}/files/.hushlogin", dest: "~/.hushlogin" }
-    - { src: "{{ role_path }}/files/screensaver.workflow", dest: "~/screensaver.workflow" }
-    - { src: "{{ role_path }}/files/.config/alacritty/macos.toml", dest: "~/.config/alacritty/os.toml" }
-    - { src: "{{ role_path }}/files/.config/aerospace/aerospace.toml", dest: "~/.config/aerospace/aerospace.toml" }
-    - { src: "files/chatterino/commands.json", dest: "~/Library/Application Support/chatterino/Settings/commands.json" }
-    - { src: "files/chatterino/settings.json", dest: "~/Library/Application Support/chatterino/Settings/settings.json" }
-    - { src: "files/chatterino/window-layout.json", dest: "~/Library/Application Support/chatterino/Settings/window-layout.json" }
+-   name: Copy macOS-specific configuration files
+    ansible.builtin.copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        force: true
+    loop:
+        - { src: "{{ role_path }}/files/.hushlogin", dest: "~/.hushlogin" }
+        - { src: "{{ role_path }}/files/screensaver.workflow", dest: "~/screensaver.workflow" }
+        - { src: "{{ role_path }}/files/.config/alacritty/macos.toml", dest: "~/.config/alacritty/os.toml" }
+        - { src: "{{ role_path }}/files/.config/aerospace/aerospace.toml", dest: "~/.config/aerospace/aerospace.toml" }
+        - { src: "files/chatterino/commands.json", dest: "~/Library/Application Support/chatterino/Settings/commands.json" }
+        - { src: "files/chatterino/settings.json", dest: "~/Library/Application Support/chatterino/Settings/settings.json" }
+        - { src: "files/chatterino/window-layout.json", dest: "~/Library/Application Support/chatterino/Settings/window-layout.json" }

@@ -1,0 +1,44 @@
+---
+macos_highlight_color: "0.764700 0.976500 0.568600" # Green
+
+macos_language: "en"
+macos_locale: "de_DE@currency=EUR" # Adjust for your region, e.g., en_US@currency=USD
+macos_measurement_units: "Centimeters" # or Inches
+macos_metric_units: true # or false
+macos_timezone: "Europe/Berlin" # Find yours with `sudo systemsetup -listtimezones`
+
+macos_screenshots_location: "{{ ansible_user_dir }}/Desktop"
+macos_screenshots_format: "png"
+
+# Set default path for new windows.
+# Computer     : `PfCm`
+# Volume       : `PfVo`
+# $HOME        : `PfHm`
+# Desktop      : `PfDe`
+# Documents    : `PfDo`
+# All My Files : `PfAF`
+# Other…       : `PfLo`
+macos_finder_new_window_target: "PfHm"
+macos_finder_new_window_target_path: "file://{{ ansible_user_dir }}"
+# Set preferred view style.
+# Icon View   : `icnv`
+# List View   : `Nlsv`
+# Column View : `clmv`
+# Cover Flow  : `Flwv`
+macos_finder_preferred_view_style: "Nlsv"
+# Set search scope.
+# This Mac       : `SCev`
+# Current Folder : `SCcf`
+# Previous Scope : `SCsp`
+macos_finder_search_scope: "SCcf"
+
+# Hot Corners
+# 0: no-op, 2: Mission Control, 3: App windows, 4: Desktop, 5: Screensaver, 6: Disable Screensaver, 10: Sleep display, 13: Lock Screen
+macos_hotcorner_tl_corner: 5 # Top Left: Start screen saver
+macos_hotcorner_tl_modifier: 0 # No modifier
+macos_hotcorner_tr_corner: 0 # Top Right: No-op
+macos_hotcorner_tr_modifier: 0 # No modifier
+macos_hotcorner_bl_corner: 0 # Bottom Left: No-op
+macos_hotcorner_bl_modifier: 0 # No modifier
+macos_hotcorner_br_corner: 0 # Bottom Right: No-op
+macos_hotcorner_br_modifier: 0 # No modifier
