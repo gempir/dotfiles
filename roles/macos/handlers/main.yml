@@ -1,0 +1,25 @@
+---
+# Handlers for macOS role
+
+- name: Restart Dock
+  ansible.builtin.command: killall Dock
+  listen: Restart Dock
+
+- name: Restart Finder
+  ansible.builtin.command: killall Finder
+  listen: Restart Finder
+
+- name: Restart SystemUIServer
+  ansible.builtin.command: killall SystemUIServer
+  listen: Restart SystemUIServer
+
+# Note: Restarting WindowServer usually requires logout/reboot.
+# This handler is just a placeholder or for specific non-critical resets if applicable.
+# - name: Restart WindowServer
+#   ansible.builtin.command: # Command needed? Often needs full reboot.
+#   listen: Restart WindowServer
+
+# Restarting mds (Spotlight) is handled by mdutil commands in tasks usually.
+# - name: Restart mds
+#   ansible.builtin.command: killall mds
+#   listen: Restart mds 
