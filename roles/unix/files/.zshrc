@@ -9,8 +9,6 @@ export GTK_THEME=Adwaita:dark
 export QT_STYLE_OVERRIDE=adwaita
 
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -54,9 +52,5 @@ bindkey "^[[1;5D" backward-word
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
-
-export GOROOT=/home/gempir/.go
-export GOPATH=/home/gempir/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 [[ -f "$HOME/.config/local/share/../bin/env" ]] && . "$HOME/.config/local/share/../bin/env"
