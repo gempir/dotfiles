@@ -6,6 +6,7 @@
 	ci = !git add -A && git commit
 	tracking = for-each-ref --format='%(refname:short) <- %(upstream:short)' refs/heads
 	s = status --short
+	cp = cherry-pick
 
 	# current branch
 	# $ git find-merge <SHA-1>
