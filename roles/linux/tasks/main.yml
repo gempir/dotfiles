@@ -15,6 +15,7 @@
   loop:
     - ".config/gtk-3.0"
     - ".local/share"
+    - ".config/share/chatterino/Settings"
 
 - name: Copy shared config files
   ansible.builtin.copy:

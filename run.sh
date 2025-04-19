@@ -79,6 +79,8 @@ install_python() {
 run_playbook() {
     source .venv/bin/activate
 
+    ansible-vault decrypt files/ssh/id_ed25519_ansible_gempir.vault --output files/ssh/id_ed25519_ansible_gempir
+
     ansible-playbook --limit "$OS" playbook.yml
 }
 
