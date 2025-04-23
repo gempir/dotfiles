@@ -10,7 +10,7 @@ services:
       - TZ={{ ansible_date_time.tz }}
     volumes:
       - "{{ docker_base_dir }}/jdownloader/config:/config:rw"
-      - "{{ jdownloader_downloads_dir }}:/output:rw"
+      - "{{ storage_dir }}/Downloads:/output:rw"
     restart: unless-stopped
   watchtower:
     image: containrrr/watchtower:latest

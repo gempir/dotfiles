@@ -1,1 +1,0 @@
-/System/Volumes/Data/../Data/Volumes/wd1    -fstype=nfs,noowners,nolockd,hard,bg,intr,rw,tcp,nfc,resvport,nfsvers=4 nfs://192.168.178.40:/volume1/WD1

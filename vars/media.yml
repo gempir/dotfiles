@@ -19,7 +19,7 @@ homebrew_packages:
   - gnu-tar
   - hazel
 
-jdownloader_downloads_dir: "/Volumes/wd1/Downloads"
+storage_dir: "/Volumes/Terramaster"
 
 watchtower_email_enabled: true
 watchtower_email_from: "{{ email_user }}"

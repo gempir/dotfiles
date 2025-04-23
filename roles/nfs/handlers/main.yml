@@ -1,6 +1,0 @@
----
-- name: Reload automountd
-  ansible.builtin.command:
-    cmd: automount -vc
-  become: yes
-  listen: "Reload automountd"
