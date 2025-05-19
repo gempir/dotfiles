@@ -264,8 +264,8 @@
         type: int
         value: "{{ item.value }}"
     loop:
-        - { key: KeyRepeat, value: 1 }
-        - { key: InitialKeyRepeat, value: 10 }
+        - { key: KeyRepeat, value: 2 }
+        - { key: InitialKeyRepeat, value: 25 }
 
 -   name: Set language and text formats
     ansible.builtin.osx_defaults:
