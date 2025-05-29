@@ -11,3 +11,15 @@ services:
         volumes:
             - "{{ docker_base_dir }}/openwebui/config:/app/backend/data"
         restart: unless-stopped
+
+    mcp-obsidian:
+        image: ghcr.io/astral-sh/uv:debian-slim
+        container_name: mcp-obsidian
+        ports:
+            - "8000:8000"
+        network_mode: host
+        # the obsidian host variable is not respected for some reason, i'll keep it here for documentation purposes, ideally i don't want to use host networking
+        command: uvx mcpo --env OBSIDIAN_API_KEY={{ mcp_obsidian_api_key }} --env OBSIDIAN_HOST={{ mcp_obsidian_url }} --host 0.0.0.0 --port 8000 -- uvx mcp-obsidian
+        environment:
+            - TZ=Europe/Berlin
+        restart: unless-stopped
