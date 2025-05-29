@@ -1,0 +1,13 @@
+services:
+    openwebui:
+        image: ghcr.io/open-webui/open-webui:latest
+        container_name: openwebui
+        ports:
+            - "8080:8080"
+        environment:
+            - OPENAI_API_KEY={{ openai_api_key | default('') }}
+            - ANTHROPIC_API_KEY={{ anthropic_api_key | default('') }}
+            - TZ=Europe/Berlin
+        volumes:
+            - "{{ docker_base_dir }}/openwebui/config:/app/backend/data"
+        restart: unless-stopped
