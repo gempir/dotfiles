@@ -1,0 +1,22 @@
+---
+- name: Create cloudflared directory
+  file:
+    path: "{{ docker_base_dir }}/cloudflared"
+    state: directory
+    mode: '0755'
+
+- name: Generate cloudflared docker-compose.yml
+  template:
+    src: docker-compose.yml.j2
+    dest: "{{ docker_base_dir }}/cloudflared/docker-compose.yml"
+    mode: '0644'
+  notify: Restart cloudflared
+
+- name: Ensure cloudflared service is running
+  community.docker.docker_compose_v2:
+    project_src: "{{ docker_base_dir }}/cloudflared"
+    files:
+      - "{{ docker_base_dir }}/cloudflared/docker-compose.yml"
+    state: present
+    recreate: auto
+    docker_cli: /usr/local/bin/docker
