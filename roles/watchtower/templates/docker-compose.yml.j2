@@ -1,0 +1,11 @@
+services:
+    watchtower:
+        image: containrrr/watchtower:latest
+        container_name: watchtower
+        volumes:
+            - "/Users/gempir/.orbstack/run/docker.sock:/var/run/docker.sock"
+        environment:
+            - WATCHTOWER_CLEANUP=true
+            - WATCHTOWER_NOTIFICATIONS=shoutrrr
+            - WATCHTOWER_NOTIFICATION_URL=smtp://{{ watchtower_email_user | urlencode }}:{{ watchtower_email_password | urlencode }}@{{ watchtower_email_server }}:{{ watchtower_email_port }}/?from={{ watchtower_email_from | urlencode }}&to={{ watchtower_email_to | urlencode }}&subject=Watchtower%20Update%20-%20{{ ansible_hostname | urlencode }}
+        restart: unless-stopped

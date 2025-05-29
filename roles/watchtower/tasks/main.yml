@@ -1,0 +1,29 @@
+---
+- name: Ensure Watchtower directory structure exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ target_user }}"
+    group: "staff"
+    mode: '0755'
+  loop:
+    - "{{ docker_base_dir }}"
+    - "{{ docker_base_dir }}/watchtower"
+
+- name: Template Watchtower Docker Compose file
+  ansible.builtin.template:
+    src: templates/docker-compose.yml.j2
+    dest: "{{ docker_base_dir }}/watchtower/docker-compose.yml"
+    owner: "{{ target_user }}"
+    group: "staff"
+    mode: '0644'
+  notify: Restart watchtower
+
+- name: Ensure Watchtower service is running
+  community.docker.docker_compose_v2:
+    project_src: "{{ docker_base_dir }}/watchtower"
+    files:
+      - "{{ docker_base_dir }}/watchtower/docker-compose.yml"
+    state: present
+    recreate: auto
+    docker_cli: /usr/local/bin/docker

@@ -1,0 +1,8 @@
+---
+- name: Restart cloudflared
+  community.docker.docker_compose_v2:
+    project_src: "{{ docker_base_dir }}/cloudflared"
+    files:
+      - "{{ docker_base_dir }}/cloudflared/docker-compose.yml"
+    state: restarted
+    docker_cli: /usr/local/bin/docker

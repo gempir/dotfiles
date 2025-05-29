@@ -1,0 +1,9 @@
+# roles/openwebui/handlers/main.yml
+---
+- name: Restart openwebui
+  community.docker.docker_compose_v2:
+    project_src: "{{ docker_base_dir }}/openwebui"
+    files:
+      - "{{ docker_base_dir }}/openwebui/docker-compose.yml"
+    state: restarted
+    docker_cli: /usr/local/bin/docker

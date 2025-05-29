@@ -1,0 +1,9 @@
+# roles/watchtower/handlers/main.yml
+---
+- name: Restart watchtower
+  community.docker.docker_compose_v2:
+    project_src: "{{ docker_base_dir }}/watchtower"
+    files:
+      - "{{ docker_base_dir }}/watchtower/docker-compose.yml"
+    state: restarted
+    docker_cli: /usr/local/bin/docker

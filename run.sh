@@ -81,7 +81,17 @@ run_playbook() {
 
     ansible-vault decrypt files/ssh/id_ed25519_ansible_gempir.vault --output files/ssh/id_ed25519_ansible_gempir
 
+    # Run the main playbook
+    print_notice "Running main playbook"
     ansible-playbook --limit "$OS" playbook.yml
+    
+    # Run macos_defaults playbook only if RUN_MACOS_DEFAULTS is set
+    if [ -n "$RUN_MACOS_DEFAULTS" ]; then
+        print_notice "Running macos_defaults playbook"
+        ansible-playbook --limit "$OS" macos_defaults.yml
+    else
+        print_notice "Skipping macos_defaults (set RUN_MACOS_DEFAULTS=1 to enable)"
+    fi
 }
 
 if [ ! -f ".venv/bin/ansible" ]; then

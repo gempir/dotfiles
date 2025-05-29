@@ -7,5 +7,3 @@
       - "{{ docker_base_dir }}/jdownloader/docker-compose.yml"
     state: restarted
     docker_cli: /usr/local/bin/docker
-  become: no
-  listen: "Restart jdownloader" 

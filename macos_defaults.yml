@@ -1,0 +1,17 @@
+---
+- name: macos_defaults
+  hosts: [macos, media]
+  become: true
+  vars:
+    current_os: macos
+
+  vars_files:
+    - vars/macos.yml
+
+  vars_prompt:
+    - name: "ansible_become_pass"
+      prompt: "Sudo password"
+      private: yes
+
+  roles:
+    - macos_defaults
