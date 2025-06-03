@@ -3,7 +3,6 @@
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
-  become: "{{ current_os == 'linux' }}"
   loop:
     - alacritty
     - tree

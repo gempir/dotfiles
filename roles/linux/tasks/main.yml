@@ -3,9 +3,9 @@
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
-  become: true
   loop:
     - fontconfig
+    - cosmic
 
 - name: Create Linux-specific directories
   ansible.builtin.file:
@@ -14,8 +14,8 @@
     mode: '0755'
   loop:
     - ".config/gtk-3.0"
-    - ".local/share"
-    - ".local/share/chatterino/Settings"
+    - ".config/local/share"
+    - ".config/local/share/chatterino/Settings"
 
 - name: Copy shared config files
   ansible.builtin.copy:
@@ -23,8 +23,9 @@
     dest: "~/{{ item.dest | default(item.src) }}"
     force: true
   loop:
-    - { src: "chatterino/commands.json", dest: ".local/share/chatterino/Settings/commands.json" }
-    - { src: "chatterino/window-layout.json", dest: ".local/share/chatterino/Settings/window-layout.json" }
+    - { src: "chatterino/commands.json", dest: ".config/local/share/chatterino/Settings/commands.json" }
+    - { src: "chatterino/window-layout.json", dest: ".config/local/share/chatterino/Settings/window-layout.json" }
+    - { src: "chatterino/settings.json", dest: ".config/local/share/chatterino/Settings/settings.json" }
 
 - name: Copy Linux-specific configuration files
   ansible.builtin.copy:
@@ -34,11 +35,8 @@
   loop:
     - { src: ".config/alacritty/linux.toml", dest: ".config/alacritty/os.toml" }
     - { src: ".config/gtk-3.0/settings.ini" }
-    - { src: ".config/i3/" }
-    - { src: ".config/i3blocks/" }
-    - { src: ".config/dunst/" }
     - { src: ".config/wallpaper.jpg" }
-    - { src: ".local/share/fonts/" }
+    - { src: ".config/local/share/fonts/" }
     - { src: ".imwheelrc" }
   notify: 
     - Update font cache

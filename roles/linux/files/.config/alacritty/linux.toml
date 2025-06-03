@@ -1,2 +1,5 @@
 [font]
-size = 8.0
+size = 10.0
+
+[window]
+decorations = "buttonless"
