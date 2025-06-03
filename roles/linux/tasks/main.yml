@@ -7,6 +7,11 @@
     - fontconfig
     - cosmic
 
+- name: Ensure cosmic-greeter is enabled
+  ansible.builtin.systemd:
+    name: cosmic-greeter
+    enabled: true
+
 - name: Create Linux-specific directories
   ansible.builtin.file:
     path: "~/{{ item }}"
