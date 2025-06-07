@@ -46,6 +46,8 @@ alias bssh="mkdir -p ~/.ssh/config.d && echo -e '\nHost *\n    IdentityFile \"~/
 alias nssh="rm ~/.ssh/config.d/backup"
 alias drink="brew update && brew upgrade && brew cleanup"
 
+alias bambu="__GLX_VENDOR_LIBRARY_NAME=mesa  __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_amber.json bambu-studio"
+
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
