@@ -41,3 +41,7 @@ y = 0
 
 [general]
 import = ["~/.config/alacritty/os.toml"]
+
+[terminal.shell]
+program = "zsh"
+args = ["-c", "tmux new-session"]
