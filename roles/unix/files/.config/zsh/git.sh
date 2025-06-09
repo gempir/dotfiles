@@ -80,4 +80,3 @@ alias ghead='git reset HEAD^'
 alias ghard='git reset --hard'
 alias gc='_gc() { git commit -m "$*" }; _gc'
 alias gca='git add -A && gc'
-alias gjca="gjca || gca"
