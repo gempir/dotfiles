@@ -5,7 +5,7 @@
     state: present
   loop:
     - fontconfig
-    - cosmic
+    # - cosmic
 
 - name: Ensure cosmic-greeter is enabled
   ansible.builtin.systemd:
@@ -19,8 +19,8 @@
     mode: 0755
   loop:
     - ".config/gtk-3.0"
-    - ".config/local/share"
-    - ".config/local/share/chatterino/Settings"
+    - ".local/share"
+    - ".local/share/chatterino/Settings"
 
 - name: Copy shared config files
   ansible.builtin.copy:
@@ -28,9 +28,9 @@
     dest: "~/{{ item.dest | default(item.src) }}"
     force: true
   loop:
-    - { src: "chatterino/commands.json", dest: ".config/local/share/chatterino/Settings/commands.json" }
-    - { src: "chatterino/window-layout.json", dest: ".config/local/share/chatterino/Settings/window-layout.json" }
-    - { src: "chatterino/settings.json", dest: ".config/local/share/chatterino/Settings/settings.json" }
+    - { src: "chatterino/commands.json", dest: ".local/share/chatterino/Settings/commands.json" }
+    - { src: "chatterino/window-layout.json", dest: ".local/share/chatterino/Settings/window-layout.json" }
+    - { src: "chatterino/settings.json", dest: ".local/share/chatterino/Settings/settings.json" }
 
 - name: Copy Linux-specific configuration files
   ansible.builtin.copy:
