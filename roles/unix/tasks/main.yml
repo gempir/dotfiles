@@ -19,7 +19,7 @@
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
-    mode: '0755'
+    mode: "0755"
   loop:
     - "~/.ssh/config.d"
     - "~/.vim/colors"
@@ -27,6 +27,7 @@
     - "~/.config/alacritty"
     - "~/.config/zsh"
     - "~/.config/streamlink"
+    - "~/.config/zed"
 
 - name: Copy common configuration files
   ansible.builtin.copy:
@@ -44,6 +45,10 @@
     - { src: ".tmux.conf" }
     - { src: ".config/zsh/git.sh" }
     - { src: ".config/streamlink/config" }
+    - {
+        src: "../../../files/zed/settings.json",
+        dest: ".config/zed/settings.json",
+      }
 
 - name: Ensure ssh_config contains include
   ansible.builtin.lineinfile:
