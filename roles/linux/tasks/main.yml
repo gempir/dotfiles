@@ -41,7 +41,7 @@
     - { src: ".config/alacritty/linux.toml", dest: ".config/alacritty/os.toml" }
     - { src: ".config/gtk-3.0/settings.ini" }
     - { src: ".config/wallpaper.jpg" }
-    - { src: ".config/local/share/fonts/" }
+    - { src: ".local/share/fonts/" }
     - { src: ".config/cosmic" }
     - { src: ".profile" }
   notify: 
