@@ -1,4 +1,5 @@
 theme = "0x96f"
+background = "000000"
 window-decoration = false
 font-family = "Menlo"
 
