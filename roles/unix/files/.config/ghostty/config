@@ -1,0 +1,15 @@
+theme = "0x96f"
+window-decoration = false
+font-family = "Menlo"
+
+keybind = ctrl+t>left=new_split:left
+keybind = ctrl+t>right=new_split:right
+keybind = ctrl+t>down=new_split:down
+keybind = ctrl+t>up=new_split:up
+
+keybind = ctrl+left=goto_split:left
+keybind = ctrl+right=goto_split:right
+keybind = ctrl+down=goto_split:down
+keybind = ctrl+up=goto_split:up
+
+keybind = ctrl+t>e=equalize_splits

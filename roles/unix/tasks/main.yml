@@ -25,6 +25,7 @@
     - "~/.vim/colors"
     - "~/.vim/autoload"
     - "~/.config/alacritty"
+    - "~/.config/ghostty"
     - "~/.config/zsh"
     - "~/.config/streamlink"
     - "~/.config/zed"
@@ -42,6 +43,7 @@
     - { src: ".vim/colors/onedark.vim" }
     - { src: ".vim/autoload/onedark.vim" }
     - { src: ".config/alacritty/alacritty.toml" }
+    - { src: ".config/ghostty/config" }
     - { src: ".tmux.conf" }
     - { src: ".config/zsh/git.sh" }
     - { src: ".config/streamlink/config" }
