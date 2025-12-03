@@ -11,6 +11,7 @@ export QT_STYLE_OVERRIDE=adwaita
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
 source "$XDG_CONFIG_HOME/zsh/git.sh"
 

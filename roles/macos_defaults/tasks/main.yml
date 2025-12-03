@@ -115,10 +115,6 @@
         type: bool
         value: false
 
--   name: Remove duplicates in the "Open With" menu
-    ansible.builtin.command: /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-    changed_when: false
-
 -   name: Display ASCII control characters using caret notation
     ansible.builtin.osx_defaults:
         domain: NSGlobalDomain
