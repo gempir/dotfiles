@@ -62,6 +62,7 @@ alias doc="docker compose"
 alias bssh="mkdir -p ~/.ssh/config.d && echo -e '\nHost *\n    IdentityFile \"~/.ssh/id_ed25519_sk_backup\"\n    IdentityFile \"~/.ssh/id_rsa\"\n' >> ~/.ssh/config.d/backup"
 alias nssh="rm ~/.ssh/config.d/backup"
 alias drink="brew update && brew upgrade && brew cleanup"
+alias pn="pnpm"
 
 alias bambu="__GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_amber.json bambu-studio"
 
