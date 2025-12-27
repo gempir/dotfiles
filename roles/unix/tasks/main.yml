@@ -29,6 +29,7 @@
     - "~/.config/zsh"
     - "~/.config/streamlink"
     - "~/.config/zed"
+    - "~/.config/opencode"
 
 - name: Copy common configuration files
   ansible.builtin.copy:
@@ -51,6 +52,7 @@
         src: "../../../files/zed/settings.json",
         dest: ".config/zed/settings.json",
       }
+    - { src: ".config/opencode/opencode.json" }
 
 - name: Ensure ssh_config contains include
   ansible.builtin.lineinfile:

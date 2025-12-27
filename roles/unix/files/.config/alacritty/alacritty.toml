@@ -44,3 +44,6 @@ import = ["~/.config/alacritty/os.toml"]
 
 [terminal.shell]
 program = "zsh"
+
+[keyboard]
+bindings = [ { key = "Return", mods = "Shift", chars = "\n" } ]
