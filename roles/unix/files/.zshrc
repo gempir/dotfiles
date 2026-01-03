@@ -12,6 +12,8 @@ export WINIT_HIDPI_FACTOR=1
 export GTK_THEME=Adwaita:dark
 export QT_STYLE_OVERRIDE=adwaita
 
+export BUN_INSTALL="$HOME/.bun"
+
 # PATH: Build it once efficiently
 typeset -U path  # Ensure unique entries
 path=(
@@ -20,6 +22,7 @@ path=(
     /opt/homebrew/bin(N)  # N flag: only add if exists
     /usr/local/go/bin
     $path
+    $BUN_INSTALL/bin
 )
 
 source "$XDG_CONFIG_HOME/zsh/git.sh"
@@ -43,8 +46,13 @@ if [[ -f ~/.ssh/config ]]; then
     zstyle ':completion:*:(ssh|scp|sftp):*' hosts $(awk '/^Host [^*]/ {print $2}' ~/.ssh/config)
 fi
 
+# Bun completions
+[ -s "/home/gempir/.bun/_bun" ] && source "/home/gempir/.bun/_bun"
+
 # Source additional config files
 [[ -f $HOME/.profile ]] && . $HOME/.profile
+[[ -f "$HOME/.config/local/bin/env" ]] && . "$HOME/.config/local/bin/env"
+[[ -f "$HOME/.config/local/share/../bin/env" ]] && . "$HOME/.config/local/share/../bin/env"
 
 # Project-specific settings
 export MOEBEL_CODE="$HOME/dev/furniture"
@@ -77,6 +85,3 @@ if command -v terraform &> /dev/null; then
     autoload -U +X bashcompinit && bashcompinit
     complete -o nospace -C /usr/local/bin/terraform terraform
 fi
-
-# Additional local config
-[[ -f "$HOME/.config/local/bin/env" ]] && . "$HOME/.config/local/bin/env"
