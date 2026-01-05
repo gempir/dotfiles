@@ -1,611 +1,614 @@
 {
-    "hotkeys": {
-        "addedDefaults": [
-            "change channel",
-            "close popup window",
-            "create clip",
-            "delete",
-            "emote picker",
-            "focus down",
-            "focus left",
-            "focus right",
-            "focus up",
-            "go to end of input",
-            "go to end of input with selection",
-            "go to start of input",
-            "go to start of input with selection",
-            "new popup window",
-            "new popup window from tab",
-            "new split",
-            "new tab",
-            "next message",
-            "open debug popup",
-            "open overlay",
-            "open quick switcher",
-            "open settings",
-            "popup accept",
-            "popup focus search box",
-            "popup reject",
-            "popup scroll down",
-            "popup scroll up",
-            "popup select last tab",
-            "popup select next tab",
-            "popup select previous tab",
-            "popup select tab #1",
-            "popup select tab #2",
-            "popup select tab #3",
-            "popup select tab #4",
-            "popup select tab #5",
-            "popup select tab #6",
-            "popup select tab #7",
-            "popup select tab #8",
-            "previous message",
-            "reconnect",
-            "reload emotes",
-            "remove tab",
-            "reopen split",
-            "scroll page down",
-            "scroll page up",
-            "scroll to bottom",
-            "scroll to top",
-            "select last tab",
-            "select next tab",
-            "select previous tab",
-            "select tab #1",
-            "select tab #2",
-            "select tab #3",
-            "select tab #4",
-            "select tab #5",
-            "select tab #6",
-            "select tab #7",
-            "select tab #8",
-            "send message",
-            "send message and keep text",
-            "show global search",
-            "show search",
-            "toggle local r9k",
-            "toggle overlay click-through",
-            "toggle tab visibility",
-            "zoom in",
-            "zoom out",
-            "zoom reset"
-        ],
-        "close popup window": {
-            "action": "delete",
-            "keySequence": "Esc",
-            "category": "popupWindow",
-            "arguments": []
-        },
-        "popup accept": {
-            "action": "accept",
-            "keySequence": "Return",
-            "category": "popupWindow",
-            "arguments": []
-        },
-        "popup focus search box": {
-            "action": "search",
-            "keySequence": "Ctrl+F",
-            "category": "popupWindow",
-            "arguments": []
-        },
-        "popup reject": {
-            "action": "reject",
-            "keySequence": "Esc",
-            "category": "popupWindow",
-            "arguments": []
-        },
-        "popup scroll down": {
-            "action": "scrollPage",
-            "keySequence": "PgDown",
-            "category": "popupWindow",
-            "arguments": [
-                "down"
-            ]
-        },
-        "popup scroll up": {
-            "action": "scrollPage",
-            "keySequence": "PgUp",
-            "category": "popupWindow",
-            "arguments": [
-                "up"
-            ]
-        },
-        "popup select last tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+9",
-            "category": "popupWindow",
-            "arguments": [
-                "last"
-            ]
-        },
-        "popup select next tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+Tab",
-            "category": "popupWindow",
-            "arguments": [
-                "next"
-            ]
-        },
-        "popup select previous tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+Shift+Tab",
-            "category": "popupWindow",
-            "arguments": [
-                "previous"
-            ]
-        },
-        "popup select tab #1": {
-            "action": "openTab",
-            "keySequence": "Ctrl+1",
-            "category": "popupWindow",
-            "arguments": [
-                "0"
-            ]
-        },
-        "popup select tab #2": {
-            "action": "openTab",
-            "keySequence": "Ctrl+2",
-            "category": "popupWindow",
-            "arguments": [
-                "1"
-            ]
-        },
-        "popup select tab #3": {
-            "action": "openTab",
-            "keySequence": "Ctrl+3",
-            "category": "popupWindow",
-            "arguments": [
-                "2"
-            ]
-        },
-        "popup select tab #4": {
-            "action": "openTab",
-            "keySequence": "Ctrl+4",
-            "category": "popupWindow",
-            "arguments": [
-                "3"
-            ]
-        },
-        "popup select tab #5": {
-            "action": "openTab",
-            "keySequence": "Ctrl+5",
-            "category": "popupWindow",
-            "arguments": [
-                "4"
-            ]
-        },
-        "popup select tab #6": {
-            "action": "openTab",
-            "keySequence": "Ctrl+6",
-            "category": "popupWindow",
-            "arguments": [
-                "5"
-            ]
-        },
-        "popup select tab #7": {
-            "action": "openTab",
-            "keySequence": "Ctrl+7",
-            "category": "popupWindow",
-            "arguments": [
-                "6"
-            ]
-        },
-        "popup select tab #8": {
-            "action": "openTab",
-            "keySequence": "Ctrl+8",
-            "category": "popupWindow",
-            "arguments": [
-                "7"
-            ]
-        },
-        "change channel": {
-            "action": "changeChannel",
-            "keySequence": "Ctrl+R",
-            "category": "split",
-            "arguments": []
-        },
-        "create clip": {
-            "action": "createClip",
-            "keySequence": "Alt+X",
-            "category": "split",
-            "arguments": []
-        },
-        "delete": {
-            "action": "delete",
-            "keySequence": "Ctrl+W",
-            "category": "split",
-            "arguments": []
-        },
-        "focus down": {
-            "action": "focus",
-            "keySequence": "Alt+Down",
-            "category": "split",
-            "arguments": [
-                "down"
-            ]
-        },
-        "focus left": {
-            "action": "focus",
-            "keySequence": "Alt+Left",
-            "category": "split",
-            "arguments": [
-                "left"
-            ]
-        },
-        "focus right": {
-            "action": "focus",
-            "keySequence": "Alt+Right",
-            "category": "split",
-            "arguments": [
-                "right"
-            ]
-        },
-        "focus up": {
-            "action": "focus",
-            "keySequence": "Alt+Up",
-            "category": "split",
-            "arguments": [
-                "up"
-            ]
-        },
-        "open debug popup": {
-            "action": "debug",
-            "keySequence": "F10",
-            "category": "split",
-            "arguments": []
-        },
-        "open overlay": {
-            "action": "popupOverlay",
-            "keySequence": "Ctrl+Alt+N",
-            "category": "split",
-            "arguments": []
-        },
-        "reconnect": {
-            "action": "reconnect",
-            "keySequence": "Ctrl+F5",
-            "category": "split",
-            "arguments": []
-        },
-        "reload emotes": {
-            "action": "reloadEmotes",
-            "keySequence": "F5",
-            "category": "split",
-            "arguments": []
-        },
-        "scroll page down": {
-            "action": "scrollPage",
-            "keySequence": "PgDown",
-            "category": "split",
-            "arguments": [
-                "down"
-            ]
-        },
-        "scroll page up": {
-            "action": "scrollPage",
-            "keySequence": "PgUp",
-            "category": "split",
-            "arguments": [
-                "up"
-            ]
-        },
-        "scroll to bottom": {
-            "action": "scrollToBottom",
-            "keySequence": "Ctrl+End",
-            "category": "split",
-            "arguments": []
-        },
-        "scroll to top": {
-            "action": "scrollToTop",
-            "keySequence": "Ctrl+Home",
-            "category": "split",
-            "arguments": []
-        },
-        "show global search": {
-            "action": "showGlobalSearch",
-            "keySequence": "Ctrl+Shift+F",
-            "category": "split",
-            "arguments": []
-        },
-        "show search": {
-            "action": "showSearch",
-            "keySequence": "Ctrl+F",
-            "category": "split",
-            "arguments": []
-        },
-        "toggle overlay click-through": {
-            "action": "toggleOverlayInertia",
-            "keySequence": "Ctrl+Shift+U",
-            "category": "split",
-            "arguments": [
-                "all"
-            ]
-        },
-        "emote picker": {
-            "action": "openEmotesPopup",
-            "keySequence": "Ctrl+E",
-            "category": "splitInput",
-            "arguments": []
-        },
-        "go to end of input": {
-            "action": "cursorToEnd",
-            "keySequence": "End",
-            "category": "splitInput",
-            "arguments": [
-                "withoutSelection"
-            ]
-        },
-        "go to end of input with selection": {
-            "action": "cursorToEnd",
-            "keySequence": "Shift+End",
-            "category": "splitInput",
-            "arguments": [
-                "withSelection"
-            ]
-        },
-        "go to start of input": {
-            "action": "cursorToStart",
-            "keySequence": "Home",
-            "category": "splitInput",
-            "arguments": [
-                "withoutSelection"
-            ]
-        },
-        "go to start of input with selection": {
-            "action": "cursorToStart",
-            "keySequence": "Shift+Home",
-            "category": "splitInput",
-            "arguments": [
-                "withSelection"
-            ]
-        },
-        "next message": {
-            "action": "nextMessage",
-            "keySequence": "Down",
-            "category": "splitInput",
-            "arguments": []
-        },
-        "previous message": {
-            "action": "previousMessage",
-            "keySequence": "Up",
-            "category": "splitInput",
-            "arguments": []
-        },
-        "send message": {
-            "action": "sendMessage",
-            "keySequence": "Return",
-            "category": "splitInput",
-            "arguments": []
-        },
-        "send message and keep text": {
-            "action": "sendMessage",
-            "keySequence": "Ctrl+Return",
-            "category": "splitInput",
-            "arguments": [
-                "keepInput"
-            ]
-        },
-        "new popup window": {
-            "action": "popup",
-            "keySequence": "Ctrl+N",
-            "category": "window",
-            "arguments": [
-                "split"
-            ]
-        },
-        "new popup window from tab": {
-            "action": "popup",
-            "keySequence": "Ctrl+Shift+N",
-            "category": "window",
-            "arguments": [
-                "window"
-            ]
-        },
-        "new split": {
-            "action": "newSplit",
-            "keySequence": "Ctrl+T",
-            "category": "window",
-            "arguments": []
-        },
-        "new tab": {
-            "action": "newTab",
-            "keySequence": "Ctrl+Shift+T",
-            "category": "window",
-            "arguments": []
-        },
-        "open quick switcher": {
-            "action": "openQuickSwitcher",
-            "keySequence": "Ctrl+K",
-            "category": "window",
-            "arguments": []
-        },
-        "open settings": {
-            "action": "openSettings",
-            "keySequence": "Ctrl+P",
-            "category": "window",
-            "arguments": []
-        },
-        "remove tab": {
-            "action": "removeTab",
-            "keySequence": "Ctrl+Shift+W",
-            "category": "window",
-            "arguments": []
-        },
-        "reopen split": {
-            "action": "reopenSplit",
-            "keySequence": "Ctrl+G",
-            "category": "window",
-            "arguments": []
-        },
-        "select last tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+9",
-            "category": "window",
-            "arguments": [
-                "last"
-            ]
-        },
-        "select next tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+Tab",
-            "category": "window",
-            "arguments": [
-                "next"
-            ]
-        },
-        "select previous tab": {
-            "action": "openTab",
-            "keySequence": "Ctrl+Shift+Tab",
-            "category": "window",
-            "arguments": [
-                "previous"
-            ]
-        },
-        "select tab #1": {
-            "action": "openTab",
-            "keySequence": "Ctrl+1",
-            "category": "window",
-            "arguments": [
-                "0"
-            ]
-        },
-        "select tab #2": {
-            "action": "openTab",
-            "keySequence": "Ctrl+2",
-            "category": "window",
-            "arguments": [
-                "1"
-            ]
-        },
-        "select tab #3": {
-            "action": "openTab",
-            "keySequence": "Ctrl+3",
-            "category": "window",
-            "arguments": [
-                "2"
-            ]
-        },
-        "select tab #4": {
-            "action": "openTab",
-            "keySequence": "Ctrl+4",
-            "category": "window",
-            "arguments": [
-                "3"
-            ]
-        },
-        "select tab #5": {
-            "action": "openTab",
-            "keySequence": "Ctrl+5",
-            "category": "window",
-            "arguments": [
-                "4"
-            ]
-        },
-        "select tab #6": {
-            "action": "openTab",
-            "keySequence": "Ctrl+6",
-            "category": "window",
-            "arguments": [
-                "5"
-            ]
-        },
-        "select tab #7": {
-            "action": "openTab",
-            "keySequence": "Ctrl+7",
-            "category": "window",
-            "arguments": [
-                "6"
-            ]
-        },
-        "select tab #8": {
-            "action": "openTab",
-            "keySequence": "Ctrl+8",
-            "category": "window",
-            "arguments": [
-                "7"
-            ]
-        },
-        "toggle local r9k": {
-            "action": "toggleLocalR9K",
-            "keySequence": "Ctrl+H",
-            "category": "window",
-            "arguments": []
-        },
-        "toggle tab visibility": {
-            "action": "setTabVisibility",
-            "keySequence": "Ctrl+U",
-            "category": "window",
-            "arguments": [
-                "toggle"
-            ]
-        },
-        "zoom in": {
-            "action": "zoom",
-            "keySequence": "Ctrl++",
-            "category": "window",
-            "arguments": [
-                "in"
-            ]
-        },
-        "zoom out": {
-            "action": "zoom",
-            "keySequence": "Ctrl+-",
-            "category": "window",
-            "arguments": [
-                "out"
-            ]
-        },
-        "zoom reset": {
-            "action": "zoom",
-            "keySequence": "Ctrl+0",
-            "category": "window",
-            "arguments": [
-                "reset"
-            ]
-        }
+  "accounts": {},
+  "appearance": {
+    "currentFontFamily": "Open Sans",
+    "currentFontSize": 12,
+    "lastPopup": {
+      "size": {
+        "height": 1375,
+        "width": 388
+      }
     },
-    "misc": {
-        "currentVersion": "2.5.3",
-        "lockNotebookLayout": false
+    "messages": {
+      "showTimestamps": false,
+      "timestampFormat": "h:mm"
     },
-    "accounts": {
-        "uid77829817": {
-            "username": "gempir",
-            "userID": "77829817",
-            "clientID": "g5zg0400k4vhrx2g6xi4hgveruamlv",
-            "oauthToken": "ltiigwstllwidzi5c6qpjkptbdpi3f"
-        },
-        "current": "gempir"
+    "showEmptyInputBox": false,
+    "showTabCloseButton": false,
+    "thumbnailSize": 300,
+    "thumbnailSizeStream": 3
+  },
+  "emotes": {
+    "showUnlistedSevenTVEmotes": true
+  },
+  "filtering": {
+    "filters": [
+      {
+        "filter": "((author.badges) contains (\"staff\") || (author.badges) contains (\"moderator\") || (author.badges) contains (\"broadcaster\") || (author.badges) contains (\"partner\")) && ((author.name) !== (\"botnextdoor\")) && ((author.name) !== (\"supibot\"))",
+        "id": "f04550a7-b6e7-404a-928b-940a7df54949",
+        "name": "NymN Important"
+      },
+      {
+        "filter": "!flags.shared",
+        "id": "dbf09549-a1f0-45e8-99f1-b7bdb4d98d3a",
+        "name": "Only Non-Shared"
+      },
+      {
+        "filter": "flags.shared",
+        "id": "7e6c1610-c3c2-4c10-b497-38306b9e84d2",
+        "name": "Only Shared"
+      }
+    ]
+  },
+  "hotkeys": {
+    "addedDefaults": [
+      "change channel",
+      "close popup window",
+      "create clip",
+      "delete",
+      "emote picker",
+      "focus down",
+      "focus left",
+      "focus right",
+      "focus up",
+      "go to end of input",
+      "go to end of input with selection",
+      "go to start of input",
+      "go to start of input with selection",
+      "new popup window",
+      "new popup window from tab",
+      "new split",
+      "new tab",
+      "next message",
+      "open debug popup",
+      "open overlay",
+      "open quick switcher",
+      "open settings",
+      "popup accept",
+      "popup focus search box",
+      "popup reject",
+      "popup scroll down",
+      "popup scroll up",
+      "popup select last tab",
+      "popup select next tab",
+      "popup select previous tab",
+      "popup select tab #1",
+      "popup select tab #2",
+      "popup select tab #3",
+      "popup select tab #4",
+      "popup select tab #5",
+      "popup select tab #6",
+      "popup select tab #7",
+      "popup select tab #8",
+      "previous message",
+      "reconnect",
+      "reload emotes",
+      "remove tab",
+      "reopen split",
+      "scroll page down",
+      "scroll page up",
+      "scroll to bottom",
+      "scroll to top",
+      "select last tab",
+      "select next tab",
+      "select previous tab",
+      "select tab #1",
+      "select tab #2",
+      "select tab #3",
+      "select tab #4",
+      "select tab #5",
+      "select tab #6",
+      "select tab #7",
+      "select tab #8",
+      "send message",
+      "send message and keep text",
+      "show global search",
+      "show search",
+      "toggle local r9k",
+      "toggle overlay click-through",
+      "toggle tab visibility",
+      "zoom in",
+      "zoom out",
+      "zoom reset"
+    ],
+    "change channel": {
+      "action": "changeChannel",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+R"
     },
-    "appearance": {
-        "showEmptyInputBox": false,
-        "messages": {
-            "showTimestamps": false,
-            "timestampFormat": "h:mm"
-        },
-        "currentFontFamily": "Open Sans",
-        "currentFontSize": 12,
-        "showTabCloseButton": false
+    "close popup window": {
+      "action": "delete",
+      "arguments": [],
+      "category": "popupWindow",
+      "keySequence": "Esc"
     },
-    "emotes": {
-        "showUnlistedSevenTVEmotes": true
+    "create clip": {
+      "action": "createClip",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Alt+X"
     },
-    "filtering": {
-        "filters": [
-            {
-                "name": "NymN Important",
-                "filter": "((author.badges) contains (\"staff\") || (author.badges) contains (\"moderator\") || (author.badges) contains (\"broadcaster\") || (author.badges) contains (\"partner\")) && ((author.name) !== (\"botnextdoor\")) && ((author.name) !== (\"supibot\"))",
-                "id": "f04550a7-b6e7-404a-928b-940a7df54949"
-            },
-            {
-                "name": "Only Non-Shared",
-                "filter": "!flags.shared",
-                "id": "dbf09549-a1f0-45e8-99f1-b7bdb4d98d3a"
-            },
-            {
-                "name": "Only Shared",
-                "filter": "flags.shared",
-                "id": "7e6c1610-c3c2-4c10-b497-38306b9e84d2"
-            }
-        ]
+    "delete": {
+      "action": "delete",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+W"
+    },
+    "emote picker": {
+      "action": "openEmotesPopup",
+      "arguments": [],
+      "category": "splitInput",
+      "keySequence": "Ctrl+E"
+    },
+    "focus down": {
+      "action": "focus",
+      "arguments": [
+        "down"
+      ],
+      "category": "split",
+      "keySequence": "Alt+Down"
+    },
+    "focus left": {
+      "action": "focus",
+      "arguments": [
+        "left"
+      ],
+      "category": "split",
+      "keySequence": "Alt+Left"
+    },
+    "focus right": {
+      "action": "focus",
+      "arguments": [
+        "right"
+      ],
+      "category": "split",
+      "keySequence": "Alt+Right"
+    },
+    "focus up": {
+      "action": "focus",
+      "arguments": [
+        "up"
+      ],
+      "category": "split",
+      "keySequence": "Alt+Up"
+    },
+    "go to end of input": {
+      "action": "cursorToEnd",
+      "arguments": [
+        "withoutSelection"
+      ],
+      "category": "splitInput",
+      "keySequence": "End"
+    },
+    "go to end of input with selection": {
+      "action": "cursorToEnd",
+      "arguments": [
+        "withSelection"
+      ],
+      "category": "splitInput",
+      "keySequence": "Shift+End"
+    },
+    "go to start of input": {
+      "action": "cursorToStart",
+      "arguments": [
+        "withoutSelection"
+      ],
+      "category": "splitInput",
+      "keySequence": "Home"
+    },
+    "go to start of input with selection": {
+      "action": "cursorToStart",
+      "arguments": [
+        "withSelection"
+      ],
+      "category": "splitInput",
+      "keySequence": "Shift+Home"
+    },
+    "new popup window": {
+      "action": "popup",
+      "arguments": [
+        "split"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+N"
+    },
+    "new popup window from tab": {
+      "action": "popup",
+      "arguments": [
+        "window"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+Shift+N"
+    },
+    "new split": {
+      "action": "newSplit",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+T"
+    },
+    "new tab": {
+      "action": "newTab",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+Shift+T"
+    },
+    "next message": {
+      "action": "nextMessage",
+      "arguments": [],
+      "category": "splitInput",
+      "keySequence": "Down"
+    },
+    "open debug popup": {
+      "action": "debug",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "F10"
+    },
+    "open overlay": {
+      "action": "popupOverlay",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+Alt+N"
+    },
+    "open quick switcher": {
+      "action": "openQuickSwitcher",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+K"
+    },
+    "open settings": {
+      "action": "openSettings",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+P"
+    },
+    "popup accept": {
+      "action": "accept",
+      "arguments": [],
+      "category": "popupWindow",
+      "keySequence": "Return"
+    },
+    "popup focus search box": {
+      "action": "search",
+      "arguments": [],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+F"
+    },
+    "popup reject": {
+      "action": "reject",
+      "arguments": [],
+      "category": "popupWindow",
+      "keySequence": "Esc"
+    },
+    "popup scroll down": {
+      "action": "scrollPage",
+      "arguments": [
+        "down"
+      ],
+      "category": "popupWindow",
+      "keySequence": "PgDown"
+    },
+    "popup scroll up": {
+      "action": "scrollPage",
+      "arguments": [
+        "up"
+      ],
+      "category": "popupWindow",
+      "keySequence": "PgUp"
+    },
+    "popup select last tab": {
+      "action": "openTab",
+      "arguments": [
+        "last"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+9"
+    },
+    "popup select next tab": {
+      "action": "openTab",
+      "arguments": [
+        "next"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+Tab"
+    },
+    "popup select previous tab": {
+      "action": "openTab",
+      "arguments": [
+        "previous"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+Shift+Tab"
+    },
+    "popup select tab #1": {
+      "action": "openTab",
+      "arguments": [
+        "0"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+1"
+    },
+    "popup select tab #2": {
+      "action": "openTab",
+      "arguments": [
+        "1"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+2"
+    },
+    "popup select tab #3": {
+      "action": "openTab",
+      "arguments": [
+        "2"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+3"
+    },
+    "popup select tab #4": {
+      "action": "openTab",
+      "arguments": [
+        "3"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+4"
+    },
+    "popup select tab #5": {
+      "action": "openTab",
+      "arguments": [
+        "4"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+5"
+    },
+    "popup select tab #6": {
+      "action": "openTab",
+      "arguments": [
+        "5"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+6"
+    },
+    "popup select tab #7": {
+      "action": "openTab",
+      "arguments": [
+        "6"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+7"
+    },
+    "popup select tab #8": {
+      "action": "openTab",
+      "arguments": [
+        "7"
+      ],
+      "category": "popupWindow",
+      "keySequence": "Ctrl+8"
+    },
+    "previous message": {
+      "action": "previousMessage",
+      "arguments": [],
+      "category": "splitInput",
+      "keySequence": "Up"
+    },
+    "reconnect": {
+      "action": "reconnect",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+F5"
+    },
+    "reload emotes": {
+      "action": "reloadEmotes",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "F5"
+    },
+    "remove tab": {
+      "action": "removeTab",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+Shift+W"
+    },
+    "reopen split": {
+      "action": "reopenSplit",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+G"
+    },
+    "scroll page down": {
+      "action": "scrollPage",
+      "arguments": [
+        "down"
+      ],
+      "category": "split",
+      "keySequence": "PgDown"
+    },
+    "scroll page up": {
+      "action": "scrollPage",
+      "arguments": [
+        "up"
+      ],
+      "category": "split",
+      "keySequence": "PgUp"
+    },
+    "scroll to bottom": {
+      "action": "scrollToBottom",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+End"
+    },
+    "scroll to top": {
+      "action": "scrollToTop",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+Home"
+    },
+    "select last tab": {
+      "action": "openTab",
+      "arguments": [
+        "last"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+9"
+    },
+    "select next tab": {
+      "action": "openTab",
+      "arguments": [
+        "next"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+Tab"
+    },
+    "select previous tab": {
+      "action": "openTab",
+      "arguments": [
+        "previous"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+Shift+Tab"
+    },
+    "select tab #1": {
+      "action": "openTab",
+      "arguments": [
+        "0"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+1"
+    },
+    "select tab #2": {
+      "action": "openTab",
+      "arguments": [
+        "1"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+2"
+    },
+    "select tab #3": {
+      "action": "openTab",
+      "arguments": [
+        "2"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+3"
+    },
+    "select tab #4": {
+      "action": "openTab",
+      "arguments": [
+        "3"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+4"
+    },
+    "select tab #5": {
+      "action": "openTab",
+      "arguments": [
+        "4"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+5"
+    },
+    "select tab #6": {
+      "action": "openTab",
+      "arguments": [
+        "5"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+6"
+    },
+    "select tab #7": {
+      "action": "openTab",
+      "arguments": [
+        "6"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+7"
+    },
+    "select tab #8": {
+      "action": "openTab",
+      "arguments": [
+        "7"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+8"
+    },
+    "send message": {
+      "action": "sendMessage",
+      "arguments": [],
+      "category": "splitInput",
+      "keySequence": "Return"
+    },
+    "send message and keep text": {
+      "action": "sendMessage",
+      "arguments": [
+        "keepInput"
+      ],
+      "category": "splitInput",
+      "keySequence": "Ctrl+Return"
+    },
+    "show global search": {
+      "action": "showGlobalSearch",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+Shift+F"
+    },
+    "show search": {
+      "action": "showSearch",
+      "arguments": [],
+      "category": "split",
+      "keySequence": "Ctrl+F"
+    },
+    "toggle local r9k": {
+      "action": "toggleLocalR9K",
+      "arguments": [],
+      "category": "window",
+      "keySequence": "Ctrl+H"
+    },
+    "toggle overlay click-through": {
+      "action": "toggleOverlayInertia",
+      "arguments": [
+        "all"
+      ],
+      "category": "split",
+      "keySequence": "Ctrl+Shift+U"
+    },
+    "toggle tab visibility": {
+      "action": "setTabVisibility",
+      "arguments": [
+        "toggle"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+U"
+    },
+    "zoom in": {
+      "action": "zoom",
+      "arguments": [
+        "in"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl++"
+    },
+    "zoom out": {
+      "action": "zoom",
+      "arguments": [
+        "out"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+-"
+    },
+    "zoom reset": {
+      "action": "zoom",
+      "arguments": [
+        "reset"
+      ],
+      "category": "window",
+      "keySequence": "Ctrl+0"
     }
+  },
+  "links": {
+    "linkInfoTooltip": true
+  },
+  "misc": {
+    "currentVersion": "2.5.4",
+    "lockNotebookLayout": false
+  }
 }

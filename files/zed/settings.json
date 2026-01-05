@@ -7,16 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "always_allow_tool_actions": true
-  },
-  "icon_theme": "JetBrains New UI Icons (Dark)",
-  "buffer_font_family": "Menlo",
-  "ui_font_size": 13,
-  "buffer_font_size": 11,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark - Darkened"
-  }
+    "agent": {
+        "always_allow_tool_actions": true,
+    },
+    "icon_theme": "JetBrains New UI Icons (Dark)",
+    "buffer_font_family": "Menlo",
+    "ui_font_size": 13,
+    "buffer_font_size": 11,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "One Dark - Darkened",
+    },
+    "tab_size": 4,
+    "formatter": "language_server",
+    "format_on_save": "on",
 }

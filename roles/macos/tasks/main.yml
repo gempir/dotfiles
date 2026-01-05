@@ -19,5 +19,34 @@
         - { src: "{{ role_path }}/files/.config/alacritty/macos.toml", dest: "~/.config/alacritty/os.toml" }
         - { src: "{{ role_path }}/files/.config/aerospace/aerospace.toml", dest: "~/.config/aerospace/aerospace.toml" }
         - { src: "files/chatterino/commands.json", dest: "~/Library/Application Support/chatterino/Settings/commands.json" }
-        - { src: "files/chatterino/settings.json", dest: "~/Library/Application Support/chatterino/Settings/settings.json" }
         - { src: "files/chatterino/window-layout.json", dest: "~/Library/Application Support/chatterino/Settings/window-layout.json" }
+
+-   name: Check if chatterino settings.json exists
+    ansible.builtin.stat:
+        path: "~/Library/Application Support/chatterino/Settings/settings.json"
+    register: chatterino_settings_stat
+
+-   name: Read existing chatterino settings.json
+    ansible.builtin.slurp:
+        src: "~/Library/Application Support/chatterino/Settings/settings.json"
+    register: existing_chatterino_settings
+    when: chatterino_settings_stat.stat.exists
+
+-   name: Read new chatterino settings.json from repo
+    ansible.builtin.slurp:
+        src: "files/chatterino/settings.json"
+    register: new_chatterino_settings
+
+-   name: Merge chatterino settings.json preserving accounts
+    ansible.builtin.copy:
+        content: "{{ new_chatterino_settings.content | b64decode | from_json | combine({'accounts': (existing_chatterino_settings.content | b64decode | from_json).accounts}, recursive=True) | to_nice_json }}"
+        dest: "~/Library/Application Support/chatterino/Settings/settings.json"
+        force: true
+    when: chatterino_settings_stat.stat.exists
+
+-   name: Copy chatterino settings.json if no existing file
+    ansible.builtin.copy:
+        src: "files/chatterino/settings.json"
+        dest: "~/Library/Application Support/chatterino/Settings/settings.json"
+        force: true
+    when: not chatterino_settings_stat.stat.exists

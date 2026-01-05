@@ -1,49 +1,85 @@
 ---
 - name: Install packages
   ansible.builtin.package:
-    name: "{{ item }}"
-    state: present
+      name: "{{ item }}"
+      state: present
   loop:
-    - fontconfig
-    # - cosmic
+      - fontconfig
+      # - cosmic
 
 - name: Ensure cosmic-greeter is enabled
   ansible.builtin.systemd:
-    name: cosmic-greeter
-    enabled: true
+      name: cosmic-greeter
+      enabled: true
 
 - name: Create Linux-specific directories
   ansible.builtin.file:
-    path: "~/{{ item }}"
-    state: directory
-    mode: 0755
+      path: "~/{{ item }}"
+      state: directory
+      mode: 0755
   loop:
-    - ".config/gtk-3.0"
-    - ".local/share"
-    - ".local/share/chatterino/Settings"
+      - ".config/gtk-3.0"
+      - ".local/share"
+      - ".local/share/chatterino/Settings"
 
-- name: Copy shared config files
+- name: Copy shared config files (non-merged)
   ansible.builtin.copy:
-    src: "{{ role_path }}/../../files/{{ item.src }}"
-    dest: "~/{{ item.dest | default(item.src) }}"
-    force: true
+      src: "{{ role_path }}/../../files/{{ item.src }}"
+      dest: "~/{{ item.dest | default(item.src) }}"
+      force: true
   loop:
-    - { src: "chatterino/commands.json", dest: ".local/share/chatterino/Settings/commands.json" }
-    - { src: "chatterino/window-layout.json", dest: ".local/share/chatterino/Settings/window-layout.json" }
-    - { src: "chatterino/settings.json", dest: ".local/share/chatterino/Settings/settings.json" }
+      - {
+            src: "chatterino/commands.json",
+            dest: ".local/share/chatterino/Settings/commands.json",
+        }
+      - {
+            src: "chatterino/window-layout.json",
+            dest: ".local/share/chatterino/Settings/window-layout.json",
+        }
+
+- name: Check if chatterino settings.json exists
+  ansible.builtin.stat:
+      path: "~/.local/share/chatterino/Settings/settings.json"
+  register: chatterino_settings_stat
+
+- name: Read existing chatterino settings.json
+  ansible.builtin.slurp:
+      src: "~/.local/share/chatterino/Settings/settings.json"
+  register: existing_chatterino_settings
+  when: chatterino_settings_stat.stat.exists
+
+- name: Read new chatterino settings.json from repo
+  ansible.builtin.slurp:
+      src: "{{ role_path }}/../../files/chatterino/settings.json"
+  register: new_chatterino_settings
+
+- name: Merge chatterino settings.json preserving accounts
+  ansible.builtin.copy:
+      content: "{{ new_chatterino_settings.content | b64decode | from_json | combine({'accounts': (existing_chatterino_settings.content | b64decode | from_json).accounts}, recursive=True) | to_nice_json }}"
+      dest: "~/.local/share/chatterino/Settings/settings.json"
+      force: true
+  when: chatterino_settings_stat.stat.exists
+
+- name: Copy chatterino settings.json if no existing file
+  ansible.builtin.copy:
+      src: "{{ role_path }}/../../files/chatterino/settings.json"
+      dest: "~/.local/share/chatterino/Settings/settings.json"
+      force: true
+  when: not chatterino_settings_stat.stat.exists
 
 - name: Copy Linux-specific configuration files
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/{{ item.src }}"
-    dest: "~/{{ item.dest | default(item.src) }}"
-    force: true
+      src: "{{ role_path }}/files/{{ item.src }}"
+      dest: "~/{{ item.dest | default(item.src) }}"
+      force: true
   loop:
-    - { src: ".config/alacritty/linux.toml", dest: ".config/alacritty/os.toml" }
-    - { src: ".config/gtk-3.0/settings.ini" }
-    - { src: ".config/wallpaper.jpg" }
-    - { src: ".local/share/fonts/" }
-    - { src: ".config/cosmic" }
-    - { src: ".profile" }
-  notify: 
-    - Update font cache
-
+      - {
+            src: ".config/alacritty/linux.toml",
+            dest: ".config/alacritty/os.toml",
+        }
+      - { src: ".config/gtk-3.0/settings.ini" }
+      - { src: ".config/wallpaper.jpg" }
+      - { src: ".local/share/fonts/" }
+      - { src: ".profile" }
+  notify:
+      - Update font cache
