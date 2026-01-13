@@ -32,13 +32,13 @@ else
 fi
 
 # Install Python and uv
-install_python() {    
+install_python() {
     if [[ "$OS" == "macos" ]]; then
         if ! command -v brew &> /dev/null; then
             print_notice "Homebrew not found. Installing Homebrew..."
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         fi
-        
+
         if ! command -v curl &> /dev/null; then
             print_notice "Installing curl using Homebrew"
             brew install curl
@@ -74,17 +74,17 @@ install_python() {
 
     uv venv --python 3.12
     uv pip install ansible
-} 
+}
 
 run_playbook() {
     source .venv/bin/activate
 
-    ansible-vault decrypt files/ssh/id_ed25519_ansible_gempir.vault --output files/ssh/id_ed25519_ansible_gempir
+    # ansible-vault decrypt files/ssh/id_ed25519_ansible_gempir.vault --output files/ssh/id_ed25519_ansible_gempir
 
     # Run the main playbook
     print_notice "Running main playbook"
     ansible-playbook --limit "$OS" playbook.yml
-    
+
     # Run macos_defaults playbook only if RUN_MACOS_DEFAULTS is set
     if [ -n "$RUN_MACOS_DEFAULTS" ]; then
         print_notice "Running macos_defaults playbook"

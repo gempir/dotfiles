@@ -27,3 +27,5 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
+[rerere]
+    enabled = true
