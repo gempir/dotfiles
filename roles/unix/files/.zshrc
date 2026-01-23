@@ -58,6 +58,8 @@ fi
 export MOEBEL_CODE="$HOME/dev/furniture"
 [[ -f $MOEBEL_CODE/env/misc/zshrc ]] && . $MOEBEL_CODE/env/misc/zshrc
 
+export RUN_GITHOOKS=false
+
 # Aliases
 alias ls="ls -l"
 alias initsubmodules="git submodule update --init --recursive"
@@ -71,7 +73,6 @@ alias bssh="mkdir -p ~/.ssh/config.d && echo -e '\nHost *\n    IdentityFile \"~/
 alias nssh="rm ~/.ssh/config.d/backup"
 alias drink="brew update && brew upgrade && brew cleanup"
 alias pn="pnpm"
-alias zed="zeditor"
 (( ${+aliases[gjca]} )) || alias gjca='git add -A && gc'
 
 alias bambu="__GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_amber.json bambu-studio"
