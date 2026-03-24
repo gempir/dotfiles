@@ -2,5 +2,6 @@ theme = GitHub Dark Default
 window-decoration = false
 font-family = Menlo Regular
 font-thicken = true
-font-size = 12.5
+font-size = 13
 confirm-close-surface = false
+font-feature = -calt, -liga, -dlig
