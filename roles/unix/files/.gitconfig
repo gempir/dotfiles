@@ -1,6 +1,13 @@
 [user]
 	email = gempir.dev@gmail.com
 	name = gempir
+[core]
+	untrackedCache = true
+	fsmonitor = true
+[feature]
+	manyFiles = true
+[includeIf "gitdir:/Users/daniel.pasch/"]
+	path = ~/.gitconfig-check24
 [alias]
 	slog = log -n 10 --format=format:'%Creset%an %Cgreen%ar:%Creset%s %Cred%h'
 	ci = !git add -A && git commit

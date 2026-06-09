@@ -39,6 +39,7 @@
   loop:
     - { src: ".zshrc" }
     - { src: ".gitconfig" }
+    - { src: ".gitconfig-check24" }
     - { src: ".ssh/config.d/gempir" }
     - { src: ".vimrc" }
     - { src: ".vim/colors/onedark.vim" }
