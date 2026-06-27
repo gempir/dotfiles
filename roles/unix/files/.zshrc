@@ -69,8 +69,7 @@ alias ktm="killall -9 tmux"
 alias dev="cd ~/dev"
 alias dcom="docker compose"
 alias doc="docker compose"
-alias bssh="mkdir -p ~/.ssh/config.d && echo -e '\nHost *\n    IdentityFile \"~/.ssh/id_ed25519_sk_backup\"\n    IdentityFile \"~/.ssh/id_rsa\"\n' >> ~/.ssh/config.d/backup"
-alias nssh="rm ~/.ssh/config.d/backup"
+alias yssh='if [ "$(readlink ~/.ssh/id_ed25519_sk)" = "$HOME/.ssh/id_ed25519_sk_backup" ]; then ln -sf ~/.ssh/id_ed25519_sk_primary ~/.ssh/id_ed25519_sk; else ln -sf ~/.ssh/id_ed25519_sk_backup ~/.ssh/id_ed25519_sk; fi'
 alias drink="brew update && brew upgrade && brew cleanup"
 alias pn="pnpm"
 (( ${+aliases[gjca]} )) || alias gjca='git add -A && gc'
