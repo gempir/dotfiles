@@ -69,7 +69,7 @@ alias ktm="killall -9 tmux"
 alias dev="cd ~/dev"
 alias dcom="docker compose"
 alias doc="docker compose"
-alias yssh='if [ "$(readlink ~/.ssh/id_ed25519_sk)" = "$HOME/.ssh/id_ed25519_sk_backup" ]; then ln -sf ~/.ssh/id_ed25519_sk_primary ~/.ssh/id_ed25519_sk; else ln -sf ~/.ssh/id_ed25519_sk_backup ~/.ssh/id_ed25519_sk; fi'
+alias yssh='if [ "$(readlink ~/.ssh/id_ed25519_sk)" = "$HOME/.ssh/id_ed25519_sk_backup" ]; then ln -sf ~/.ssh/id_ed25519_sk_primary ~/.ssh/id_ed25519_sk && ln -sf ~/.ssh/id_ed25519_sk_primary.pub ~/.ssh/id_ed25519_sk.pub && echo primary; else ln -sf ~/.ssh/id_ed25519_sk_backup ~/.ssh/id_ed25519_sk && ln -sf ~/.ssh/id_ed25519_sk_backup.pub ~/.ssh/id_ed25519_sk.pub && echo backup; fi'
 alias drink="brew update && brew upgrade && brew cleanup"
 alias pn="pnpm"
 (( ${+aliases[gjca]} )) || alias gjca='git add -A && gc'
