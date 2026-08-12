@@ -7,64 +7,8 @@ approvals_reviewer = "user"
 
 approval_policy = "untrusted"
 sandbox_mode = "workspace-write"
-[projects."/Users/daniel.pasch/dev/furniture"]
-trust_level = "trusted"
 
-[projects."/Users/daniel.pasch/dev/pullrequest.review"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/CHECK24 E&M Dropbox/Daniel Pasch-Sannapiu/Documents/Presentations/ClickHouse Deep Dive"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/clickhouse-cluster-meeting"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/presentations"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/bitbucket-mcp"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/bitbucket-cloud-mcp"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/grafana-cli"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/inside-config"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/ber-checkito-lunch"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/sftpgo"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/PrestaShop"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/CHECK24 E&M Dropbox/Daniel Pasch-Sannapiu/Obsidian"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/furniture-vibe"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/chkit"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/iconfactory"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/opensource"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/strider"]
-trust_level = "trusted"
-
-[projects."/Users/daniel.pasch/dev/pr-cella-server"]
+[projects."/Users/daniel.pasch/dev]
 trust_level = "trusted"
 
 [projects."/Users/daniel.pasch/.config/opencode"]
