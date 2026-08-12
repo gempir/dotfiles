@@ -60,7 +60,7 @@
       - {
             live: ".config/cursor/cli-config.json",
             repo: ".config/cursor/cli-config.json",
-            scrub: cursor,
+            sync_back: false,
         }
       - {
             live: ".config/opencode/opencode.json",
