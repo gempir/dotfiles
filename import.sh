@@ -41,6 +41,39 @@ REPO_CHATTERINO_DIR="$SCRIPT_DIR/files/chatterino"
 REPO_ZED_DIR="$SCRIPT_DIR/files/zed"
 REPO_UNIX_FILES="$SCRIPT_DIR/roles/unix/files"
 
+# True when input and output resolve to the same inode (e.g. live path is a
+# symlink into the repo). Redirecting onto output would truncate input first.
+same_file() {
+    local input="$1"
+    local output="$2"
+
+    if [ ! -e "$input" ] || [ ! -e "$output" ]; then
+        return 1
+    fi
+
+    local input_id output_id
+    input_id="$(stat -f '%d:%i' "$input" 2>/dev/null || stat -c '%d:%i' "$input")"
+    output_id="$(stat -f '%d:%i' "$output" 2>/dev/null || stat -c '%d:%i' "$output")"
+    [ "$input_id" = "$output_id" ]
+}
+
+# Write jq output via a temp file so symlink sources are not truncated.
+jq_to_file() {
+    local filter="$1"
+    local input="$2"
+    local output="$3"
+    local tmp
+
+    mkdir -p "$(dirname "$output")"
+    tmp="$(mktemp)"
+    # shellcheck disable=SC2016
+    if ! jq "$filter" "$input" > "$tmp"; then
+        rm -f "$tmp"
+        return 1
+    fi
+    mv "$tmp" "$output"
+}
+
 # Filter JSON function - removes specified keys and replaces with {}
 # Usage: filter_json <input_file> <output_file> <key1> [key2] ...
 filter_json() {
@@ -60,7 +93,7 @@ filter_json() {
         jq_filter="$jq_filter | .${key} = {}"
     done
     
-    jq "$jq_filter" "$input" > "$output"
+    jq_to_file "$jq_filter" "$input" "$output"
     echo "Imported: $input -> $output (filtered keys: ${keys[*]})"
 }
 
@@ -73,7 +106,13 @@ copy_json() {
         echo "Warning: Source file not found: $input"
         return 1
     fi
+
+    if same_file "$input" "$output"; then
+        echo "Skipped (already linked): $input -> $output"
+        return 0
+    fi
     
+    mkdir -p "$(dirname "$output")"
     cp "$input" "$output"
     echo "Imported: $input -> $output"
 }
@@ -86,6 +125,11 @@ copy_file() {
     if [ ! -f "$input" ] && [ ! -L "$input" ]; then
         echo "Warning: Source file not found: $input"
         return 1
+    fi
+
+    if same_file "$input" "$output"; then
+        echo "Skipped (already linked): $input -> $output"
+        return 0
     fi
 
     mkdir -p "$(dirname "$output")"
@@ -103,8 +147,7 @@ import_cursor_cli_config() {
         return 1
     fi
 
-    mkdir -p "$(dirname "$output")"
-    jq 'del(
+    jq_to_file 'del(
       .privacyCache,
       .authInfo,
       .model,
@@ -113,7 +156,7 @@ import_cursor_cli_config() {
       .hasChangedDefaultModel,
       .showSandboxIntro,
       .conversationClassificationScoredConversations
-    )' "$input" > "$output"
+    )' "$input" "$output"
     echo "Imported: $input -> $output (scrubbed Cursor runtime fields)"
 }
 
