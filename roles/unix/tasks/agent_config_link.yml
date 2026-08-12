@@ -1,0 +1,48 @@
+---
+- name: Stat live agent config
+  ansible.builtin.stat:
+      path: "{{ ansible_env.HOME }}/{{ agent_config.live }}"
+  register: agent_config_live_stat
+
+- name: Sync Cursor CLI config back to repo
+  when:
+      - agent_config_live_stat.stat.exists
+      - agent_config_live_stat.stat.isreg
+      - (agent_config.scrub | default('')) == "cursor"
+  ansible.builtin.shell: |
+      set -euo pipefail
+      live="{{ ansible_env.HOME }}/{{ agent_config.live }}"
+      repo="{{ role_path }}/files/{{ agent_config.repo }}"
+      tmp="$(mktemp)"
+      jq 'del(
+        .privacyCache,
+        .authInfo,
+        .model,
+        .selectedModel,
+        .modelParameters,
+        .hasChangedDefaultModel,
+        .showSandboxIntro,
+        .conversationClassificationScoredConversations
+      )' "$live" > "$tmp"
+      mv "$tmp" "$repo"
+  args:
+      executable: /bin/bash
+  changed_when: true
+
+- name: Sync agent config back to repo
+  when:
+      - agent_config_live_stat.stat.exists
+      - agent_config_live_stat.stat.isreg
+      - (agent_config.scrub | default('')) != "cursor"
+  ansible.builtin.copy:
+      src: "{{ ansible_env.HOME }}/{{ agent_config.live }}"
+      dest: "{{ role_path }}/files/{{ agent_config.repo }}"
+      remote_src: true
+      force: true
+
+- name: Ensure agent config symlink
+  ansible.builtin.file:
+      src: "{{ role_path }}/files/{{ agent_config.repo }}"
+      dest: "{{ ansible_env.HOME }}/{{ agent_config.live }}"
+      state: link
+      force: true

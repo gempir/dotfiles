@@ -27,6 +27,10 @@
       - "~/.config/streamlink"
       - "~/.config/zed"
       - "~/.config/cursor"
+      - "~/.config/opencode"
+      - "~/.claude"
+      - "~/.codex"
+      - "~/.codex/rules"
 
 - name: Copy common configuration files
   ansible.builtin.copy:
@@ -49,7 +53,27 @@
             src: "../../../files/zed/settings.json",
             dest: ".config/zed/settings.json",
         }
-      - { src: ".config/cursor/cli-config.json" }
+
+- name: Link agent configs into repo with sync-back
+  ansible.builtin.include_tasks: agent_config_link.yml
+  loop:
+      - {
+            live: ".config/cursor/cli-config.json",
+            repo: ".config/cursor/cli-config.json",
+            scrub: cursor,
+        }
+      - {
+            live: ".config/opencode/opencode.json",
+            repo: ".config/opencode/opencode.json",
+        }
+      - { live: ".claude/settings.json", repo: ".claude/settings.json" }
+      - {
+            live: ".codex/rules/allowlist.rules",
+            repo: ".codex/rules/allowlist.rules",
+        }
+      - { live: ".codex/config.toml", repo: ".codex/config.toml" }
+  loop_control:
+      loop_var: agent_config
 
 - name: Ensure ssh_config contains include
   ansible.builtin.lineinfile:
