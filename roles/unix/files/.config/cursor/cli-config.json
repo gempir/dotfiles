@@ -1,100 +1,100 @@
 {
-    "permissions": {
-        "allow": [
-            "Shell(cd)",
-            "Shell(pwd)",
-            "Shell(ls)",
-            "Shell(cat)",
-            "Shell(head)",
-            "Shell(tail)",
-            "Shell(dirname)",
-            "Shell(basename)",
-            "Shell(which)",
-            "Shell(file)",
-            "Shell(stat)",
-            "Shell(du)",
-            "Shell(df)",
-            "Shell(grep)",
-            "Shell(wc)",
-            "Shell(sort)",
-            "Shell(uniq)",
-            "Shell(cut)",
-            "Shell(rg)",
-            "Shell(echo)",
-            "Shell(printf)",
-            "Shell(date)",
-            "Shell(sleep)",
-            "Shell(whoami)",
-            "Shell(id)",
-            "Shell(uname)",
-            "Shell(printenv)",
-            "Shell(git status)",
-            "Shell(git diff)",
-            "Shell(git log)",
-            "Shell(git show)",
-            "Shell(docker ps)",
-            "Shell(docker images)",
-            "Shell(docker logs)",
-            "Shell(docker inspect)",
-            "Shell(docker compose ps)",
-            "Shell(docker compose logs)",
-            "Shell(docker compose config)",
-            "Mcp(context7:query-docs)",
-            "Mcp(context7:resolve-library-id)"
-        ],
-        "deny": []
-    },
-    "version": 1,
-    "editor": {
-        "vimMode": false
-    },
-    "display": {
-        "showLineNumbers": false,
-        "showThinkingBlocks": false,
-        "showStatusIndicators": false,
-        "showStatusLineRunningTime": false,
-        "mode": "zen"
-    },
-    "notifications": true,
-    "hints": true,
-    "modelSlashCommands": true,
-    "rewind": true,
-    "modelSelectionHistory": [
-        "auto-smart",
-        "grok-4.5"
+  "permissions": {
+    "allow": [
+      "Shell(cd)",
+      "Shell(pwd)",
+      "Shell(ls)",
+      "Shell(cat)",
+      "Shell(head)",
+      "Shell(tail)",
+      "Shell(dirname)",
+      "Shell(basename)",
+      "Shell(which)",
+      "Shell(file)",
+      "Shell(stat)",
+      "Shell(du)",
+      "Shell(df)",
+      "Shell(grep)",
+      "Shell(wc)",
+      "Shell(sort)",
+      "Shell(uniq)",
+      "Shell(cut)",
+      "Shell(rg)",
+      "Shell(echo)",
+      "Shell(printf)",
+      "Shell(date)",
+      "Shell(sleep)",
+      "Shell(whoami)",
+      "Shell(id)",
+      "Shell(uname)",
+      "Shell(printenv)",
+      "Shell(git status)",
+      "Shell(git diff)",
+      "Shell(git log)",
+      "Shell(git show)",
+      "Shell(docker ps)",
+      "Shell(docker images)",
+      "Shell(docker logs)",
+      "Shell(docker inspect)",
+      "Shell(docker compose ps)",
+      "Shell(docker compose logs)",
+      "Shell(docker compose config)",
+      "Mcp(context7:query-docs)",
+      "Mcp(context7:resolve-library-id)"
     ],
-    "exploreSubagentModel": "default",
-    "autoReviewAvailabilityCache": {
-        "backendUrl": "https://api2.cursor.sh",
-        "authCacheKey": "auth:auth0|user_01JPAE8HFSQEKGN1DEXB7YZWZV",
-        "teamId": 7017093,
-        "available": true,
-        "updatedAt": 1786531885113
+    "deny": []
+  },
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "display": {
+    "showLineNumbers": false,
+    "showThinkingBlocks": false,
+    "showStatusIndicators": false,
+    "showStatusLineRunningTime": false,
+    "mode": "zen"
+  },
+  "notifications": true,
+  "hints": true,
+  "modelSlashCommands": true,
+  "rewind": true,
+  "modelSelectionHistory": [
+    "auto-smart",
+    "grok-4.5"
+  ],
+  "exploreSubagentModel": "default",
+  "autoReviewAvailabilityCache": {
+    "backendUrl": "https://api2.cursor.sh",
+    "authCacheKey": "auth:auth0|user_01JPAE8HFSQEKGN1DEXB7YZWZV",
+    "teamId": 7017093,
+    "available": true,
+    "updatedAt": 1786531885113
+  },
+  "serverConfigCache": {
+    "backendUrl": "https://api2.cursor.sh",
+    "authCacheKey": "auth:auth0|user_01JPAE8HFSQEKGN1DEXB7YZWZV",
+    "teamId": 7017093,
+    "agentUrlConfig": {
+      "agentUrl": "https://agentn.us.api5.cursor.sh",
+      "agentnUrl": "https://agentn.us.api5.cursor.sh"
     },
-    "serverConfigCache": {
-        "backendUrl": "https://api2.cursor.sh",
-        "authCacheKey": "auth:auth0|user_01JPAE8HFSQEKGN1DEXB7YZWZV",
-        "teamId": 7017093,
-        "agentUrlConfig": {
-            "agentUrl": "https://agentn.us.api5.cursor.sh",
-            "agentnUrl": "https://agentn.us.api5.cursor.sh"
-        },
-        "cliSandboxDefaultEnabled": false,
-        "serverHttp2Config": 0,
-        "updatedAt": 1786533234700
-    },
-    "network": {
-        "useHttp1ForAgent": false
-    },
-    "approvalMode": "allowlist",
-    "autoAcceptWebSearch": false,
-    "sandbox": {
-        "mode": "enabled",
-        "networkAccess": "user_config_with_defaults"
-    },
-    "runEverythingSettingsPromptStreak": 0,
-    "attribution": {
-        "attributeCommitsToAgent": true,
-        "attributePRsToAgent": true
-    }
+    "cliSandboxDefaultEnabled": false,
+    "serverHttp2Config": 0,
+    "updatedAt": 1786533493957
+  },
+  "network": {
+    "useHttp1ForAgent": false
+  },
+  "approvalMode": "allowlist",
+  "autoAcceptWebSearch": false,
+  "sandbox": {
+    "mode": "enabled",
+    "networkAccess": "user_config_with_defaults"
+  },
+  "runEverythingSettingsPromptStreak": 0,
+  "attribution": {
+    "attributeCommitsToAgent": true,
+    "attributePRsToAgent": true
+  }
 }
