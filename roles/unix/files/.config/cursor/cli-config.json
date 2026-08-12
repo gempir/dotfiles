@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "permissions": {
+    "allow": [
+      "Shell(cd)",
+      "Shell(pwd)",
+      "Shell(ls)",
+      "Shell(cat)",
+      "Shell(head)",
+      "Shell(tail)",
+      "Shell(dirname)",
+      "Shell(basename)",
+      "Shell(which)",
+      "Shell(file)",
+      "Shell(stat)",
+      "Shell(du)",
+      "Shell(df)",
+      "Shell(grep)",
+      "Shell(wc)",
+      "Shell(sort)",
+      "Shell(uniq)",
+      "Shell(cut)",
+      "Shell(rg)",
+      "Shell(echo)",
+      "Shell(printf)",
+      "Shell(date)",
+      "Shell(sleep)",
+      "Shell(whoami)",
+      "Shell(id)",
+      "Shell(uname)",
+      "Shell(printenv)",
+      "Shell(git status)",
+      "Shell(git diff)",
+      "Shell(git log)",
+      "Shell(git show)",
+      "Shell(docker ps)",
+      "Shell(docker images)",
+      "Shell(docker logs)",
+      "Shell(docker inspect)",
+      "Shell(docker compose ps)",
+      "Shell(docker compose logs)",
+      "Shell(docker compose config)"
+    ],
+    "deny": []
+  },
+  "approvalMode": "allowlist",
+  "sandbox": {
+    "mode": "enabled",
+    "networkAccess": "user_config_with_defaults"
+  },
+  "network": {
+    "useHttp1ForAgent": false
+  },
+  "attribution": {
+    "attributeCommitsToAgent": true,
+    "attributePRsToAgent": true
+  }
+}

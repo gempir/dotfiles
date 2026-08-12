@@ -4,7 +4,6 @@
       name: "{{ item }}"
       state: present
   loop:
-      - alacritty
       - tree
 
 - name: Delete files
@@ -12,8 +11,7 @@
       path: "{{ item }}"
       state: absent
   loop:
-      - "~/.config/alacritty/alacritty.yml"
-      - "~/.config/alacritty/os.yml"
+      - "~/.config/alacritty"
 
 - name: Create required directories
   ansible.builtin.file:
@@ -24,11 +22,11 @@
       - "~/.ssh/config.d"
       - "~/.vim/colors"
       - "~/.vim/autoload"
-      - "~/.config/alacritty"
       - "~/.config/ghostty"
       - "~/.config/zsh"
       - "~/.config/streamlink"
       - "~/.config/zed"
+      - "~/.config/cursor"
 
 - name: Copy common configuration files
   ansible.builtin.copy:
@@ -43,7 +41,6 @@
       - { src: ".vimrc" }
       - { src: ".vim/colors/onedark.vim" }
       - { src: ".vim/autoload/onedark.vim" }
-      - { src: ".config/alacritty/alacritty.toml" }
       - { src: ".config/ghostty/config" }
       - { src: ".tmux.conf" }
       - { src: ".config/zsh/git.sh" }
@@ -52,6 +49,7 @@
             src: "../../../files/zed/settings.json",
             dest: ".config/zed/settings.json",
         }
+      - { src: ".config/cursor/cli-config.json" }
 
 - name: Ensure ssh_config contains include
   ansible.builtin.lineinfile:
