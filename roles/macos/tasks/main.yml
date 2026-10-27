@@ -6,7 +6,15 @@
         mode: '0755'
     loop:
         - "~/.config/aerospace"
+        - "~/.local/bin"
         - "~/Library/Application Support/chatterino/Settings"
+
+-   name: Install macOS utility scripts
+    ansible.builtin.copy:
+        src: "{{ role_path }}/files/.local/bin/cleanup-wallpapers"
+        dest: "~/.local/bin/cleanup-wallpapers"
+        mode: '0755'
+        force: true
 
 -   name: Copy macOS-specific configuration files
     ansible.builtin.copy:

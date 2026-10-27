@@ -82,5 +82,6 @@
     "enabled": true,
     "autoAllowBashIfSandboxed": false
   },
-  "theme": "dark"
+  "theme": "dark",
+  "model": "opus"
 }

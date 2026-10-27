@@ -1,0 +1,70 @@
+#!/bin/zsh
+#
+# Why and what do we need this for?
+# macOS wallpaper and lock-screen animations can cache converted images and
+# downloaded aerial videos indefinitely. This removes only known wallpaper
+# cache files older than 1 hour.
+
+set -u
+setopt null_glob
+
+readonly WALLPAPER_CACHE_ROOT="${HOME}/Library/Containers/com.apple.wallpaper.agent/Data/Library/Caches/com.apple.wallpaper.caches"
+readonly WALLPAPER_IMAGE_CACHE_DIR="${WALLPAPER_CACHE_ROOT}/extension-com.apple.wallpaper.extension.image"
+readonly WALLPAPER_AERIAL_CACHE_DIR="${WALLPAPER_CACHE_ROOT}/extension-com.apple.wallpaper.extension.aerials"
+readonly WALLPAPER_AERIAL_VIDEO_DIR="${HOME}/Library/Application Support/com.apple.wallpaper/aerials/videos"
+# macOS moved to downloading aerials into their own sandboxed container instead of the
+# extension cache dir above; leftover interrupted-download temp files pile up here unbounded.
+readonly WALLPAPER_AERIAL_DOWNLOAD_TMP_DIR="${HOME}/Library/Containers/com.apple.wallpaper.extension.aerials/Data/tmp"
+readonly RUN_MODE="${1:-}"
+
+zmodload zsh/files
+
+log() {
+    print -- "$(date -u '+%Y-%m-%dT%H:%M:%SZ') $*"
+}
+
+log_error() {
+    print -- "$(date -u '+%Y-%m-%dT%H:%M:%SZ') $*" >&2
+}
+
+clean_matching_files() {
+    local label="$1"
+    local target_dir="$2"
+    local file_glob="$3"
+
+    if [[ ! -d "$target_dir" ]]; then
+        log "${label}: skipped; directory does not exist: ${target_dir}"
+        return 0
+    fi
+
+    local -a matching_files
+    matching_files=("${target_dir}"/**/${~file_glob}(.mh+1N))
+
+    if [[ "${#matching_files[@]}" == "0" ]]; then
+        log "${label}: no matching files older than 1h"
+        return 0
+    fi
+
+    if [[ "$RUN_MODE" == "--dry-run" ]]; then
+        log "${label}: would delete ${#matching_files[@]} file(s) older than 1h"
+        return 0
+    fi
+
+    if rm -f -- "${matching_files[@]}"; then
+        log "${label}: deleted ${#matching_files[@]} file(s) older than 1h"
+        return 0
+    fi
+
+    log "${label}: failed while deleting matching files"
+    log_error "${label}: rm failed for one or more matching files"
+    return 1
+}
+
+cleanup_exit_status=0
+
+clean_matching_files "converted wallpaper image cache" "$WALLPAPER_IMAGE_CACHE_DIR" "*" || cleanup_exit_status=1
+clean_matching_files "aerial wallpaper bitmap cache" "$WALLPAPER_AERIAL_CACHE_DIR" "*.bmp" || cleanup_exit_status=1
+clean_matching_files "aerial wallpaper videos" "$WALLPAPER_AERIAL_VIDEO_DIR" "*.mov" || cleanup_exit_status=1
+clean_matching_files "aerial wallpaper download tmp files" "$WALLPAPER_AERIAL_DOWNLOAD_TMP_DIR" "CFNetworkDownload_*.tmp" || cleanup_exit_status=1
+
+exit "$cleanup_exit_status"

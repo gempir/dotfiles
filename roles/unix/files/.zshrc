@@ -56,7 +56,7 @@ fi
 
 # Project-specific settings
 export MOEBEL_CODE="$HOME/dev/furniture"
-[[ -f $MOEBEL_CODE/env/misc/zshrc ]] && . $MOEBEL_CODE/env/misc/zshrc
+[[ -f $MOEBEL_CODE/envy/misc/zshrc ]] && . $MOEBEL_CODE/envy/misc/zshrc
 
 export RUN_GITHOOKS=false
 
